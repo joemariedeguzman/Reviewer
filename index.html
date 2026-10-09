@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BlackBerry Limited — Case Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F7F6; --surface:#FFFFFF; --text:#1C2321; --muted:#56635F; --line:#D6DDD9;
+  --jade:#0F5C4C; --jade-soft:#E3EFEB; --red:#A8261E; --red-soft:#F6E4E2; --gold:#8A6A12;
+  --serif:'Spectral',Georgia,'Times New Roman',serif;
+  --sans:'IBM Plex Sans',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1412; --surface:#151E1B; --text:#E4EBE8; --muted:#9AA8A3; --line:#2A3632;
+    --jade:#5FBFA5; --jade-soft:#17302A; --red:#EE7A70; --red-soft:#3A1E1C; --gold:#D9B45A;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1412; --surface:#151E1B; --text:#E4EBE8; --muted:#9AA8A3; --line:#2A3632;
+  --jade:#5FBFA5; --jade-soft:#17302A; --red:#EE7A70; --red-soft:#3A1E1C; --gold:#D9B45A;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{padding:36px 0 24px}
+header .kicker{color:var(--muted);font-size:.9rem;margin:0 0 6px}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.01em}
+.quote{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);border-left:3px solid var(--red);padding-left:14px;margin:0 0 26px;max-width:62ch}
+.quote span{display:block;font-style:normal;font-family:var(--sans);font-size:.85rem;margin-top:4px}
+
+/* Hero: P/E comparison, the one memorable element */
+.pe{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 18px 14px}
+.pe h2{font-family:var(--sans);font-size:1rem;font-weight:600;margin:0 0 2px}
+.pe p{margin:0 0 14px;color:var(--muted);font-size:.9rem}
+.bar{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:10px;margin:8px 0}
+.bar b{font-weight:600;font-size:.9rem}
+.track{position:relative;height:30px}
+.fill{height:100%;border-radius:3px;background:var(--muted);opacity:.35;width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.fill.dd{background:var(--red);opacity:1}
+.track em{position:absolute;top:50%;transform:translateY(-50%);font-style:normal;font-weight:600;font-size:.9rem;padding-left:8px}
+@media (prefers-reduced-motion:reduce){.fill{transition:none}}
+
+/* Tab bar */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-top:26px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 20px;max-width:860px;margin:0 auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:0 0 auto;font:500 .92rem var(--sans);color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;min-height:40px}
+.tabs button[aria-selected="true"]{background:var(--jade);border-color:var(--jade);color:var(--surface)}
+.tabs button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+main{padding:22px 0 60px}
+section[role="tabpanel"]{display:none}
+section[role="tabpanel"].on{display:block}
+h2.title{font-family:var(--serif);font-size:1.7rem;font-weight:700;margin:4px 0 14px;line-height:1.2}
+h3{font-size:1.02rem;font-weight:600;margin:26px 0 8px;color:var(--jade)}
+p{margin:0 0 12px;max-width:72ch}
+ul{margin:0 0 12px;padding-left:20px;max-width:74ch}
+li{margin:0 0 7px}
+.bottom{background:var(--jade-soft);border-left:4px solid var(--jade);padding:14px 16px;border-radius:0 8px 8px 0;margin:0 0 20px}
+.bottom strong{display:block;font-size:.85rem;color:var(--jade);margin-bottom:4px}
+.bottom p{margin:0}
+.warn{background:var(--red-soft);border-left-color:var(--red)}
+.warn strong{color:var(--red)}
+.scroll{overflow-x:auto;margin:6px 0 16px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.9rem}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;background:var(--jade-soft)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.neg{color:var(--red)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+.quad{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.quad h4{margin:0 0 8px;font-size:1rem;font-weight:600}
+.quad ul{padding-left:18px;margin:0}
+.quad.s h4{color:var(--jade)} .quad.w h4{color:var(--red)} .quad.o h4{color:var(--gold)} .quad.t h4{color:var(--muted)}
+.tl{list-style:none;padding:0;margin:0 0 12px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding-left:18px;margin:0 0 12px}
+.tl li::before{content:"";position:absolute;left:-6px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--jade)}
+.tl b{display:block;font-size:.88rem;color:var(--muted);font-weight:600}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px;margin:6px 0 16px}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{font-family:var(--sans);font-size:12px;fill:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:6px}
+.pick{border-color:var(--jade);border-width:2px}
+.tag{display:inline-block;font-size:.78rem;font-weight:600;color:var(--surface);background:var(--jade);border-radius:999px;padding:1px 9px;margin-left:6px;vertical-align:middle}
+.src{color:var(--muted);font-size:.82rem;margin-top:30px}
+
+header.wrap{padding-top:36px;padding-bottom:8px}
+.members{color:var(--muted);font-size:.9rem;margin:-6px 0 18px}
+/* Hero: segment shift */
+.seg{margin:12px 0}
+.seg-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.9rem;margin-bottom:4px}
+.seg-head b{font-weight:600}
+.seg-head span{color:var(--muted);font-variant-numeric:tabular-nums}
+.seg-head em{font-style:normal;font-weight:600;margin-left:6px}
+em.up{color:var(--jade)} em.down{color:var(--red)}
+.pe .track{height:22px;background:none}
+.ghost{position:absolute;inset:0 auto 0 0;border:1.5px dashed var(--muted);opacity:.55;border-radius:3px}
+.pe .fill{position:relative;opacity:1}
+.pe .fill.up{background:var(--jade)} .pe .fill.down{background:var(--red)}
+.key{display:flex;align-items:center;gap:6px;font-size:.82rem !important;margin:10px 0 0 !important}
+.key i{display:inline-block;width:18px;height:10px;border-radius:2px;margin-left:8px}
+.key i:first-child{margin-left:0}
+.k-ghost{border:1.5px dashed var(--muted)} .k-fill{background:var(--text);opacity:.7}
+.legend i.sq{width:10px;height:10px;border-radius:2px}
+tr.grp td{background:var(--bg);font-weight:600;font-size:.85rem;color:var(--muted)}
+td:first-child{min-width:150px}
+.badge{display:inline-block;font-weight:600;font-size:.78rem;padding:1px 9px;border-radius:999px;white-space:nowrap}
+.badge.good{color:var(--jade);background:var(--jade-soft)}
+.badge.watch{color:var(--gold);background:color-mix(in srgb,var(--gold) 14%,transparent)}
+.badge.poor{color:var(--red);background:var(--red-soft)}
+.pc{font-weight:600;font-size:.88rem;margin:12px 0 4px}
+.pc.pro{color:var(--jade)} .pc.con{color:var(--red)}
+.quad p{margin:0 0 8px}
+/* Root cause flow */
+.flow{margin:6px 0 18px;text-align:center}
+.flow .causes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.flow .node,.flow .effect{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 10px;display:flex;flex-direction:column;gap:4px}
+.flow b{font-size:.92rem;font-weight:600}
+.flow span{font-size:.8rem;color:var(--muted);line-height:1.4}
+.flow .node{border-top:3px solid var(--red)}
+.flow .effect{max-width:540px;margin:0 auto}
+.flow .effect.final{background:var(--jade);border-color:var(--jade)}
+.flow .effect.final b,.flow .effect.final span{color:var(--surface)}
+.flow .join{position:relative;height:24px;margin:0 12.5% 22px;border:1.5px solid var(--muted);border-top:0;border-radius:0 0 4px 4px;background-image:linear-gradient(var(--muted),var(--muted)),linear-gradient(var(--muted),var(--muted));background-size:1.5px 100%,1.5px 100%;background-position:33.333% 0,66.667% 0;background-repeat:no-repeat}
+.flow .join::after{content:"";position:absolute;left:50%;top:100%;width:1.5px;height:22px;background:var(--muted)}
+.flow .arrow{position:relative;width:1.5px;height:22px;background:var(--muted);margin:0 auto}
+.flow .arrow::after{content:"";position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--muted);border-bottom:0}
+@media (max-width:640px){
+  .flow .causes{grid-template-columns:1fr 1fr}
+  .flow .join{height:0;border:0;background:none;margin:0 0 22px}
+  .flow .join::after{top:0;height:22px}
+}
+/* Score cards */
+.scores{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 12px}
+@media (max-width:640px){.scores{grid-template-columns:1fr 1fr}}
+.sc{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:2px}
+.sc b{font-family:var(--serif);font-size:1.7rem;line-height:1.1}
+.sc span{font-size:.85rem}
+.sc i{font-style:normal;font-size:.78rem;color:var(--muted)}
+.sc.pick{border:2px solid var(--jade)} .sc.pick b{color:var(--jade)}
+.tl .tl-h{display:block;font-weight:600}
+.tl em{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+.refs{overflow-wrap:anywhere}
+.chart{overflow-x:auto}
+.chart svg{min-width:500px}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="kicker">Case 3 · MGT 281: Strategic Management · Department of Agribusiness Management and Entrepreneurship, CEM, UP Los Baños · October 10, 2026</p>
+  <h1>BlackBerry Limited: Is There a Path to Recovery?</h1>
+  <p class="members">Group 2: Louie Jay Aguilar, Joe Marie De Guzman, Roanee Bryle Joseph, Franz Lenin R. Punto</p>
+  <p class="quote">“BlackBerry's problem is not a shortage of valuable, rare, hard-to-imitate resources; it is that the organization variable failed.”<span>Group 2, VRIO analysis</span></p>
+
+  <div class="pe" aria-label="Segment revenue, FY2015 versus FY2017">
+    <h2>Segment revenue, FY2015 to FY2017 (USD millions)</h2>
+    <p>Software grew, but not fast enough to replace the hardware and network fees it was meant to succeed. Total segment revenue fell 58.8%.</p>
+    <div class="seg">
+      <div class="seg-head"><b>Software &amp; Services</b><span>$249M → $652M <em class="up">+161.8%</em></span></div>
+      <div class="track"><div class="ghost" style="width:15.5%"></div><div class="fill up" data-w="40.6"></div></div>
+    </div>
+    <div class="seg">
+      <div class="seg-head"><b>Mobility Solutions (hardware)</b><span>$1,480M → $409M <em class="down">−72.4%</em></span></div>
+      <div class="track"><div class="ghost" style="width:92.2%"></div><div class="fill down" data-w="25.5"></div></div>
+    </div>
+    <div class="seg">
+      <div class="seg-head"><b>System Access Fees</b><span>$1,606M → $313M <em class="down">−80.5%</em></span></div>
+      <div class="track"><div class="ghost" style="width:100%"></div><div class="fill down" data-w="19.5"></div></div>
+    </div>
+    <p class="key"><i class="k-ghost"></i>FY2015 <i class="k-fill"></i>FY2017</p>
+  </div>
+</header>
+
+<nav aria-label="Case sections">
+  <div class="tabs" role="tablist">
+    <button role="tab" id="t-bg" aria-controls="p-bg" aria-selected="true">Case background</button>
+    <button role="tab" id="t-pov" aria-controls="p-pov" aria-selected="false" tabindex="-1">POV</button>
+    <button role="tab" id="t-facts" aria-controls="p-facts" aria-selected="false" tabindex="-1">Case facts</button>
+    <button role="tab" id="t-prob" aria-controls="p-prob" aria-selected="false" tabindex="-1">Problem analysis &amp; statement</button>
+    <button role="tab" id="t-swot" aria-controls="p-swot" aria-selected="false" tabindex="-1">SWOT</button>
+    <button role="tab" id="t-tows" aria-controls="p-tows" aria-selected="false" tabindex="-1">TOWS</button>
+    <button role="tab" id="t-env" aria-controls="p-env" aria-selected="false" tabindex="-1">Internal &amp; external environment</button>
+    <button role="tab" id="t-alt" aria-controls="p-alt" aria-selected="false" tabindex="-1">Alternatives</button>
+    <button role="tab" id="t-ana" aria-controls="p-ana" aria-selected="false" tabindex="-1">Analysis</button>
+    <button role="tab" id="t-imp" aria-controls="p-imp" aria-selected="false" tabindex="-1">Implementation plan</button>
+    <button role="tab" id="t-annex" aria-controls="p-annex" aria-selected="false" tabindex="-1">Annex</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- CASE BACKGROUND -->
+<section role="tabpanel" id="p-bg" aria-labelledby="t-bg" class="on">
+  <h2 class="title">Case background</h2>
+  <div class="bottom"><strong>In brief</strong><p>BlackBerry held about 20.1% of the global smartphone market in 2009, then lost its position to the iPhone and Android. By 2017 it had moved away from making phones and was rebuilding around enterprise software, security, QNX and licensing.</p></div>
+
+  <h3>Company background and competitive decline</h3>
+  <ul>
+    <li>Research in Motion (RIM), founded in 1984 in Waterloo, Ontario, became a leading smartphone company through its BlackBerry devices, known for secure communications, wireless email, and physical keyboards.</li>
+    <li>Its strong relationships with corporate and government customers established BlackBerry as a trusted brand in mobile communications. At its peak, BlackBerry held approximately 20.1% of the global smartphone market in 2009.</li>
+    <li>Apple's iPhone and the rapid growth of Android changed the basis of competition. Consumers increasingly preferred touchscreen devices, wider application availability, and integrated digital ecosystems; BlackBerry's advantages in security, email, and physical keyboards became insufficient.</li>
+    <li>Unsuccessful product launches, delays in developing the BlackBerry 10 operating system, and internal leadership disagreements weakened its competitiveness.</li>
+    <li>The growing adoption of Bring Your Own Device (BYOD) policies reduced enterprise dependence on BlackBerry devices and its proprietary network.</li>
+  </ul>
+
+  <h3>Existing capabilities and resources</h3>
+  <ul>
+    <li><b>Security expertise and brand equity:</b> BlackBerry maintained a reputation for secure communications, supported by its established relationships with enterprise and government customers.</li>
+    <li><b>Enterprise software and services:</b> The company had developed capabilities in enterprise mobility management, secure communications, and related software solutions.</li>
+    <li><b>QNX technology:</b> BlackBerry owned an embedded operating system with applications in automotive systems and other connected technologies.</li>
+    <li><b>Patents and intellectual property:</b> Its portfolio of patents and proprietary technologies provided opportunities for licensing, partnerships, and commercialization.</li>
+    <li><b>Financial resources:</b> The company retained cash and other financial assets. In April 2017, BlackBerry also secured an $815 million arbitration award against Qualcomm, providing additional financial flexibility.</li>
+  </ul>
+  <p>These resources represented potential sources of competitive advantage, although their ability to generate sustainable growth and profitability remained uncertain.</p>
+
+  <h3>Management response and strategic position</h3>
+  <ul>
+    <li>John Chen became CEO in November 2013 and initiated restructuring: reducing operating costs, limiting exposure to smartphone hardware manufacturing, and expanding focus on enterprise software, secure communications, technology solutions, and licensing.</li>
+    <li>By 2017, BlackBerry had moved away from directly manufacturing smartphones and was pursuing a business model less dependent on hardware sales, while facing established technology companies and emerging enterprise software and security providers.</li>
+    <li>Although its software business was growing, BlackBerry had not yet demonstrated that its remaining businesses could consistently replace lost revenues and deliver sustainable profitability.</li>
+  </ul>
+
+  <h3>Key milestones</h3>
+  <ul class="tl">
+    <li><b>1984</b>RIM founded in Waterloo, Ontario (Lazaridis, Fregin).</li>
+    <li><b>1992</b>Balsillie joins as co-CEO.</li>
+    <li><b>1999</b>BlackBerry 850 launched; NASDAQ IPO raises $250 million.</li>
+    <li><b>2001</b>Network stays up during 9/11 cellular outages; government and corporate credibility established.</li>
+    <li><b>2006</b>$600 million NTP patent settlement.</li>
+    <li><b>2009</b>Peak: 20.1% market share, about 15 million devices per quarter.</li>
+    <li><b>2012</b>Co-CEOs depart; Heins appointed.</li>
+    <li><b>2013</b>Renamed BlackBerry Limited; BB10 and Z10 launch; Chen replaces Heins.</li>
+    <li><b>2015–2017</b>Hardware falls from $1,480M to $409M; software and services rise from $249M to $652M.</li>
+    <li><b>April 2017</b>$815 million Qualcomm arbitration award.</li>
+  </ul>
+</section>
+
+<!-- POV -->
+<section role="tabpanel" id="p-pov" aria-labelledby="t-pov">
+  <h2 class="title">Point of view</h2>
+  <div class="bottom"><strong>Point of view</strong><p>John Chen, CEO of BlackBerry Limited, in fiscal year 2017.</p></div>
+  <p>Chen faces the challenge of reversing the company's declining financial performance and competitive position while determining how best to leverage its remaining financial resources, technological capabilities, and brand equity to achieve sustainable growth and profitability.</p>
+</section>
+
+<!-- CASE FACTS -->
+<section role="tabpanel" id="p-facts" aria-labelledby="t-facts">
+  <h2 class="title">Case facts</h2>
+  <div class="bottom"><strong>Key fact</strong><p>Revenue fell from about $19.9 billion in FY2011 to $1.3 billion in FY2017, with a net loss of about $1.2 billion in FY2017. Liquidity stayed adequate, but profitability was deeply negative.</p></div>
+
+  <h3>Financial performance</h3>
+  <ul>
+    <li>BlackBerry's revenue declined from approximately $19.9 billion in FY2011 to $1.3 billion in FY2017; the company reported a net loss of approximately $1.2 billion in FY2017. Its stock price also declined substantially from its 2008 peak.</li>
+    <li>Software &amp; Services revenue grew by 161.8% between FY2015 and FY2017, but Mobility Solutions and System Access Fees declined by 72.4% and 80.5%. Total segment revenue declined by 58.8%.</li>
+    <li>While BlackBerry was developing new revenue sources, their growth had not yet offset the decline of its traditional businesses.</li>
+  </ul>
+
+  <h3>Segment revenue (USD millions)</h3>
+  <div class="scroll"><table>
+    <tr><th>Segment</th><th class="n">FY2015</th><th class="n">FY2016</th><th class="n">FY2017</th></tr>
+    <tr><td>Software &amp; Services</td><td class="n">$249</td><td class="n">$530</td><td class="n">$652</td></tr>
+    <tr><td>Mobility Solutions (hardware)</td><td class="n">$1,480</td><td class="n">$884</td><td class="n">$409</td></tr>
+    <tr><td>System Access Fees (SAF)</td><td class="n">$1,606</td><td class="n">$779</td><td class="n">$313</td></tr>
+    <tr><td><b>Total</b></td><td class="n"><b>$3,335</b></td><td class="n"><b>$2,193</b></td><td class="n"><b>$1,374</b></td></tr>
+  </table></div>
+  <div class="chart" role="img" aria-label="Grouped bar chart of segment revenue. Software and Services rises from 249 to 652 million dollars; Mobility Solutions falls from 1,480 to 409; System Access Fees fall from 1,606 to 313.">
+    <svg viewBox="0 0 600 260"><line x1="48" x2="590" y1="226.0" y2="226.0" stroke="var(--line)"/><text x="42" y="230.0" text-anchor="end">0</text><line x1="48" x2="590" y1="156.7" y2="156.7" stroke="var(--line)"/><text x="42" y="160.7" text-anchor="end">600</text><line x1="48" x2="590" y1="87.3" y2="87.3" stroke="var(--line)"/><text x="42" y="91.3" text-anchor="end">1,200</text><line x1="48" x2="590" y1="18.0" y2="18.0" stroke="var(--line)"/><text x="42" y="22.0" text-anchor="end">1,800</text><rect x="73.3" y="197.2" width="40" height="28.8" rx="2" fill="var(--jade)"/><text x="93.3" y="192.2" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">249</text><rect x="118.3" y="55.0" width="40" height="171.0" rx="2" fill="var(--gold)"/><text x="138.3" y="50.0" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">1,480</text><rect x="163.3" y="40.4" width="40" height="185.6" rx="2" fill="var(--red)"/><text x="183.3" y="35.4" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">1,606</text><text x="138.3" y="250" text-anchor="middle" style="fill:var(--text);font-weight:600">FY2015</text><rect x="254.0" y="164.8" width="40" height="61.2" rx="2" fill="var(--jade)"/><text x="274.0" y="159.8" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">530</text><rect x="299.0" y="123.8" width="40" height="102.2" rx="2" fill="var(--gold)"/><text x="319.0" y="118.8" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">884</text><rect x="344.0" y="136.0" width="40" height="90.0" rx="2" fill="var(--red)"/><text x="364.0" y="131.0" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">779</text><text x="319.0" y="250" text-anchor="middle" style="fill:var(--text);font-weight:600">FY2016</text><rect x="434.7" y="150.7" width="40" height="75.3" rx="2" fill="var(--jade)"/><text x="454.7" y="145.7" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">652</text><rect x="479.7" y="178.7" width="40" height="47.3" rx="2" fill="var(--gold)"/><text x="499.7" y="173.7" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">409</text><rect x="524.7" y="189.8" width="40" height="36.2" rx="2" fill="var(--red)"/><text x="544.7" y="184.8" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">313</text><text x="499.7" y="250" text-anchor="middle" style="fill:var(--text);font-weight:600">FY2017</text></svg>
+    <div class="legend"><span><i class="sq" style="background:var(--jade)"></i>Software &amp; Services</span><span><i class="sq" style="background:var(--gold)"></i>Mobility Solutions</span><span><i class="sq" style="background:var(--red)"></i>System Access Fees</span></div>
+  </div>
+  <p class="src">Source: case Exhibit 3, from BlackBerry annual reports [1]. The case's FY2017 highlights state total revenue of $935 million (down from $1,276 million in FY2016) with a net loss of $1,206 million, which does not reconcile exactly with the segment total of $1,374 million; the difference is likely definitional (for example, revenue recognition or intersegment eliminations). Both sets of figures are reported as given [1][2].</p>
+
+  <h3>Financial ratio analysis</h3>
+  <div class="scroll"><table>
+    <tr><th>Financial ratio</th><th class="n">FY2016</th><th class="n">FY2017</th><th>Assessment</th></tr>
+    <tr class="grp"><td colspan="4">Profitability</td></tr>
+    <tr><td>Gross profit margin</td><td class="n">43.6%</td><td class="n">47.1%</td><td><span class="badge good">Improving</span></td></tr>
+    <tr><td>Operating profit margin</td><td class="n neg">-10.3%</td><td class="n neg">-90.2%</td><td><span class="badge poor">Poor</span></td></tr>
+    <tr><td>Net profit margin</td><td class="n neg">-9.6%</td><td class="n neg">-92.1%</td><td><span class="badge poor">Poor</span></td></tr>
+    <tr class="grp"><td colspan="4">Liquidity &amp; solvency</td></tr>
+    <tr><td>Current ratio</td><td class="n">2.90×</td><td class="n">2.79×</td><td><span class="badge good">Adequate</span></td></tr>
+    <tr><td>Quick ratio</td><td class="n">2.76×</td><td class="n">2.75×</td><td><span class="badge good">Adequate</span></td></tr>
+    <tr><td>Liabilities-to-equity</td><td class="n">0.73×</td><td class="n">0.59×</td><td><span class="badge good">Improving</span></td></tr>
+    <tr class="grp"><td colspan="4">Asset efficiency</td></tr>
+    <tr><td>Asset turnover</td><td class="n">—</td><td class="n">0.30×</td><td><span class="badge watch">Needs improvement</span></td></tr>
+    <tr><td>Return on assets</td><td class="n">—</td><td class="n neg">-27.4%</td><td><span class="badge poor">Poor</span></td></tr>
+  </table></div>
+  <p class="src">Computed from case Exhibits 8 and 9. Assessments based on financial trends and ratio interpretation principles from CFA Institute and Corporate Finance Institute.</p>
+  <ul>
+    <li><b>Profitability:</b> Gross margin improved from 43.6% to 47.1%, but operating and net margins remained negative and deteriorated significantly in FY2017, partly due to substantial impairment charges. Software and services had not yet generated enough revenue to offset the decline of traditional businesses and support the cost structure.</li>
+    <li><b>Liquidity and solvency:</b> Current and quick ratios of 2.79 and 2.75 show short-term assets substantially exceeded current liabilities; liabilities-to-equity improved from 0.73 to 0.59. However, cash and short-term investments declined from $2.38 billion to $1.38 billion, so financial flexibility was narrowing.</li>
+    <li><b>Asset efficiency:</b> Asset turnover of 0.30 times indicates limited revenue generation relative to the asset base, though no directly comparable industry benchmark is available. Negative ROA reflects weak reported profitability, affected by substantial noncash charges.</li>
+    <li><b>Overall:</b> Liquidity and leverage remained relatively favorable, but profitability and revenue generation were weak. Management needed to prioritize opportunities capable of improving earnings and asset productivity while preserving financial flexibility.</li>
+  </ul>
+
+  <h3>Competitive landscape</h3>
+  <div class="scroll"><table>
+    <tr><th>Competitor</th><th>Arena</th><th>Key facts from the case</th></tr>
+    <tr><td>Apple</td><td>Smartphones</td><td>$699 to $999+ pricing; ~36% of global smartphone spending on ~11% of volume; integrated ecosystem</td></tr>
+    <tr><td>Samsung</td><td>Smartphones</td><td>Vertical integration; entry-level to flagship ($570 to $840+)</td></tr>
+    <tr><td>Xiaomi, Huawei, Vivo</td><td>Smartphones</td><td>Open-source Android, Qualcomm/MediaTek reference chipsets; squeeze the mid-tier</td></tr>
+    <tr><td>Symantec</td><td>Enterprise security</td><td>$3.77 billion information security revenue (2017)</td></tr>
+    <tr><td>Verizon Enterprise Solutions</td><td>Enterprise security</td><td>Telecom-infrastructure reach into corporate data security</td></tr>
+    <tr><td>Imperva</td><td>Enterprise data security</td><td>$264 million revenue (FY2017)</td></tr>
+  </table></div>
+</section>
+
+<!-- PROBLEM ANALYSIS -->
+<section role="tabpanel" id="p-prob" aria-labelledby="t-prob">
+  <h2 class="title">Problem analysis &amp; statement</h2>
+  <div class="bottom warn"><strong>Problem statement</strong><p>How should BlackBerry leverage its existing capabilities and resources to achieve sustainable growth and profitability amid increasing competition and changing industry dynamics?</p></div>
+
+  <h3>Root cause analysis</h3>
+  <p>BlackBerry's decline was not caused by a single unsuccessful product but by its failure to adapt its business model and competitive capabilities to fundamental changes in the smartphone industry.</p>
+  <div class="scroll"><table>
+    <tr><th>Root cause</th><th>Case evidence</th><th>Business impact</th></tr>
+    <tr><td>1. Failure to anticipate market shifts</td><td>Management underestimated the shift toward touchscreen smartphones, mobile applications, and consumer-driven purchasing preferences.</td><td>BlackBerry's traditional product advantages became less relevant, resulting in declining market share.</td></tr>
+    <tr><td>2. Weak innovation and product execution</td><td>The BlackBerry Storm, Torch, and BB10 failed to establish a competitive position against iOS and Android. Product delays and software limitations weakened execution.</td><td>BlackBerry struggled to retain customers and recover lost hardware sales.</td></tr>
+    <tr><td>3. Dependence on a proprietary ecosystem</td><td>BlackBerry relied heavily on its devices, operating system, and network infrastructure. The rise of BYOD reduced enterprise dependence on this closed ecosystem.</td><td>Declining device sales and system access fees eroded traditional revenue sources.</td></tr>
+    <tr><td>4. Leadership and strategic misalignment</td><td>Disagreements between senior leaders contributed to delayed decisions and inconsistent responses to industry changes.</td><td>BlackBerry lost valuable time while competitors strengthened their market positions.</td></tr>
+    <tr><td>5. Slow replacement of declining revenues</td><td>Despite Software &amp; Services revenue growing by 161.8% from FY2015 to FY2017, total segment revenue declined by 58.8%.</td><td>Emerging businesses had not achieved sufficient scale to replace traditional revenues and restore profitability.</td></tr>
+  </table></div>
+
+  <h3>Root cause and effect</h3>
+  <div class="flow" role="img" aria-label="Four root causes (market misjudgment, execution weaknesses, business model dependence, leadership misalignment) lead to loss of competitive position, then financial deterioration, then the unresolved strategic challenge in 2017.">
+    <div class="causes">
+      <div class="node"><b>Market misjudgment</b><span>Underestimated changing customer needs</span></div>
+      <div class="node"><b>Execution weaknesses</b><span>Delayed and unsuccessful product responses</span></div>
+      <div class="node"><b>Business model dependence</b><span>Reliance on proprietary devices and networks</span></div>
+      <div class="node"><b>Leadership misalignment</b><span>Slow and inconsistent strategic decisions</span></div>
+    </div>
+    <div class="join"></div>
+    <div class="effect"><b>Loss of competitive position</b><span>Declining market share, hardware sales, and system access fees</span></div>
+    <div class="arrow"></div>
+    <div class="effect"><b>Financial deterioration</b><span>Revenue contraction, operating losses, and declining financial resources</span></div>
+    <div class="arrow"></div>
+    <div class="effect final"><b>Unresolved strategic challenge in 2017</b><span>How to convert remaining capabilities and resources into sustainable growth and profitability</span></div>
+  </div>
+
+  <h3>Synthesis</h3>
+  <ul>
+    <li>BlackBerry's decline was primarily driven by its inability to respond effectively to changing customer preferences and technological developments, compounded by weak product execution, dependence on its proprietary ecosystem, and leadership disagreements that delayed strategic decisions.</li>
+    <li>By 2017, management had begun addressing these weaknesses through restructuring and diversification, but software and services growth remained insufficient to replace declining traditional revenues.</li>
+    <li>The strategic challenge had shifted from defending the smartphone business to determining how remaining technological capabilities, intellectual property, customer relationships, and financial resources could generate sustainable growth and profitability.</li>
+  </ul>
+</section>
+
+<!-- SWOT -->
+<section role="tabpanel" id="p-swot" aria-labelledby="t-swot">
+  <h2 class="title">SWOT analysis</h2>
+  <div class="bottom"><strong>In brief</strong><p>BlackBerry's strengths lie in trust, security, patents and a growing software line. Its weaknesses are uncompetitive hardware, collapsing system access fees, heavy losses and small scale against security incumbents.</p></div>
+  <div class="grid2">
+    <div class="quad s"><h4>Strengths</h4><ul>
+      <li>Trusted security brand with governments and enterprises</li>
+      <li>Growing software/services line ($249M to $652M, FY2015 to FY2017, +161.8%)</li>
+      <li>Patent portfolio with proven licensing value</li>
+      <li>$815 million Qualcomm award; cost base cut under Chen</li>
+    </ul></div>
+    <div class="quad w"><h4>Weaknesses</h4><ul>
+      <li>Non-competitive hardware and no consumer ecosystem</li>
+      <li>Collapsing System Access Fees ($1,606M to $313M, −80.5%) and heavy losses ($1,206M net loss, FY2017)</li>
+      <li>Small scale versus Symantec, Microsoft, and Verizon</li>
+      <li>History of slow decisions and internal leadership conflict</li>
+    </ul></div>
+    <div class="quad o"><h4>Opportunities</h4><ul>
+      <li>Growth in enterprise mobility management and cybersecurity spending</li>
+      <li>Licensing the BlackBerry brand and name to OEMs (asset-light hardware), IoT</li>
+      <li>Embedded/automotive software (QNX heritage)</li>
+      <li>Secure communications niches; regulatory and privacy tailwinds favoring certified secure vendors</li>
+    </ul></div>
+    <div class="quad t"><h4>Threats</h4><ul>
+      <li>Entrenched enterprise-security incumbents (Symantec, Verizon, Imperva)</li>
+      <li>Continued erosion of SAF as carriers decommission BlackBerry services</li>
+      <li>Platform owners (Apple, Google) absorbing security features natively</li>
+      <li>Any re-entry into consumer hardware invites commoditization by Chinese vendors</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- TOWS -->
+<section role="tabpanel" id="p-tows" aria-labelledby="t-tows">
+  <h2 class="title">TOWS matrix</h2>
+  <div class="bottom"><strong>In brief</strong><p>The matrix points toward software, security and licensing, funded by disciplined cost control and away from capital-intensive hardware.</p></div>
+  <div class="grid2">
+    <div class="quad s"><h4>SO strategies (use strengths to seize opportunities)</h4><ul>
+      <li>Leverage security expertise and enterprise relationships to expand software solutions.</li>
+      <li>Commercialize patents through licensing.</li>
+      <li>Explore growth opportunities in QNX and connected technologies.</li>
+    </ul></div>
+    <div class="quad o"><h4>WO strategies (overcome weaknesses using opportunities)</h4><ul>
+      <li>Accelerate replacement of declining traditional revenues through software expansion, partnerships, and selective acquisitions.</li>
+      <li>Redeploy resources toward businesses with stronger growth potential.</li>
+    </ul></div>
+    <div class="quad w"><h4>ST strategies (use strengths to counter threats)</h4><ul>
+      <li>Differentiate through trusted security capabilities.</li>
+      <li>Use strategic partnerships and licensing to compete without significant hardware investment.</li>
+    </ul></div>
+    <div class="quad t"><h4>WT strategies (minimize weaknesses and avoid threats)</h4><ul>
+      <li>Rationalize underperforming operations and control operating costs.</li>
+      <li>Preserve liquidity while reducing exposure to highly competitive, capital-intensive businesses.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- ENVIRONMENT -->
+<section role="tabpanel" id="p-env" aria-labelledby="t-env">
+  <h2 class="title">Internal &amp; external environment</h2>
+  <div class="bottom"><strong>In brief</strong><p>Technological and social shifts broke the device business. Enterprise security software is competitive but has entry barriers that favor BlackBerry's certifications, government trust and compliance history.</p></div>
+
+  <h3>External environment: PESTLE</h3>
+  <div class="scroll"><table>
+    <tr><th>Factor</th><th>External factors</th><th>Strategic implications</th></tr>
+    <tr><td>Political</td><td>Government agencies and public institutions continued to require secure and reliable communication systems.</td><td>Government security requirements provided opportunities for BlackBerry to leverage its established reputation and relationships.</td></tr>
+    <tr><td>Economic</td><td>The smartphone market had become increasingly competitive, with large technology companies benefiting from scale and extensive product ecosystems.</td><td>BlackBerry faced pressure to generate returns in markets dominated by financially stronger competitors.</td></tr>
+    <tr><td>Social</td><td>Consumers shifted toward touchscreen smartphones, mobile applications, and integrated ecosystems. BYOD practices also became increasingly common among enterprise customers.</td><td>BlackBerry's traditional advantage in corporate devices weakened as purchasing preferences shifted toward consumer-oriented platforms.</td></tr>
+    <tr><td>Technological</td><td>Rapid innovation in mobile operating systems, application ecosystems, cybersecurity, and connected devices changed the basis of competition.</td><td>BlackBerry faced continued technological disruption but could potentially leverage its security expertise and QNX technology in emerging applications.</td></tr>
+    <tr><td>Legal</td><td>Patent protection, intellectual property disputes, and requirements for secure handling of information remained important. BlackBerry received an $815 million arbitration award against Qualcomm in April 2017.</td><td>Intellectual property represented a potential source of economic value, while litigation and compliance created costs and risks.</td></tr>
+    <tr><td>Environmental</td><td>Electronic waste, device lifecycles, and environmental concerns associated with electronics manufacturing affected the broader technology industry.</td><td>Relevant to hardware operations but not identified as a major driver of BlackBerry's strategic difficulties in the case.</td></tr>
+  </table></div>
+  <ul>
+    <li><b>Key finding:</b> Technological and Social factors were the most significant external pressures. The shift toward touchscreen devices, application ecosystems, and BYOD fundamentally weakened BlackBerry's traditional competitive advantages.</li>
+    <li>Developments in cybersecurity, connected devices, and embedded systems created opportunities beyond smartphones; BlackBerry's 2017 annual filing confirms its participation through enterprise security solutions, QNX, and technology licensing.</li>
+    <li>Political and Legal factors mattered because of security requirements and IP protection; Economic pressures reinforced the need for sustainable returns; Environmental factors had limited direct relevance.</li>
+  </ul>
+
+  <h3>External environment: Porter's Five Forces (devices vs. enterprise software)</h3>
+  <div class="scroll"><table>
+    <tr><th>Force</th><th>Smartphone devices</th><th>Enterprise security software</th></tr>
+    <tr><td>Rivalry</td><td>Extreme: Apple, Samsung, and Chinese vendors on open Android</td><td>High: Symantec ($3.77B security revenue), Verizon, Imperva, but fragmented by vertical</td></tr>
+    <tr><td>Buyer power</td><td>Extreme: carriers and consumers; zero switching loyalty shown post-2010</td><td>Moderate: enterprises face switching costs in the security stack</td></tr>
+    <tr><td>Supplier power</td><td>High: Qualcomm/MediaTek reference designs available to all, so no differentiation</td><td>Moderate: talent and certifications</td></tr>
+    <tr><td>Threat of substitutes</td><td>Absolute: any touchscreen Android/iOS device substitutes</td><td>Moderate: native platform security (Apple/Google) is the main substitute</td></tr>
+    <tr><td>Barriers to entry</td><td>Low for hardware assembly (exactly how Chinese vendors entered)</td><td>Moderate to high: certifications, compliance track records, federal approvals</td></tr>
+  </table></div>
+  <p>The devices industry scores badly on every force, which explains why revenue there fell regardless of product quality. The enterprise software industry is competitive but has entry barriers that play to BlackBerry's existing strengths. The five forces independently confirm the direction the segment data already suggested.</p>
+
+  <h3>Internal environment: VRIO</h3>
+  <div class="scroll"><table class="wide">
+    <tr><th>Resource</th><th>V</th><th>R</th><th>I</th><th>O</th><th>Implication</th></tr>
+    <tr><td>Security/encryption technology and certifications</td><td>Yes</td><td>Yes</td><td>Costly to imitate</td><td>No (organized around devices)</td><td>Temporary advantage only; organization must be re-oriented</td></tr>
+    <tr><td>Global secure network infrastructure (SAF base)</td><td>Yes (historic)</td><td>Yes</td><td>Hard to imitate</td><td>No (structured decline)</td><td>Non-durable: BYOD is dismantling exclusivity; milk, do not invest</td></tr>
+    <tr><td>Patent portfolio</td><td>Yes</td><td>Yes</td><td>Legally protected</td><td>Partial (licensing underdeveloped)</td><td>Durable cash source if a licensing organization is built</td></tr>
+    <tr><td>QNX embedded automotive software</td><td>Yes</td><td>Yes</td><td>Very hard to imitate</td><td>Under-leveraged</td><td>The most under-exploited durable advantage in the company</td></tr>
+    <tr><td>Brand (“secure”)</td><td>Yes</td><td>Yes</td><td>Hard to imitate</td><td>No (tied to failing hardware)</td><td>Transferable to software and licensing once repositioned</td></tr>
+    <tr><td>Handset design/manufacturing</td><td>No</td><td>No</td><td>Easily imitated</td><td>Yes</td><td>Competitive parity at best; a liability to keep</td></tr>
+  </table></div>
+  <p>The company kept organizing durable resources around a device business whose resource base was worth nothing. This reframes the problem from “build better phones” to “re-organize existing durable resources toward businesses where they are actually competitive.”</p>
+
+  <h3>Internal environment: assessment</h3>
+  <div class="scroll"><table>
+    <tr><th>Dimension</th><th>Assessment</th></tr>
+    <tr><td>Strategy</td><td>Shifting from device-led to software/services/licensing-led under Chen; cost discipline restored</td></tr>
+    <tr><td>Structure and leadership</td><td>Two-CEO structure removed; single CEO with clearer accountability, but a history of strategic paralysis to overcome</td></tr>
+    <tr><td>Finances</td><td>Revenue collapsed to $935 million (FY2017 case highlights) with a $1,206 million net loss; segment table shows total revenue of $1,374 million for FY2017 (see Annex note); $815 million Qualcomm award provides a one-time cash buffer</td></tr>
+    <tr><td>Products and technology</td><td>World-class security and encryption pedigree; secure messaging (BBM); QNX embedded software heritage; hardware now uncompetitive</td></tr>
+    <tr><td>Brand</td><td>Strong residual trust with governments, regulated industries, and enterprises (“secure” positioning)</td></tr>
+    <tr><td>Weaknesses</td><td>Shrinking developer base, no consumer ecosystem, loss of carrier leverage, revenue concentration in declining segments</td></tr>
+  </table></div>
+</section>
+
+<!-- ALTERNATIVES -->
+<section role="tabpanel" id="p-alt" aria-labelledby="t-alt">
+  <h2 class="title">Alternative courses of action</h2>
+  <div class="bottom"><strong>In brief</strong><p>Four alternatives were considered, differing in where BlackBerry's revenue would come from: enterprise customers, embedded technology and IP, a sale or merger, or device manufacturers.</p></div>
+
+  <div class="quad pick" style="margin-bottom:12px">
+    <h4>Alternative 1: Expand as an enterprise software and security company <span class="tag">Recommended</span></h4>
+    <p>Concentrate resources on becoming a major provider of enterprise software, cybersecurity, and secure communications solutions, accelerating organic development and pursuing selective acquisitions to expand the portfolio, customer base, and recurring software revenues.</p>
+    <p class="pc pro">Pros</p>
+    <ul>
+      <li><b>Leverages existing strengths:</b> builds on security expertise, enterprise customer relationships, and the established software portfolio.</li>
+      <li><b>Recurring revenue potential:</b> subscriptions and enterprise contracts could provide more predictable revenues and higher margins than hardware.</li>
+      <li><b>Established growth momentum:</b> Software &amp; Services revenue increased by 161.8% between FY2015 and FY2017.</li>
+    </ul>
+    <p class="pc con">Cons</p>
+    <ul>
+      <li><b>Intense competition:</b> established enterprise software and cybersecurity providers have greater scale and resources.</li>
+      <li><b>High investment requirements:</b> product development, acquisitions, and customer acquisition would require substantial financial commitments.</li>
+      <li><b>Concentration risk:</b> heavy dependence on enterprise software increases exposure if the business fails to achieve sufficient market penetration.</li>
+    </ul>
+  </div>
+
+  <div class="quad" style="margin-bottom:12px">
+    <h4>Alternative 2: Focus on embedded technology and IP licensing</h4>
+    <p>Reposition primarily as a technology and IP provider concentrating on QNX, automotive applications, connected devices, and patent licensing, commercializing proprietary technologies through OEM agreements, licensing arrangements, and strategic partnerships.</p>
+    <p class="pc pro">Pros</p>
+    <ul>
+      <li><b>Leverages proprietary technology:</b> QNX and the patent portfolio provide opportunities beyond the smartphone market.</li>
+      <li><b>Lower capital intensity:</b> licensing and embedded software could generate revenues without large-scale hardware manufacturing.</li>
+      <li><b>Growth opportunities:</b> adoption of connected vehicles and IoT could expand demand for embedded software.</li>
+    </ul>
+    <p class="pc con">Cons</p>
+    <ul>
+      <li><b>Dependence on OEM adoption:</b> growth depends on manufacturers selecting and integrating BlackBerry technologies.</li>
+      <li><b>Long commercialization cycles:</b> automotive and embedded systems require extensive development, testing, and qualification.</li>
+      <li><b>Uncertain revenue scale:</b> licensing income and royalties may not grow sufficiently or quickly enough to replace declining revenues.</li>
+    </ul>
+  </div>
+
+  <div class="quad" style="margin-bottom:12px">
+    <h4>Alternative 3: Pursue a strategic sale or merger</h4>
+    <p>Pursue a sale or merger with a larger technology, enterprise software, or cybersecurity company able to integrate BlackBerry's security technologies, IP, and customer relationships, maximizing shareholder value through a negotiated transaction rather than an independent turnaround.</p>
+    <p class="pc pro">Pros</p>
+    <ul>
+      <li><b>Potential shareholder value realization:</b> immediate value and reduced exposure to future turnaround risks.</li>
+      <li><b>Access to greater resources:</b> a larger company could provide capital, distribution, and organizational capabilities.</li>
+      <li><b>Operational synergies:</b> combining technologies and eliminating duplicated functions could improve cost efficiency.</li>
+    </ul>
+    <p class="pc con">Cons</p>
+    <ul>
+      <li><b>Loss of independence:</b> surrenders control over future strategic direction and long-term upside.</li>
+      <li><b>Valuation risk:</b> declining performance could weaken the negotiating position and result in an unattractive price.</li>
+      <li><b>Execution and regulatory risks:</b> regulatory scrutiny, integration challenges, and uncertain buyer interest.</li>
+    </ul>
+  </div>
+
+  <div class="quad" style="margin-bottom:12px">
+    <h4>Alternative 4: Become a security technology supplier to global device manufacturers</h4>
+    <p>License and integrate security technologies, encrypted communications, and enterprise device management into third-party platforms such as Samsung and potentially Apple, expanding the existing Samsung collaboration while pursuing additional OEM customers.</p>
+    <p class="pc pro">Pros</p>
+    <ul>
+      <li><b>Leverages security expertise:</b> capitalizes on reputation and proprietary security technologies without returning to smartphone manufacturing.</li>
+      <li><b>Access to established device ecosystems:</b> larger installed bases and global distribution channels.</li>
+      <li><b>Recurring licensing opportunities:</b> licensing, integration services, and enterprise security agreements across multiple platforms.</li>
+    </ul>
+    <p class="pc con">Cons</p>
+    <ul>
+      <li><b>Strong OEM bargaining power:</b> Apple and Samsung may demand unfavorable commercial terms.</li>
+      <li><b>Limited differentiation:</b> major manufacturers already invest heavily in proprietary security.</li>
+      <li><b>Partner dependence:</b> growth depends on OEM adoption and partnership continuity.</li>
+    </ul>
+  </div>
+
+  <h3>Strategic distinction among alternatives</h3>
+  <div class="scroll"><table>
+    <tr><th>Alternative</th><th>Primary business focus</th><th>Main revenue driver</th></tr>
+    <tr><td><b>1. Enterprise software &amp; security</b></td><td>Enterprise customers</td><td>Software subscriptions and service contracts</td></tr>
+    <tr><td>2. Embedded technology &amp; IP</td><td>Automotive and connected-device manufacturers</td><td>QNX royalties and technology licensing</td></tr>
+    <tr><td>3. Sale or merger</td><td>Corporate acquisition</td><td>Shareholder proceeds from the transaction</td></tr>
+    <tr><td>4. Device security technology supplier</td><td>Smartphone and device manufacturers</td><td>Security licensing and integration agreements</td></tr>
+  </table></div>
+</section>
+
+<!-- ANALYSIS -->
+<section role="tabpanel" id="p-ana" aria-labelledby="t-ana">
+  <h2 class="title">Analysis of alternatives</h2>
+  <div class="bottom"><strong>Recommendation</strong><p>Alternative 1, Enterprise Software &amp; Security Expansion, scores highest at 4.60 out of 5.00. A sale shows the highest estimated value ($3.22B), but it depends on finding a buyer at that price and gives up future growth.</p></div>
+
+  <h3>Comparative projected financial statement, FY2018 (USD millions)</h3>
+  <div class="scroll"><table>
+    <tr><th>Financial item</th><th class="n">Alt 1<br>Software &amp; Security</th><th class="n">Alt 2<br>Embedded Tech &amp; IP</th><th class="n">Alt 3<br>Sale / Merger</th><th class="n">Alt 4<br>Device Security</th></tr>
+    <tr><td>Revenue</td><td class="n">1,505</td><td class="n">1,440</td><td class="n">1,309</td><td class="n">1,466</td></tr>
+    <tr><td>Revenue growth</td><td class="n">15%</td><td class="n">10%</td><td class="n">0%</td><td class="n">12%</td></tr>
+    <tr><td>Cost of revenue</td><td class="n neg">(602)</td><td class="n neg">(576)</td><td class="n neg">(524)</td><td class="n neg">(616)</td></tr>
+    <tr><td><b>Gross profit</b></td><td class="n"><b>903</b></td><td class="n"><b>864</b></td><td class="n"><b>785</b></td><td class="n"><b>850</b></td></tr>
+    <tr><td>Gross margin</td><td class="n">60.0%</td><td class="n">60.0%</td><td class="n">60.0%</td><td class="n">58.0%</td></tr>
+    <tr><td>Operating expenses</td><td class="n neg">(950)</td><td class="n neg">(800)</td><td class="n neg">(700)</td><td class="n neg">(820)</td></tr>
+    <tr><td><b>Operating profit (loss)</b></td><td class="n neg"><b>(47)</b></td><td class="n"><b>64</b></td><td class="n"><b>85</b></td><td class="n"><b>30</b></td></tr>
+    <tr><td>Operating margin</td><td class="n neg">-3.1%</td><td class="n">4.4%</td><td class="n">6.5%</td><td class="n">2.0%</td></tr>
+    <tr><td>Strategic investment</td><td class="n neg">(250)</td><td class="n neg">(150)</td><td class="n">—</td><td class="n neg">(120)</td></tr>
+    <tr><td>Acquisition enterprise value</td><td class="n">—</td><td class="n">—</td><td class="n">2,500</td><td class="n">—</td></tr>
+    <tr><td>Cash &amp; short-term investments</td><td class="n">—</td><td class="n">—</td><td class="n">1,378</td><td class="n">—</td></tr>
+    <tr><td>Less: debt</td><td class="n">—</td><td class="n">—</td><td class="n neg">(591)</td><td class="n">—</td></tr>
+    <tr><td>Estimated equity value</td><td class="n">—</td><td class="n">—</td><td class="n">3,287</td><td class="n">—</td></tr>
+    <tr><td>Transaction costs</td><td class="n">—</td><td class="n">—</td><td class="n neg">(66)</td><td class="n">—</td></tr>
+    <tr><td><b>Net shareholder proceeds</b></td><td class="n">—</td><td class="n">—</td><td class="n"><b>3,221</b></td><td class="n">—</td></tr>
+  </table></div>
+  <p class="src">All FY2018 operating projections, the acquisition enterprise value, strategic investments, and transaction costs are hypothetical. Alt 3 operating figures represent an illustrative post-merger scenario. The $1,378M liquid holdings and $591M debt are drawn from the case's FY2017 balance sheet.</p>
+  <ul>
+    <li>Alternative 1 delivers the highest revenue growth but requires the largest investment and remains operating-loss-making.</li>
+    <li>Alternative 2 generates the strongest operating profit among the independent growth strategies; Alternative 4 produces a smaller operating profit with lower assumed investment.</li>
+    <li>Alternative 3 provides an estimated $3.22 billion in net shareholder proceeds, but this is a one-time equity realization, whereas the other alternatives' operating profits are annual results. They cannot be compared directly.</li>
+  </ul>
+
+  <h3>Comparative financial valuation, FY2018–FY2020 (USD millions)</h3>
+  <div class="scroll"><table>
+    <tr><th>Financial measure</th><th class="n">Alt 1</th><th class="n">Alt 2</th><th class="n">Alt 3</th><th class="n">Alt 4</th></tr>
+    <tr><td>Initial investment</td><td class="n neg">(250)</td><td class="n neg">(150)</td><td class="n">—</td><td class="n neg">(120)</td></tr>
+    <tr><td>FY2018 cash flow</td><td class="n">50</td><td class="n">80</td><td class="n">—</td><td class="n">60</td></tr>
+    <tr><td>FY2019 cash flow</td><td class="n">120</td><td class="n">130</td><td class="n">—</td><td class="n">110</td></tr>
+    <tr><td>FY2020 cash flow</td><td class="n">200</td><td class="n">190</td><td class="n">—</td><td class="n">170</td></tr>
+    <tr><td>Terminal value</td><td class="n">2,800</td><td class="n">2,500</td><td class="n">—</td><td class="n">2,400</td></tr>
+    <tr><td>PV of future cash flows &amp; terminal value</td><td class="n">2,416</td><td class="n">2,273</td><td class="n">—</td><td class="n">2,165</td></tr>
+    <tr><td>Less: initial investment</td><td class="n neg">(250)</td><td class="n neg">(150)</td><td class="n">—</td><td class="n neg">(120)</td></tr>
+    <tr><td><b>Estimated shareholder value</b></td><td class="n"><b>2,166</b></td><td class="n"><b>2,123</b></td><td class="n"><b>3,221</b></td><td class="n"><b>2,045</b></td></tr>
+  </table></div>
+  <p class="src">Assumptions: 10% discount rate; three-year projection period; hypothetical terminal values and acquisition price. Alternative 3 represents immediate estimated net proceeds from a sale.</p>
+  <ul>
+    <li><b>Alt 1, Enterprise Software &amp; Security:</b> highest initial investment ($250M) but rising cash flows as software expands; estimated value $2.17B.</li>
+    <li><b>Alt 2, Embedded Technology &amp; IP:</b> $150M investment; estimated value $2.12B, commercializing existing technologies without substantial hardware investment.</li>
+    <li><b>Alt 3, Sale or Merger:</b> highest estimated value at $3.22B, assuming a willing buyer at the proposed price; shareholders surrender future ownership and returns.</li>
+    <li><b>Alt 4, Security Technology Supplier:</b> lowest investment ($120M); estimated value $2.05B, exposed to OEM bargaining power and partner dependence.</li>
+    <li>These valuations are sensitive to assumed terminal values, cash flows, and acquisition price, and the terminal values have not yet been derived from a consistent valuation formula. Treat them as a preliminary comparison.</li>
+  </ul>
+
+  <h3>Weighted scoring model</h3>
+  <div class="scroll"><table>
+    <tr><th>Criterion</th><th class="n">Weight</th><th>Basis for evaluation</th></tr>
+    <tr><td>Financial viability</td><td class="n">40%</td><td>Potential shareholder value, profitability, and investment requirements</td></tr>
+    <tr><td>Strategic fit</td><td class="n">35%</td><td>Ability to leverage BlackBerry's existing capabilities, technologies, and resources</td></tr>
+    <tr><td>Growth &amp; sustainability</td><td class="n">25%</td><td>Potential to generate long-term growth and maintain a competitive position</td></tr>
+  </table></div>
+  <p>Financial viability carries the highest weight given declining revenues and continuing losses; strategic fit emphasizes maximizing existing capabilities; growth and sustainability assesses long-term potential. Ratings use a 1 (very poor) to 5 (excellent) scale.</p>
+
+  <div class="scores" aria-label="Weighted scores">
+    <div class="sc pick"><b>4.60</b><span>Alt 1: Software &amp; Security</span><i>Rank 1</i></div>
+    <div class="sc"><b>4.00</b><span>Alt 2: QNX &amp; IP</span><i>Rank 2</i></div>
+    <div class="sc"><b>3.95</b><span>Alt 4: OEM Security</span><i>Rank 3</i></div>
+    <div class="sc"><b>3.80</b><span>Alt 3: Sale / Merger</span><i>Rank 4</i></div>
+  </div>
+  <div class="scroll"><table>
+    <tr><th>Criterion</th><th class="n">Weight</th><th class="n">Alt 1</th><th class="n">Alt 2</th><th class="n">Alt 3</th><th class="n">Alt 4</th></tr>
+    <tr><td>Financial viability</td><td class="n">40%</td><td class="n">4</td><td class="n">4</td><td class="n">5</td><td class="n">3</td></tr>
+    <tr><td>Strategic fit</td><td class="n">35%</td><td class="n">5</td><td class="n">4</td><td class="n">3</td><td class="n">5</td></tr>
+    <tr><td>Growth &amp; sustainability</td><td class="n">25%</td><td class="n">5</td><td class="n">4</td><td class="n">3</td><td class="n">4</td></tr>
+    <tr><td><b>Weighted score</b></td><td class="n"><b>100%</b></td><td class="n"><b>4.60</b></td><td class="n"><b>4.00</b></td><td class="n"><b>3.80</b></td><td class="n"><b>3.95</b></td></tr>
+    <tr><td><b>Rank</b></td><td class="n"></td><td class="n"><b>1</b></td><td class="n"><b>2</b></td><td class="n"><b>4</b></td><td class="n"><b>3</b></td></tr>
+  </table></div>
+  <p class="src">Weighted score = sum of (criterion weight × alternative rating).</p>
+
+  <h3>Evaluation results</h3>
+  <ul>
+    <li><b>Alt 1 (4.60):</b> strong strategic fit built on enterprise security capabilities, customer relationships, and a growing software business; substantial investment, but an opportunity for recurring revenues and sustainable profitability.</li>
+    <li><b>Alt 2 (4.00):</b> leverages QNX and IP with lower investment; growth depends on licensing agreements and the pace of adoption in automotive and embedded markets.</li>
+    <li><b>Alt 4 (3.95):</b> builds on security expertise and access to device makers; depends heavily on partnerships with manufacturers that may develop competing solutions internally.</li>
+    <li><b>Alt 3 (3.80):</b> highest estimated immediate value, but execution depends on securing a buyer at an acceptable valuation; its growth score reflects uncertainty over future value to shareholders after a transaction.</li>
+  </ul>
+</section>
+
+<!-- IMPLEMENTATION -->
+<section role="tabpanel" id="p-imp" aria-labelledby="t-imp">
+  <h2 class="title">Decision &amp; implementation plan</h2>
+  <div class="bottom"><strong>Decision</strong><p>Reposition BlackBerry as an enterprise software and security company, with profitability and cash generation taking priority over market share expansion. Implement over FY2018 to FY2020 with phased, milestone-based funding.</p></div>
+
+  <h3>Recommendation</h3>
+  <ul>
+    <li>Alternative 1 gives BlackBerry the strongest opportunity to return to sustainable growth and profitability by building on its strengths in enterprise security, software, and customer relationships, rather than attempting to regain its position in smartphones.</li>
+    <li>Although Alternative 3 offers the highest estimated value under the financial assumptions, Alternative 1 lets BlackBerry retain ownership of its technologies and participate in future growth, with greater alignment to its capabilities and long-term direction.</li>
+    <li>Prioritize enterprise software subscriptions, stronger security solutions, and existing corporate customers to generate recurring revenues. Phase investments and tie them to measurable improvements in revenue growth, operating profitability, and cash flow.</li>
+  </ul>
+
+  <h3>Implementation roadmap</h3>
+  <ul class="tl">
+    <li><b>FY2018 Q1–Q2 · CEO, CFO, Product Management</b><strong class="tl-h">Evaluate and prioritize the software portfolio.</strong> Assess products on revenue, margins, demand, and competitive strength; prioritize enterprise mobility management, endpoint security, and secure communications; identify products for investment, consolidation, or discontinuation. <em>Outcome: resources concentrated on software businesses with the strongest commercial potential.</em></li>
+    <li><b>FY2018 Q3–Q4 · CTO, Product Management</b><strong class="tl-h">Strengthen product competitiveness.</strong> Improve integration across enterprise solutions; ensure compatibility with Android, iOS, and other environments; develop subscription packages by customer size, security requirements, and service level; test with existing customers before broader rollout. <em>Outcome: more competitive solutions that address enterprise security needs beyond BlackBerry devices.</em></li>
+    <li><b>FY2019 Q1–Q2 · Enterprise Sales</b><strong class="tl-h">Expand within the existing customer base.</strong> Identify enterprise and government accounts for additional subscriptions; prioritize renewals, cross-selling, and migration of legacy customers; assign account-level revenue and retention targets. <em>Outcome: higher recurring revenues from established relationships.</em></li>
+    <li><b>FY2019 Q3–Q4 · Sales, Business Development</b><strong class="tl-h">Acquire new enterprise customers.</strong> Target financial services, healthcare, and government; strengthen partnerships with resellers, systems integrators, and managed-service providers; focus on customers securing multiple devices and operating systems. <em>Outcome: broader customer base and reduced dependence on legacy customers.</em></li>
+    <li><b>FY2020 · CEO, CFO, Product Management</b><strong class="tl-h">Scale profitable operations.</strong> Increase investment in products with strong growth, retention, and margins; reduce spending on underperformers; improve onboarding, support, and renewals to control cost-to-serve. <em>Outcome: improved operating profitability and sustainable cash generation.</em></li>
+  </ul>
+
+  <h3>Key implementation considerations</h3>
+  <ul>
+    <li><b>Prioritize enterprise security rather than compete across the entire cybersecurity market.</b> Build on enterprise mobility management, secure communications, and device security; expanding into unrelated segments would require new capabilities against more established competitors.</li>
+    <li><b>Make BlackBerry software independent of BlackBerry hardware.</b> Customers must be able to use BlackBerry security across different devices and operating systems, given widespread Android and iOS adoption in corporate environments.</li>
+    <li><b>Use existing customers as the initial source of growth.</b> Identify customers already using BlackBerry software, assess their additional security needs, and offer relevant solutions through cross-selling and subscription upgrades.</li>
+    <li><b>Manage the decline of legacy businesses without weakening the software business.</b> Keep cutting hardware and legacy service costs, but protect software engineering, security expertise, and customer support; report software performance separately from legacy operations.</li>
+  </ul>
+
+  <h3>Financial implementation and controls</h3>
+  <p>The financial evaluation assumed an illustrative strategic investment of US$250 million (not an amount established by the case). Release funding by milestone and adjust to available liquidity and operating performance.</p>
+  <div class="scroll"><table>
+    <tr><th>Stage</th><th>Funding priority</th><th>Condition for further investment</th></tr>
+    <tr><td>FY2018</td><td>Product integration, software development, and customer retention</td><td>Completion of portfolio review, validated customer demand, and acceptable development costs</td></tr>
+    <tr><td>FY2019</td><td>Enterprise sales expansion, customer acquisition, and channel partnerships</td><td>Demonstrated subscription growth, customer retention, and improving sales productivity</td></tr>
+    <tr><td>FY2020</td><td>Scaling successful products and improving operating efficiency</td><td>Evidence of improving margins and a credible path to positive operating cash flow</td></tr>
+  </table></div>
+
+  <h3>Performance monitoring (quarterly review)</h3>
+  <div class="scroll"><table>
+    <tr><th>KPI</th><th>What management should monitor</th><th>Action if performance falls short</th></tr>
+    <tr><td>Software revenue growth</td><td>Growth in software revenues relative to the decline in legacy businesses</td><td>Reassess product priorities and sales execution</td></tr>
+    <tr><td>Customer retention and recurring revenue</td><td>Subscription renewals, customer losses, and expansion of existing contracts</td><td>Address product gaps and strengthen key-account retention</td></tr>
+    <tr><td>Operating profitability</td><td>Software margins, operating expenses, and contribution to company profitability</td><td>Reduce spending on low-return products and activities</td></tr>
+    <tr><td>Operating cash flow</td><td>Cash generated by operations relative to ongoing investment requirements</td><td>Defer discretionary expansion and preserve liquidity</td></tr>
+  </table></div>
+
+  <h3>Contingency plan</h3>
+  <div class="bottom warn"><strong>If Alternative 1 underperforms</strong><p>Shift to Alternative 2: Embedded Technology &amp; IP Licensing, ranked second in the weighted scoring model.</p></div>
+  <ul>
+    <li>Conduct a formal strategic review at the end of FY2019 to assess whether enterprise software expansion is generating sufficient returns.</li>
+    <li>If performance remains below expectations, gradually redirect investment toward commercializing QNX, expanding licensing with automotive and embedded-device manufacturers, and monetizing the IP portfolio.</li>
+    <li>Make the transition selective: retain profitable enterprise software operations while reducing investment in underperforming products.</li>
+  </ul>
+</section>
+
+<!-- ANNEX -->
+<section role="tabpanel" id="p-annex" aria-labelledby="t-annex">
+  <h2 class="title">Annex</h2>
+  <div class="bottom"><strong>In brief</strong><p>External evidence of acquisitions and partnerships that support the recommended strategy, followed by references.</p></div>
+
+  <h3>Acquisitions and partnerships supporting the recommended strategy</h3>
+  <div class="scroll"><table>
+    <tr><th>Move</th><th>Year</th><th>Purpose in the strategy</th></tr>
+    <tr><td>Secusmart (voice/data encryption)</td><td>2014</td><td>Deepen secure-communications strength [9]</td></tr>
+    <tr><td>WatchDox (secure file sync and share)</td><td>2015</td><td>Product development in content security; FIPS 140-2 certified [7]</td></tr>
+    <tr><td>AtHoc (crisis communications)</td><td>2015</td><td>Government and defense vertical product [10]</td></tr>
+    <tr><td>Good Technology (EMM)</td><td>2015</td><td>$425 million; multi-OS EMM, majority of activations on iOS [5][6]</td></tr>
+    <tr><td>Encryption (cybersecurity services)</td><td>2016</td><td>Services capability [9]</td></tr>
+    <tr><td>TCL global brand and software license</td><td>2016</td><td>Convert hardware to a royalty model; exit manufacturing economics [3][4]</td></tr>
+    <tr><td>Cisco long-term patent cross-license</td><td>2015</td><td>Monetize the patent portfolio [10]</td></tr>
+    <tr><td>QNX automotive expansion</td><td>ongoing</td><td>Second growth engine; 50M+ vehicles by 2015, 120M by 2018, 275M+ later [11][12][13]</td></tr>
+  </table></div>
+
+  <h3>References</h3>
+  <ul class="refs">
+    <li>The Verge, “Chinese company TCL buys global rights to BlackBerry phone brand,” December 16, 2016. <a href="https://www.theverge.com/2016/12/16/13979914/blackberry-global-branding-phone-rights-tcl">theverge.com</a></li>
+    <li>SecurityWeek, “BlackBerry Completes Acquisition of Good Technology.” <a href="https://www.securityweek.com/blackberry-completes-acquisition-good-technology">securityweek.com</a></li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var fills=document.querySelectorAll('.pe .fill');
+  requestAnimationFrame(function(){fills.forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});});
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(t,focus){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.setAttribute('aria-selected',on);
+      x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on);
+    });
+    if(focus) t.focus();
+    t.scrollIntoView({block:'nearest',inline:'nearest'});
+    var nav=document.querySelector('nav');
+    if(window.scrollY>nav.offsetTop) window.scrollTo({top:nav.offsetTop,behavior:'auto'});
+    try{localStorage.setItem('bb-tab',t.id)}catch(e){}
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'){e.preventDefault();select(tabs[(i+1)%tabs.length],true)}
+      if(e.key==='ArrowLeft'){e.preventDefault();select(tabs[(i-1+tabs.length)%tabs.length],true)}
+    });
+  });
+  try{var s=localStorage.getItem('bb-tab'); if(s&&document.getElementById(s)) select(document.getElementById(s));}catch(e){}
+})();
+</script>
+</body>
+</html>
