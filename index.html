@@ -193,6 +193,14 @@ body.no-uh mark.uh{background:transparent;cursor:auto}
 .hl-bar .sw.y{background:#F2C94C}.hl-bar .sw.g{background:#5FBFA5}.hl-bar .sw.p{background:#EE7A9A}
 .hl-bar .txt.danger{color:var(--red)}
 @media print{.hl-fab,.hl-menu,.hl-bar{display:none!important}}
+.fa{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--jade);border-radius:8px;padding:12px 16px 6px;margin:2px 0 24px}
+.fa-h{display:block;font-family:var(--serif,inherit);font-size:1rem;color:var(--jade);margin-bottom:4px}
+.fa ul{margin:4px 0 6px}
+.ratios table{min-width:820px}
+.ratios td.frm{color:var(--muted);font-size:.85rem;max-width:220px}
+.ratios td.calc{white-space:nowrap;font-variant-numeric:tabular-nums}
+.ratios td.calc span{display:block;color:var(--muted);font-size:.85rem}
+.ratios td.calc b{display:block}
 </style>
 </head>
 <body>
@@ -455,6 +463,14 @@ body.no-uh mark.uh{background:transparent;cursor:auto}
   </table></div>
   <p class="src">The FY2015 and FY2016 profit figures in Exhibit 2 equal operating profit in Exhibit 3.</p>
 
+  <div class="fa"><strong class="fa-h">Analysis: growth is steady, profit is not</strong>
+    <ul>
+      <li><b>Traffic grew every single year:</b> passengers rose 4.1 times, from 12.5M to 51.9M, a compound growth rate of about 13.8% a year, including through the 2008–2009 recession.</li>
+      <li><b>Profit swings sharply with fuel and the economy:</b> it fell 48.8% in FY2009 (AED 4,451M to 2,278M) and 66.7% in FY2012 (AED 5,443M to 1,813M), even though passengers kept rising.</li>
+      <li><b>Profit per passenger has not kept pace:</b> about AED 161 per passenger in FY2016 versus AED 209 in FY2005. The record profit comes from scale, not from earning more on each traveller.</li>
+      <li><b>Implication:</b> FY2016's record should not be read as a return to strength; history shows profit can halve in a year when fuel or demand turns.</li>
+    </ul></div>
+
   <h3>Income statement (Exhibit 3)</h3>
   <div class="scroll"><table>
     <tr><th>AED millions</th><th class="n">FY2016</th><th class="n">FY2015</th></tr>
@@ -471,6 +487,16 @@ body.no-uh mark.uh{background:transparent;cursor:auto}
     <tr><td>Attributable to non-controlling interests</td><td class="n">193</td><td class="n">173</td></tr>
     <tr class="total"><td>Attributable to Emirates' owner</td><td class="n">7,125</td><td class="n">4,555</td></tr>
   </table></div>
+
+  <div class="fa"><strong class="fa-h">Analysis: a cost-led profit jump</strong>
+    <ul>
+      <li><b>Revenue fell AED 3,228M (−3.7%)</b> and other operating income fell AED 547M (−26.2%), a combined drop of AED 3,775M.</li>
+      <li><b>Operating costs fell AED 6,212M (−7.5%)</b>, more than offsetting the revenue drop. Costs consumed 91.9% of revenue, down from 95.6%. The case attributes the period to falling oil prices, so fuel is the most likely driver.</li>
+      <li><b>Operating profit rose AED 2,437M (+41.4%)</b>, which is exactly the cost saving minus the income lost. None of the improvement came from higher sales.</li>
+      <li><b>Financing costs eased:</b> net finance costs fell from AED 1,274M to 1,109M (−13%), helped by more finance income.</li>
+      <li><b>Tax is negligible:</b> income tax of AED 45M is about 0.6% of pre-tax profit, reflecting the low-tax UAE base, a point U.S. rivals use in their competitive-advantage arguments.</li>
+      <li><b>Implication:</b> if fuel prices rise again, the margin gain reverses unless revenue per passenger recovers.</li>
+    </ul></div>
 
   <h3>Balance sheet (Exhibit 4)</h3>
   <div class="scroll"><table>
@@ -520,6 +546,18 @@ body.no-uh mark.uh{background:transparent;cursor:auto}
     <tr class="total"><td>Total equity and liabilities</td><td class="n">119,179</td><td class="n">111,362</td></tr>
   </table></div>
 
+  <div class="fa"><strong class="fa-h">Analysis: a capital-heavy, leveraged but liquid balance sheet</strong>
+    <ul>
+      <li><b>Asset base grew 7.0%</b> to AED 119,179M while revenue fell, so each dirham of assets generated less revenue.</li>
+      <li><b>Aircraft dominate:</b> property, plant and equipment is 69.5% of total assets, typical of an airline and the reason fleet decisions drive returns.</li>
+      <li><b>Shift toward leasing:</b> advance lease rentals nearly tripled (AED 920M to 2,580M) as Emirates sold aircraft (AED 6,535M of proceeds in the cash flow) and leased capacity instead, lightening ownership of the fleet.</li>
+      <li><b>Collections slowed:</b> trade receivables rose 8.5% while revenue fell; days sales outstanding rose from about 36 to 41 days.</li>
+      <li><b>Strong cash buffer:</b> cash rose 44.9% to AED 12,165M; with short-term deposits, liquid funds of AED 19,988M equal 16.8% of total assets.</li>
+      <li><b>Debt is moving short-term:</b> current borrowings jumped 72% (AED 5,382M to 9,260M) while non-current borrowings fell, so more debt falls due within a year. This is the main reason the current ratio stays below 1.</li>
+      <li><b>Equity strengthened:</b> total equity rose 14.6% as retained earnings grew AED 5,034M (owner profit of AED 7,125M less the AED 2,100M dividend). Other reserves fell by about AED 1,011M while derivative liabilities rose, consistent with hedging losses when oil prices fell.</li>
+      <li><b>Negative working capital is structural:</b> current liabilities exceed current assets by AED 7,097M, largely because airlines hold large trade payables and customer advances; manageable given the cash buffer.</li>
+    </ul></div>
+
   <h3>Cash flow statement (Exhibit 5)</h3>
   <div class="scroll"><table>
     <tr><th>AED millions</th><th class="n">FY2016</th><th class="n">FY2015</th></tr>
@@ -565,33 +603,68 @@ body.no-uh mark.uh{background:transparent;cursor:auto}
     <tr class="total"><td>Cash and cash equivalents at end of year</td><td class="n">12,165</td><td class="n">8,393</td></tr>
   </table></div>
 
+  <div class="fa"><strong class="fa-h">Analysis: strong cash generation funds growth and dividends</strong>
+    <ul>
+      <li><b>Cash earnings exceed accounting profit:</b> operating cash flow of AED 14,105M (+6.3%) is 1.9 times profit for the year, mainly because depreciation of AED 8,000M is a non-cash charge.</li>
+      <li><b>Working capital absorbed cash:</b> the AED 2,234M rise in receivables and advance lease rentals was the biggest drag on operating cash.</li>
+      <li><b>Still investing above depreciation:</b> capital spending of AED 9,878M is 1.23 times depreciation, so the fleet is still expanding, though capex fell 5.3% from FY2015.</li>
+      <li><b>Aircraft sales cut net investment:</b> AED 6,535M of proceeds from selling property and equipment (up 88%) reduced net investing outflow to AED 2,361M from 6,411M.</li>
+      <li><b>Free cash flow is positive:</b> AED 4,227M after capex, and about AED 2,009M after all dividends.</li>
+      <li><b>Net deleveraging:</b> Emirates repaid AED 5,758M of loans and lease liabilities against only AED 1,213M of new loans.</li>
+      <li><b>Cash flows to the owner, not from it:</b> the dividend to the Government of Dubai rose 2.4 times to AED 2,100M (about 29% of owner profit). This supports Clark's rebuttal of the subsidy allegations.</li>
+      <li><b>Result:</b> cash and cash equivalents rose AED 3,769M, versus AED 590M the year before.</li>
+    </ul></div>
+
   <h3>Key financial ratios</h3>
-  <div class="scroll"><table>
-    <tr><th>Metric</th><th class="n">FY2016</th><th class="n">FY2015</th><th>Reading</th></tr>
-    <tr class="grp"><td colspan="4">Growth and profitability</td></tr>
-    <tr><td>Revenue</td><td class="n">83,500</td><td class="n">86,728</td><td><span class="badge poor">−3.7%</span></td></tr>
-    <tr><td>Passengers (thousands)</td><td class="n">51,853</td><td class="n">49,292</td><td><span class="badge good">+5.2%</span></td></tr>
-    <tr><td>Revenue per passenger (AED)</td><td class="n">1,610</td><td class="n">1,760</td><td><span class="badge poor">−8.5%</span> Yield erosion</td></tr>
-    <tr><td>Operating costs</td><td class="n">76,714</td><td class="n">82,926</td><td><span class="badge good">−7.5%</span> Mainly fuel</td></tr>
-    <tr><td>Operating margin</td><td class="n">10.0%</td><td class="n">6.8%</td><td>Improved, cost-led</td></tr>
-    <tr><td>Net profit margin</td><td class="n">8.8%</td><td class="n">5.5%</td><td>Improved</td></tr>
-    <tr><td>Return on assets</td><td class="n">6.1%</td><td class="n">4.2%</td><td>Improved</td></tr>
-    <tr><td>Return on equity</td><td class="n">22.6%</td><td class="n">16.7%</td><td>Strong</td></tr>
-    <tr><td>Asset turnover</td><td class="n">0.70×</td><td class="n">0.78×</td><td><span class="badge watch">Weaker</span></td></tr>
-    <tr class="grp"><td colspan="4">Liquidity and leverage</td></tr>
-    <tr><td>Current ratio</td><td class="n">0.82</td><td class="n">0.80</td><td><span class="badge watch">Below 1.0</span></td></tr>
-    <tr><td>Cash and short-term deposits</td><td class="n">19,988</td><td class="n">16,885</td><td>Healthy buffer</td></tr>
-    <tr><td>Borrowings and lease liabilities</td><td class="n">50,105</td><td class="n">47,808</td><td>Up 4.8%</td></tr>
-    <tr><td>Debt to equity</td><td class="n">1.55×</td><td class="n">1.69×</td><td>Improving</td></tr>
-    <tr><td>Liabilities to assets</td><td class="n">72.8%</td><td class="n">74.6%</td><td>Highly leveraged, improving</td></tr>
-    <tr><td>Interest coverage</td><td class="n">6.3×</td><td class="n">4.1×</td><td>Comfortable</td></tr>
-    <tr class="grp"><td colspan="4">Cash flow</td></tr>
-    <tr><td>Operating cash flow</td><td class="n">14,105</td><td class="n">13,265</td><td>Strong</td></tr>
-    <tr><td>Capex (PPE and intangibles)</td><td class="n">9,878</td><td class="n">10,426</td><td>Heavy fleet investment</td></tr>
-    <tr><td>Free cash flow</td><td class="n">4,227</td><td class="n">2,839</td><td><span class="badge good">Positive</span></td></tr>
-    <tr><td>Dividend paid to owner</td><td class="n">2,100</td><td class="n">869</td><td>Rising payout</td></tr>
+  <p class="src">All amounts in AED millions unless stated. Computations use year-end figures from Exhibits 2 to 5.</p>
+  <div class="scroll ratios"><table>
+    <tr><th>Ratio</th><th>Formula</th><th>FY2016 computation</th><th>FY2015 computation</th><th>Reading</th></tr>
+    <tr class="grp"><td colspan="5">Growth and unit revenue</td></tr>
+    <tr><td><b>Revenue growth</b></td><td class="frm">(Revenue FY2016 − Revenue FY2015) ÷ Revenue FY2015</td><td class="calc"><span>(83,500 − 86,728) ÷ 86,728</span><b>= −3.7%</b></td><td class="calc">n/a (no FY2014 revenue in case)</td><td><span class="badge poor">Declining</span></td></tr>
+    <tr><td><b>Passenger growth</b></td><td class="frm">(Passengers this year − last year) ÷ last year</td><td class="calc"><span>(51,853 − 49,292) ÷ 49,292</span><b>= +5.2%</b></td><td class="calc"><span>(49,292 − 44,537) ÷ 44,537</span><b>= +10.7%</b></td><td><span class="badge watch">Growth halved</span></td></tr>
+    <tr><td><b>Revenue per passenger</b></td><td class="frm">Revenue ÷ Passengers flown</td><td class="calc"><span>83,500M ÷ 51.853M</span><b>= AED 1,610</b></td><td class="calc"><span>86,728M ÷ 49.292M</span><b>= AED 1,760</b></td><td><span class="badge poor">−8.5%</span> Yield erosion</td></tr>
+    <tr><td><b>Operating cost growth</b></td><td class="frm">(Op. costs FY2016 − FY2015) ÷ Op. costs FY2015</td><td class="calc"><span>(76,714 − 82,926) ÷ 82,926</span><b>= −7.5%</b></td><td class="calc">n/a</td><td><span class="badge good">Lower costs</span> Mainly fuel</td></tr>
+    <tr class="grp"><td colspan="5">Profitability</td></tr>
+    <tr><td><b>Operating cost ratio</b></td><td class="frm">Operating costs ÷ Revenue</td><td class="calc"><span>76,714 ÷ 83,500</span><b>= 91.9%</b></td><td class="calc"><span>82,926 ÷ 86,728</span><b>= 95.6%</b></td><td><span class="badge good">Improved</span></td></tr>
+    <tr><td><b>Operating margin</b></td><td class="frm">Operating profit ÷ Revenue</td><td class="calc"><span>8,330 ÷ 83,500</span><b>= 10.0%</b></td><td class="calc"><span>5,893 ÷ 86,728</span><b>= 6.8%</b></td><td><span class="badge good">Improved</span> Cost-led</td></tr>
+    <tr><td><b>Net profit margin</b></td><td class="frm">Profit for the year ÷ Revenue</td><td class="calc"><span>7,318 ÷ 83,500</span><b>= 8.8%</b></td><td class="calc"><span>4,728 ÷ 86,728</span><b>= 5.5%</b></td><td><span class="badge good">Improved</span></td></tr>
+    <tr><td><b>Return on assets (ROA)</b></td><td class="frm">Profit for the year ÷ Total assets</td><td class="calc"><span>7,318 ÷ 119,179</span><b>= 6.1%</b></td><td class="calc"><span>4,728 ÷ 111,362</span><b>= 4.2%</b></td><td><span class="badge good">Improved</span></td></tr>
+    <tr><td><b>Return on equity (ROE)</b></td><td class="frm">Profit for the year ÷ Total equity</td><td class="calc"><span>7,318 ÷ 32,405</span><b>= 22.6%</b></td><td class="calc"><span>4,728 ÷ 28,286</span><b>= 16.7%</b></td><td><span class="badge good">Strong</span></td></tr>
+    <tr class="grp"><td colspan="5">Efficiency</td></tr>
+    <tr><td><b>Asset turnover</b></td><td class="frm">Revenue ÷ Total assets</td><td class="calc"><span>83,500 ÷ 119,179</span><b>= 0.70×</b></td><td class="calc"><span>86,728 ÷ 111,362</span><b>= 0.78×</b></td><td><span class="badge watch">Weaker</span></td></tr>
+    <tr><td><b>Days sales outstanding</b></td><td class="frm">Trade and other receivables ÷ Revenue × 365</td><td class="calc"><span>9,321 ÷ 83,500 × 365</span><b>= 40.7 days</b></td><td class="calc"><span>8,589 ÷ 86,728 × 365</span><b>= 36.1 days</b></td><td><span class="badge watch">Slower collection</span></td></tr>
+    <tr class="grp"><td colspan="5">Liquidity</td></tr>
+    <tr><td><b>Current ratio</b></td><td class="frm">Current assets ÷ Current liabilities</td><td class="calc"><span>31,427 ÷ 38,524</span><b>= 0.82×</b></td><td class="calc"><span>27,735 ÷ 34,481</span><b>= 0.80×</b></td><td><span class="badge watch">Below 1.0</span></td></tr>
+    <tr><td><b>Cash and short-term deposits</b></td><td class="frm">Cash and cash equivalents + Short-term bank deposits</td><td class="calc"><span>12,165 + 7,823</span><b>= 19,988</b></td><td class="calc"><span>8,397 + 8,488</span><b>= 16,885</b></td><td><span class="badge good">Higher buffer</span></td></tr>
+    <tr><td><b>Cash ratio</b></td><td class="frm">(Cash + Short-term deposits) ÷ Current liabilities</td><td class="calc"><span>19,988 ÷ 38,524</span><b>= 0.52×</b></td><td class="calc"><span>16,885 ÷ 34,481</span><b>= 0.49×</b></td><td><span class="badge good">Improved</span></td></tr>
+    <tr><td><b>Working capital</b></td><td class="frm">Current assets − Current liabilities</td><td class="calc"><span>31,427 − 38,524</span><b>= (7,097)</b></td><td class="calc"><span>27,735 − 34,481</span><b>= (6,746)</b></td><td><span class="badge watch">Negative</span> Structural for airlines</td></tr>
+    <tr class="grp"><td colspan="5">Leverage and solvency</td></tr>
+    <tr><td><b>Total borrowings and lease liabilities</b></td><td class="frm">Non-current + Current borrowings and lease liabilities</td><td class="calc"><span>40,845 + 9,260</span><b>= 50,105</b></td><td class="calc"><span>42,426 + 5,382</span><b>= 47,808</b></td><td><span class="badge watch">Up 4.8%</span></td></tr>
+    <tr><td><b>Debt to equity</b></td><td class="frm">Total borrowings ÷ Total equity</td><td class="calc"><span>50,105 ÷ 32,405</span><b>= 1.55×</b></td><td class="calc"><span>47,808 ÷ 28,286</span><b>= 1.69×</b></td><td><span class="badge good">Improving</span></td></tr>
+    <tr><td><b>Net debt</b></td><td class="frm">Total borrowings − (Cash + Short-term deposits)</td><td class="calc"><span>50,105 − 19,988</span><b>= 30,117</b></td><td class="calc"><span>47,808 − 16,885</span><b>= 30,923</b></td><td><span class="badge good">Lower</span></td></tr>
+    <tr><td><b>Liabilities to assets</b></td><td class="frm">Total liabilities ÷ Total assets</td><td class="calc"><span>86,774 ÷ 119,179</span><b>= 72.8%</b></td><td class="calc"><span>83,076 ÷ 111,362</span><b>= 74.6%</b></td><td><span class="badge watch">High</span> Improving</td></tr>
+    <tr><td><b>Equity multiplier</b></td><td class="frm">Total assets ÷ Total equity</td><td class="calc"><span>119,179 ÷ 32,405</span><b>= 3.68×</b></td><td class="calc"><span>111,362 ÷ 28,286</span><b>= 3.94×</b></td><td><span class="badge good">Less leveraged</span></td></tr>
+    <tr><td><b>Interest coverage</b></td><td class="frm">Operating profit ÷ Finance costs</td><td class="calc"><span>8,330 ÷ 1,329</span><b>= 6.3×</b></td><td class="calc"><span>5,893 ÷ 1,449</span><b>= 4.1×</b></td><td><span class="badge good">Comfortable</span></td></tr>
+    <tr class="grp"><td colspan="5">Cash flow</td></tr>
+    <tr><td><b>Capital expenditure</b></td><td class="frm">Additions to PPE + Additions to intangible assets</td><td class="calc"><span>9,504 + 374</span><b>= 9,878</b></td><td class="calc"><span>10,269 + 157</span><b>= 10,426</b></td><td><span class="badge watch">Heavy</span> Down 5.3%</td></tr>
+    <tr><td><b>Free cash flow</b></td><td class="frm">Net cash from operating activities − Capital expenditure</td><td class="calc"><span>14,105 − 9,878</span><b>= 4,227</b></td><td class="calc"><span>13,265 − 10,426</span><b>= 2,839</b></td><td><span class="badge good">Positive</span></td></tr>
+    <tr><td><b>Cash flow to profit</b></td><td class="frm">Net cash from operating activities ÷ Profit for the year</td><td class="calc"><span>14,105 ÷ 7,318</span><b>= 1.93×</b></td><td class="calc"><span>13,265 ÷ 4,728</span><b>= 2.81×</b></td><td><span class="badge good">High quality</span></td></tr>
+    <tr><td><b>Capex to depreciation</b></td><td class="frm">Capital expenditure ÷ Depreciation and amortisation</td><td class="calc"><span>9,878 ÷ 8,000</span><b>= 1.23×</b></td><td class="calc"><span>10,426 ÷ 7,446</span><b>= 1.40×</b></td><td><span class="badge watch">Still expanding</span></td></tr>
+    <tr><td><b>Dividend payout</b></td><td class="frm">Dividend paid to owner ÷ Profit attributable to owner</td><td class="calc"><span>2,100 ÷ 7,125</span><b>= 29.5%</b></td><td class="calc"><span>869 ÷ 4,555</span><b>= 19.1%</b></td><td><span class="badge watch">Rising</span></td></tr>
+    <tr class="grp"><td colspan="5">DuPont analysis</td></tr>
+    <tr><td><b>ROE (DuPont)</b></td><td class="frm">Net profit margin × Asset turnover × Equity multiplier</td><td class="calc"><span>8.76% × 0.701 × 3.678</span><b>= 22.6%</b></td><td class="calc"><span>5.45% × 0.779 × 3.937</span><b>= 16.7%</b></td><td><span class="badge watch">Margin-driven</span></td></tr>
   </table></div>
-  <p class="src">Computed from Exhibits 2 to 5 using year-end balances. Exhibit 5 prints FY2016 net change in cash as "3,7696"; the correct figure is 3,769.</p>
+  <p class="src">Exhibit 5 prints FY2016 net change in cash as "3,7696"; the correct figure is 3,769.</p>
+
+  <div class="fa"><strong class="fa-h">Analysis: what the ratios say</strong>
+    <ul>
+      <li><b>Profitability improved sharply</b> (operating margin 10.0%, net margin 8.8%, ROE 22.6%), but on the cost side only.</li>
+      <li><b>DuPont view:</b> ROE of 22.6% = net margin 8.8% × asset turnover 0.70 × equity multiplier 3.68. In FY2015 it was 16.7% = 5.5% × 0.78 × 3.94. The entire ROE gain came from margin; asset efficiency and leverage both declined.</li>
+      <li><b>Efficiency is the warning sign:</b> asset turnover fell from 0.78× to 0.70× and revenue per passenger fell 8.5%. Emirates is putting more aircraft and capital to work for less revenue.</li>
+      <li><b>Liquidity is tight but backed by cash:</b> a current ratio of 0.82 is normal for airlines, and AED 20.0bn of cash and deposits covers more than half of current liabilities.</li>
+      <li><b>Solvency is sound and improving:</b> debt to equity fell from 1.69× to 1.55× and interest coverage rose from 4.1× to 6.3×.</li>
+      <li><b>Overall:</b> Emirates is financially healthy enough to fund a response, but its earnings depend on fuel prices; the strategic task is to rebuild revenue quality before that cushion disappears.</li>
+    </ul></div>
 
   <h3>Competitive set (Exhibit 1, Skytrax top-rated airlines)</h3>
   <div class="scroll"><table>
