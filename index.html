@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>BlackBerry Limited — Case Analysis</title>
+<title>Emirates Airline in 2017 — Case Analysis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:wght@500;700&display=swap" rel="stylesheet">
@@ -155,566 +155,717 @@ td:first-child{min-width:150px}
 .refs{overflow-wrap:anywhere}
 .chart{overflow-x:auto}
 .chart svg{min-width:500px}
+/* Emirates additions, same tokens */
+tr.total td{font-weight:600;background:var(--jade-soft)}
+tr.win td{background:var(--jade-soft);font-weight:600}
+.ie{display:grid;grid-template-columns:72px repeat(3,1fr);gap:4px;max-width:560px;margin:6px 0 16px;font-size:.85rem}
+.ie div{padding:10px 6px;text-align:center;border-radius:6px}
+.ie .h{color:var(--muted);font-weight:600;background:transparent}
+.ie .c1{background:var(--jade-soft)} .ie .c2{background:color-mix(in srgb,var(--gold) 14%,transparent)} .ie .c3{background:var(--red-soft)}
+.ie .here{outline:2px solid var(--jade);font-weight:600;color:var(--jade)}
+.story p{max-width:68ch}
+.story h3{margin-top:22px}
+.flow .causes.five{grid-template-columns:repeat(5,1fr)}
+.flow .join.five{margin:0 10% 22px;background-position:25% 0,50% 0;background-image:linear-gradient(var(--muted),var(--muted)),linear-gradient(var(--muted),var(--muted))}
+@media (max-width:640px){.flow .causes.five{grid-template-columns:1fr 1fr}}
+.story-arc text{font-size:11px}
+.story-arc text.t{fill:var(--text);font-weight:600;font-size:12px}
+.story-arc text.d{fill:var(--red);font-weight:700;font-size:13px}
+.story-arc text.ph{fill:var(--muted);font-weight:600;font-size:12px}
+.story-arc svg{min-width:640px}
 </style>
 </head>
 <body>
 <header class="wrap">
-  <p class="kicker">Case 3 · MGT 281: Strategic Management · Department of Agribusiness Management and Entrepreneurship, CEM, UP Los Baños · October 10, 2026</p>
-  <h1>BlackBerry Limited: Is There a Path to Recovery?</h1>
-  <p class="members">Group 2: Louie Jay Aguilar, Joe Marie De Guzman, Roanee Bryle Joseph, Franz Lenin R. Punto</p>
-  <p class="quote">“BlackBerry's problem is not a shortage of valuable, rare, hard-to-imitate resources; it is that the organization variable failed.”<span>Group 2, VRIO analysis</span></p>
+  <p class="kicker">Case 12 · MGT 281: Strategic Management · Department of Agribusiness Management and Entrepreneurship, CEM, UP Los Baños</p>
+  <h1>Emirates Airline in 2017: Has Its Moment Passed?</h1>
+  <p class="members">Prepared by Joe Marie De Guzman</p>
+  <p class="quote">“I could make the case that Emirates' moment has passed. Emirates was the trendy airline three or four years ago.”<span>Joe Brancatelli, business travel writer</span></p>
 
-  <div class="pe" aria-label="Segment revenue, FY2015 versus FY2017">
-    <h2>Segment revenue, FY2015 to FY2017 (USD millions)</h2>
-    <p>Software grew, but not fast enough to replace the hardware and network fees it was meant to succeed. Total segment revenue fell 58.8%.</p>
+  <div class="pe" aria-label="Key results, FY2015 versus FY2016">
+    <h2>FY2015 to FY2016: more passengers, less revenue</h2>
+    <p>Profit jumped because fuel got cheaper, not because demand got stronger. Each passenger brought in 8.5% less revenue.</p>
     <div class="seg">
-      <div class="seg-head"><b>Software &amp; Services</b><span>$249M → $652M <em class="up">+161.8%</em></span></div>
-      <div class="track"><div class="ghost" style="width:15.5%"></div><div class="fill up" data-w="40.6"></div></div>
+      <div class="seg-head"><b>Passengers flown</b><span>49.3M → 51.9M <em class="up">+5.2%</em></span></div>
+      <div class="track"><div class="ghost" style="width:95.1%"></div><div class="fill up" data-w="100"></div></div>
     </div>
     <div class="seg">
-      <div class="seg-head"><b>Mobility Solutions (hardware)</b><span>$1,480M → $409M <em class="down">−72.4%</em></span></div>
-      <div class="track"><div class="ghost" style="width:92.2%"></div><div class="fill down" data-w="25.5"></div></div>
+      <div class="seg-head"><b>Revenue (AED M)</b><span>86,728 → 83,500 <em class="down">−3.7%</em></span></div>
+      <div class="track"><div class="ghost" style="width:100%"></div><div class="fill down" data-w="96.3"></div></div>
     </div>
     <div class="seg">
-      <div class="seg-head"><b>System Access Fees</b><span>$1,606M → $313M <em class="down">−80.5%</em></span></div>
-      <div class="track"><div class="ghost" style="width:100%"></div><div class="fill down" data-w="19.5"></div></div>
+      <div class="seg-head"><b>Revenue per passenger (AED)</b><span>1,760 → 1,610 <em class="down">−8.5%</em></span></div>
+      <div class="track"><div class="ghost" style="width:100%"></div><div class="fill down" data-w="91.5"></div></div>
     </div>
-    <p class="key"><i class="k-ghost"></i>FY2015 <i class="k-fill"></i>FY2017</p>
+    <div class="seg">
+      <div class="seg-head"><b>Operating costs (AED M)</b><span>82,926 → 76,714 <em class="up">−7.5%</em></span></div>
+      <div class="track"><div class="ghost" style="width:100%"></div><div class="fill up" data-w="92.5"></div></div>
+    </div>
+    <div class="seg">
+      <div class="seg-head"><b>Operating profit (AED M)</b><span>5,893 → 8,330 <em class="up">+41.4%</em></span></div>
+      <div class="track"><div class="ghost" style="width:70.7%"></div><div class="fill up" data-w="100"></div></div>
+    </div>
+    <p class="key"><i class="k-ghost"></i>FY2015 <i class="k-fill"></i>FY2016 (green favourable, red unfavourable)</p>
   </div>
 </header>
 
 <nav aria-label="Case sections">
   <div class="tabs" role="tablist">
-    <button role="tab" id="t-bg" aria-controls="p-bg" aria-selected="true">Case background</button>
+    <button role="tab" id="t-sum" aria-controls="p-sum" aria-selected="true">Summary</button>
+    <button role="tab" id="t-story" aria-controls="p-story" aria-selected="false" tabindex="-1">The story</button>
     <button role="tab" id="t-pov" aria-controls="p-pov" aria-selected="false" tabindex="-1">POV</button>
     <button role="tab" id="t-facts" aria-controls="p-facts" aria-selected="false" tabindex="-1">Case facts</button>
+    <button role="tab" id="t-ext" aria-controls="p-ext" aria-selected="false" tabindex="-1">External environment</button>
+    <button role="tab" id="t-int" aria-controls="p-int" aria-selected="false" tabindex="-1">Internal environment</button>
     <button role="tab" id="t-prob" aria-controls="p-prob" aria-selected="false" tabindex="-1">Problem analysis &amp; statement</button>
-    <button role="tab" id="t-swot" aria-controls="p-swot" aria-selected="false" tabindex="-1">SWOT</button>
-    <button role="tab" id="t-tows" aria-controls="p-tows" aria-selected="false" tabindex="-1">TOWS</button>
-    <button role="tab" id="t-env" aria-controls="p-env" aria-selected="false" tabindex="-1">Internal &amp; external environment</button>
+    <button role="tab" id="t-tools" aria-controls="p-tools" aria-selected="false" tabindex="-1">SWOT, TOWS &amp; IE</button>
     <button role="tab" id="t-alt" aria-controls="p-alt" aria-selected="false" tabindex="-1">Alternatives</button>
-    <button role="tab" id="t-ana" aria-controls="p-ana" aria-selected="false" tabindex="-1">Analysis</button>
+    <button role="tab" id="t-eval" aria-controls="p-eval" aria-selected="false" tabindex="-1">Evaluation &amp; decision</button>
+    <button role="tab" id="t-rec" aria-controls="p-rec" aria-selected="false" tabindex="-1">Recommendation</button>
     <button role="tab" id="t-imp" aria-controls="p-imp" aria-selected="false" tabindex="-1">Implementation plan</button>
+    <button role="tab" id="t-cont" aria-controls="p-cont" aria-selected="false" tabindex="-1">Contingency</button>
     <button role="tab" id="t-annex" aria-controls="p-annex" aria-selected="false" tabindex="-1">Annex</button>
   </div>
 </nav>
 
 <main class="wrap">
 
-<!-- CASE BACKGROUND -->
-<section role="tabpanel" id="p-bg" aria-labelledby="t-bg" class="on">
-  <h2 class="title">Case background</h2>
-  <div class="bottom"><strong>In brief</strong><p>BlackBerry held about 20.1% of the global smartphone market in 2009, then lost its position to the iPhone and Android. By 2017 it had moved away from making phones and was rebuilding around enterprise software, security, QNX and licensing.</p></div>
-
-  <h3>Company background and competitive decline</h3>
+<!-- SUMMARY -->
+<section role="tabpanel" id="p-sum" aria-labelledby="t-sum" class="on">
+  <h2 class="title">Executive summary</h2>
+  <div class="bottom"><strong>Decision</strong><p>Adopt Alternative 1: integrate the Emirates network with sister carrier flydubai at Dubai International (DXB), and defer further Airbus A380 commitments in favour of the Boeing 777X.</p></div>
   <ul>
-    <li>Research in Motion (RIM), founded in 1984 in Waterloo, Ontario, became a leading smartphone company through its BlackBerry devices, known for secure communications, wireless email, and physical keyboards.</li>
-    <li>Its strong relationships with corporate and government customers established BlackBerry as a trusted brand in mobile communications. At its peak, BlackBerry held approximately 20.1% of the global smartphone market in 2009.</li>
-    <li>Apple's iPhone and the rapid growth of Android changed the basis of competition. Consumers increasingly preferred touchscreen devices, wider application availability, and integrated digital ecosystems; BlackBerry's advantages in security, email, and physical keyboards became insufficient.</li>
-    <li>Unsuccessful product launches, delays in developing the BlackBerry 10 operating system, and internal leadership disagreements weakened its competitiveness.</li>
-    <li>The growing adoption of Bring Your Own Device (BYOD) policies reduced enterprise dependence on BlackBerry devices and its proprietary network.</li>
+    <li><b>Core problem:</b> FY2016 profit rose 55% to AED 7,318M, but the gain was cost-led (operating costs fell AED 6.2bn on cheaper fuel) while revenue fell 3.7% and revenue per passenger fell 8.5%. Demand quality is eroding beneath record earnings.</li>
+    <li><b>Drivers:</b> terrorism and regional conflict depress Gulf transfer traffic; oil-economy corporate travel cuts hit first and business class; Etihad, Qatar and Singapore Airlines are matching or exceeding Emirates' premium product; U.S. carriers allege subsidies; a large A380 fleet is hard to right-size.</li>
+    <li><b>Why flydubai integration wins:</b> highest weighted-criteria score (4.60 of 5) and QSPM total (6.45 versus 5.57, 4.29 and 3.81); low capital need; same owner, so no ownership or regulatory barrier; adds feeder markets; frees widebodies from thin routes; matches the IE Matrix "hold and maintain" prescription.</li>
+    <li><b>Implementation:</b> three phases from April 2017 to 2020: commercial integration, network optimisation, and demand creation ahead of Expo 2020 Dubai.</li>
+    <li><b>Contingency:</b> pre-defined triggers activate capacity cuts (elements of Alternative 4) if transfer traffic keeps falling, or a premium economy launch (elements of Alternative 2) if yields do not stabilise.</li>
   </ul>
+</section>
 
-  <h3>Existing capabilities and resources</h3>
-  <ul>
-    <li><b>Security expertise and brand equity:</b> BlackBerry maintained a reputation for secure communications, supported by its established relationships with enterprise and government customers.</li>
-    <li><b>Enterprise software and services:</b> The company had developed capabilities in enterprise mobility management, secure communications, and related software solutions.</li>
-    <li><b>QNX technology:</b> BlackBerry owned an embedded operating system with applications in automotive systems and other connected technologies.</li>
-    <li><b>Patents and intellectual property:</b> Its portfolio of patents and proprietary technologies provided opportunities for licensing, partnerships, and commercialization.</li>
-    <li><b>Financial resources:</b> The company retained cash and other financial assets. In April 2017, BlackBerry also secured an $815 million arbitration award against Qualcomm, providing additional financial flexibility.</li>
-  </ul>
-  <p>These resources represented potential sources of competitive advantage, although their ability to generate sustainable growth and profitability remained uncertain.</p>
+<!-- STORY -->
+<section role="tabpanel" id="p-story" aria-labelledby="t-story" class="story">
+  <h2 class="title">The story of Emirates</h2>
+  <div class="bottom"><strong>In brief</strong><p>A small start-up founded in 1985 to put Dubai on the map became one of the world's biggest international carriers in three decades. By 2017 the conditions behind that rise were weakening, and critics were asking whether its moment had passed.</p></div>
 
-  <h3>Management response and strategic position</h3>
-  <ul>
-    <li>John Chen became CEO in November 2013 and initiated restructuring: reducing operating costs, limiting exposure to smartphone hardware manufacturing, and expanding focus on enterprise software, secure communications, technology solutions, and licensing.</li>
-    <li>By 2017, BlackBerry had moved away from directly manufacturing smartphones and was pursuing a business model less dependent on hardware sales, while facing established technology companies and emerging enterprise software and security providers.</li>
-    <li>Although its software business was growing, BlackBerry had not yet demonstrated that its remaining businesses could consistently replace lost revenues and deliver sustainable profitability.</li>
-  </ul>
+  <h3>Story diagram</h3>
+  <div class="chart story-arc" role="img" aria-label="Story arc of Emirates. The line rises through four chapters, from the 1985 launch to the 2012 Hello Tomorrow brand, dips in 2016 to 2017 as challenges mount, and points to the 2017 dilemma: how to keep growing profitably as premium and transfer demand fall and rivals copy its product.">
+<svg viewBox="0 0 780 290">
+  <defs><marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--red)"/></marker></defs>
+  <line x1="40" y1="26" x2="470" y2="26" stroke="var(--jade)" stroke-width="2"/>
+  <line x1="490" y1="26" x2="770" y2="26" stroke="var(--red)" stroke-width="2"/>
+  <text x="255" y="18" text-anchor="middle" class="ph">The rise, 1985–2015</text>
+  <text x="630" y="18" text-anchor="middle" class="ph">Turning point and dilemma, 2016–2017</text>
+  <path d="M75,230 C135,230 130,175 180,165 S260,120 300,115 S380,78 420,72 S500,100 540,125" fill="none" stroke="var(--jade)" stroke-width="3"/>
+  <path d="M548,128 C570,138 588,140 610,140" fill="none" stroke="var(--red)" stroke-width="2.5" marker-end="url(#arw)"/>
+  <g fill="var(--surface)" stroke="var(--jade)" stroke-width="3">
+    <circle cx="75" cy="230" r="7"/><circle cx="180" cy="165" r="7"/><circle cx="300" cy="115" r="7"/><circle cx="420" cy="72" r="7"/>
+  </g>
+  <circle cx="540" cy="125" r="8" fill="var(--red)"/>
+  <rect x="614" y="72" width="158" height="140" rx="8" fill="var(--red-soft)" stroke="var(--red)" stroke-width="2"/>
+  <g text-anchor="middle">
+    <text x="693" y="96" class="d">The dilemma, 2017</text>
+    <text x="693" y="118">Premium and transfer</text>
+    <text x="693" y="132">demand are falling and</text>
+    <text x="693" y="146">rivals copy its product.</text>
+    <text x="693" y="168" class="t">How can Emirates keep</text>
+    <text x="693" y="183" class="t">growing profitably?</text>
+  </g>
+  <g text-anchor="middle">
+    <text x="75" y="254" class="t">1 Launching a dream</text><text x="75" y="268">1985: US$10M royal funding</text><text x="75" y="281">12 destinations by 1988</text>
+    <text x="180" y="189" class="t">2 Ultimate experience</text><text x="180" y="203">777 (1996), A380 (2008)</text><text x="180" y="216">Suites, showers, bar</text>
+    <text x="300" y="139" class="t">3 Special employee</text><text x="300" y="153">18,000 crew, 140 nations</text><text x="300" y="166">5% accepted</text>
+    <text x="420" y="96" class="t">4 Communicating</text><text x="420" y="110">“Hello Tomorrow”, 2012</text><text x="420" y="123">150 countries</text>
+    <text x="540" y="151" class="t">5 Chasing tomorrow</text><text x="540" y="165">Terrorism, oil, Etihad</text><text x="540" y="178">Subsidy claims</text>
+  </g>
+</svg>
+    <div class="legend"><span><i style="background:var(--jade)"></i>Growth and momentum</span><span><i style="background:var(--red)"></i>Pressure leading to the dilemma</span></div>
+  </div>
 
-  <h3>Key milestones</h3>
   <ul class="tl">
-    <li><b>1984</b>RIM founded in Waterloo, Ontario (Lazaridis, Fregin).</li>
-    <li><b>1992</b>Balsillie joins as co-CEO.</li>
-    <li><b>1999</b>BlackBerry 850 launched; NASDAQ IPO raises $250 million.</li>
-    <li><b>2001</b>Network stays up during 9/11 cellular outages; government and corporate credibility established.</li>
-    <li><b>2006</b>$600 million NTP patent settlement.</li>
-    <li><b>2009</b>Peak: 20.1% market share, about 15 million devices per quarter.</li>
-    <li><b>2012</b>Co-CEOs depart; Heins appointed.</li>
-    <li><b>2013</b>Renamed BlackBerry Limited; BB10 and Z10 launch; Chen replaces Heins.</li>
-    <li><b>2015–2017</b>Hardware falls from $1,480M to $409M; software and services rise from $249M to $652M.</li>
-    <li><b>April 2017</b>$815 million Qualcomm arbitration award.</li>
+    <li><b>1 · Launching a dream (1985–1988)</b>When Gulf Air cut flights into Dubai, Sheikh Mohammed bin Rashid Al Maktoum started his own airline with US$10 million in royal funding to build Dubai into a business and tourism centre. Led by Sheikh Ahmed with Sir Maurice Flanagan's guidance, it grew to 12 destinations by 1988.</li>
+    <li><b>2 · Providing the ultimate experience (1996–2008)</b>Long-range Boeing 777s (1996) and Airbus A380s (2008) let Tim Clark connect almost any two cities with one stop in Dubai. Emirates paired this network with industry firsts such as seat-back screens in every seat, first-class suites, onboard showers and a stand-up bar.</li>
+    <li><b>3 · Grooming a special employee</b>Emirates built an elite cabin crew of 18,000 from 140 nationalities, accepting only about 5% of applicants and training them for seven weeks. This multilingual, highly disciplined workforce became a core part of its service advantage.</li>
+    <li><b>4 · Communicating to the masses (2012)</b>Focus groups showed the brand was little known in new markets, so StrawberryFrog created "Hello Tomorrow", launched in 150 countries. It positioned Emirates as a connector of global cultures and rallied employees behind the brand promise.</li>
+    <li><b>5 · Chasing tomorrow (2016–2017)</b>Terrorism, falling oil prices and corporate travel cuts reduced premium and transfer demand, while U.S. airlines alleged subsidies. At the same time, Etihad and Singapore Airlines launched products that matched or surpassed Emirates, prompting critics to ask whether its moment had passed.</li>
+    <li><b>The dilemma (2017)</b>Every chapter of growth now meets a headwind: the hub depends on transfers travellers are avoiding, the luxury product is being copied, and record profit rests on cheap fuel. Emirates must decide how to keep growing profitably, which is the problem this analysis addresses.</li>
   </ul>
+
+  <h3>Cast of characters</h3>
+  <div class="grid2">
+    <div class="quad s"><h4>Founders and leaders</h4><ul><li><b>Sheikh Mohammed bin Rashid Al Maktoum:</b> founder; launched the airline after Gulf Air cut Dubai flights</li><li><b>Sir Maurice Flanagan:</b> British Airways veteran who laid the groundwork</li><li><b>Sheikh Ahmed bin Saeed Al Maktoum:</b> Chairman and CEO, appointed at 26</li><li><b>Sir Tim Clark:</b> President; architect of the "strange city pairs" network</li></ul></div>
+    <div class="quad o"><h4>Service and operations</h4><ul><li><b>Terry Daly:</b> service manager; exacting standards</li><li><b>Mohammed H. Mattar:</b> SVP, airport services</li><li><b>Marhaba team and 18,000 cabin crew:</b> the face of the brand</li></ul></div>
+    <div class="quad s"><h4>Brand builders</h4><ul><li><b>Scott Goodson, StrawberryFrog:</b> created "Hello Tomorrow"</li><li><b>Christine Negroni:</b> travel writer who joined the training</li></ul></div>
+    <div class="quad w"><h4>Rivals and critics</h4><ul><li><b>Etihad:</b> The Residence and First Apartments</li><li><b>Singapore Airlines:</b> enhanced premium economy</li><li><b>Largest U.S. airlines:</b> subsidy allegations</li><li><b>Joe Brancatelli:</b> "Emirates' moment has passed"</li></ul></div>
+  </div>
+
+  <div class="bottom warn" style="margin-top:16px"><strong>Central conflict</strong><p>An airline built on growth, transfer traffic and premium luxury now faces falling premium demand, travellers avoiding the region, and rivals copying its signature products. Can "new products" alone carry it into tomorrow?</p></div>
+
+  <h3>Launching a dream</h3>
+  <p>The roots of Emirates trace back to Gulf Air, a formidable airline jointly owned by the governments of Bahrain, Abu Dhabi, Qatar and Oman. In the early 1980s Gulf Air decided to cut flights into and out of Dubai. The young Sheikh Mohammed bin Rashid Al Maktoum, upset by that decision, resolved to start an airline of his own, one that would help build Dubai into a centre of business and tourism, since the emirate lacked significant oil resources.</p>
+  <p>He recruited British Airways veteran Sir Maurice Flanagan to lay the groundwork and bankrolled the venture with US$10 million in royal funding. To lead it, he chose a member of the royal family, Sheikh Ahmed bin Saeed Al Maktoum, who at 26 had just graduated from the University of Denver and had never held a job. The young sheikh leaned on Flanagan to learn how to run an airline.</p>
+  <p>The airline's spectacular growth, however, is credited to Sir Tim Clark, who was handed route planning. Clark saw that about two-thirds of the world's population lived within eight hours' flight of Dubai, but the airline lacked aircraft that could exploit that location. That changed with the Boeing 777 in 1996 and the Airbus A380 in 2008, whose long range let Emirates link almost any two points on the globe with a single stop in Dubai. Clark called these "strange city pairs": New York and Shanghai, London and Nairobi. No airline had grown like this.</p>
+  <p>From 12 destinations in 1988, Emirates expanded at a remarkable pace, and it kept growing even through the 2008 recession, taking delivery of more new aircraft than any other carrier. "We operated normally. We put on more aircraft. We carried more passengers," said Mohammed H. Mattar, senior vice president of airport services. Along the way, Emirates helped shift the hub of international travel from Europe to the Middle East. Dubai now handles over 80 million passengers a year and is the world's busiest airport for international passengers, with a new US$4.5 billion terminal, the largest in the world, built to accommodate the almost 240 Emirates aircraft flying to 145 destinations.</p>
+
+  <h3>Providing the ultimate experience</h3>
+  <p>Emirates set out to give every passenger, in every cabin, the best possible experience. It was the first airline to put an entertainment screen in the back of every seat. "That seems pretty normal for long haul airlines now, but it wasn't then," said Terry Daly, the service manager, who is known for once firing eight service supervisors in a single day after discovering their crews had deviated from his precise instructions.</p>
+  <p>Food became a signature. The catering division, a multi-floor maze of monorails, cameras, wine warehouses, robotics and chefs of many nationalities, delivers 115,000 meal trays a day. "It's about making sure the culinary offering is absolutely first class across the airplane," Daly said.</p>
+  <p>The premium cabins went further still. Business class tickets include a chauffeured limousine to and from the airport, personal check-in assistance and access to 30 lounges, while a 600-strong multilingual welcome team called <em>Marhaba</em>, Arabic for "welcome", guides first- and business-class passengers through airport formalities. Emirates pioneered the first-class suite on the A340 in 2003; its 50 A380s each carry 14 suites with a vanity table, closet, 23-inch screen and sliding doors. First-class passengers can use two spa showers, an industry first. "To walk onto the A380, to have an average size bathroom, a seven minute shower, full size bath towels and your own attendant is pretty amazing," one event planner said. Premium passengers also share a horseshoe-shaped stand-up bar, for which Emirates gave up several business-class seats. Other carriers called such amenities frivolous; Emirates called them its edge.</p>
+
+  <h3>Grooming a special employee</h3>
+  <p>Behind the product is a carefully built workforce. Each year Emirates holds Open Days in more than 140 cities across 70 countries to recruit for an elite force of 18,000 flight attendants from 140 nationalities who speak more than 50 languages. Recruits are not drawn by the pay, about US$30,000 a year with free room and board, but by the chance to join an iconic global brand. Only about 5% of applicants make it through, in what the case likens to an <em>American Idol</em>-style brains-and-beauty contest.</p>
+  <p>Successful recruits spend seven weeks moving through departments in a training centre shaped like a jetliner fuselage, learning posture, etiquette, safety and evacuation. Standards are exacting, down to lipstick colour, hair shade and uniform; the crew is 75% women with an average age of 26, against over 40 at U.S. airlines. "When walking through an airport terminal, it's usually a <em>Catch Me If You Can</em> movie moment, with passengers all turning their heads," said one new recruit. Training ends with motivational exercises called <em>Nujoum</em>, Arabic for stars. Travel writer Christine Negroni, who took part, described it as "a combination of a customer service experience and a come-to-Jesus rally", leaving recruits asking, "What can I do for Emirates?"</p>
+
+  <h3>Communicating to the masses</h3>
+  <p>Despite all this, focus groups revealed that the Emirates name was not well known in many of the markets it was entering. The airline needed a message that would tell consumers what to expect and rally employees behind its promise. True to form, it summoned the world's top 10 advertising agencies to Dubai to compete for the account.</p>
+  <p>The winner was StrawberryFrog, a young New York agency. Its founder, Scott Goodson, had read an interview in which Tim Clark said he wanted Emirates to make the world a smaller place by bringing people together. That became "Hello Tomorrow", not merely a slogan but a way of thinking about the airline as a catalyst for a global culture of shared aspirations. "Ad campaigns are fleeting. The power of a movement is that it can change habits and rally millions," Goodson told Clark. StrawberryFrog spent 18 months at headquarters turning employees into foot soldiers of the movement before the brand launched in spring 2012 in 150 countries. In one television ad, a steward pushes his drink cart as an A380 is built around him from parts and people drawn from across the globe.</p>
+
+  <h3>Chasing tomorrow</h3>
+  <p>By 2017 the story had reached a turning point. Falling oil prices and rising terrorism were cutting demand. Companies, especially in the Middle East, were trimming employee travel, reducing the premium revenue Emirates depended on, and fearful passengers were avoiding connections through the region. Emirates swapped some A380 routes to smaller 777s, cut back on additional A380 orders until traffic recovered, and tried to attract tourists to Dubai itself.</p>
+  <p>The largest U.S. airlines accused Emirates, Etihad and Qatar of receiving government subsidies. Clark insisted Emirates had never received subsidies or cheap fuel, pointing to 27 straight years of audited profits: "We are confident that any allegation that Emirates has been subsidized is totally without grounds."</p>
+  <p>Rivals were also catching up. Singapore Airlines launched an enhanced premium economy cabin with wider seats, cocktail tables and noise-cancelling headsets. Next door in Abu Dhabi, Etihad unveiled The Residence, a three-room suite at US$21,000 one way, and US$16,000 First Apartments, complete with Savoy-trained butlers, improving on the very suite concept Emirates had pioneered 12 years earlier.</p>
+  <p>Some observers began to wonder whether the airline's best days were behind it. "I could make the case that Emirates' moment has passed," business travel writer Joe Brancatelli said. Chairman and CEO Sheikh Ahmed brushed the concern aside: "Over the years, we have always managed to come up with new products." Whether new products alone would be enough is the question this analysis sets out to answer.</p>
 </section>
 
 <!-- POV -->
 <section role="tabpanel" id="p-pov" aria-labelledby="t-pov">
   <h2 class="title">Point of view</h2>
-  <div class="bottom"><strong>Point of view</strong><p>John Chen, CEO of BlackBerry Limited, in fiscal year 2017.</p></div>
-  <p>Chen faces the challenge of reversing the company's declining financial performance and competitive position while determining how best to leverage its remaining financial resources, technological capabilities, and brand equity to achieve sustainable growth and profitability.</p>
+  <div class="bottom"><strong>Point of view</strong><p>Sir Tim Clark, President of Emirates Airline, in early 2017, reporting to Chairman and CEO Sheikh Ahmed bin Saeed Al Maktoum.</p></div>
+  <ul>
+    <li><b>Why Clark:</b> he is responsible for network and route strategy and is the architect of the "strange city pairs" model now under pressure.</li>
+    <li><b>Data basis:</b> latest audited results, year ended 31 March 2016.</li>
+    <li><b>Decision horizon:</b> FY2017/18 to FY2019/20.</li>
+    <li><b>Challenge:</b> protect profitable growth and the premium brand while the conditions that fuelled three decades of expansion weaken.</li>
+  </ul>
 </section>
 
 <!-- CASE FACTS -->
 <section role="tabpanel" id="p-facts" aria-labelledby="t-facts">
   <h2 class="title">Case facts</h2>
-  <div class="bottom"><strong>Key fact</strong><p>Revenue fell from about $19.9 billion in FY2011 to $1.3 billion in FY2017, with a net loss of about $1.2 billion in FY2017. Liquidity stayed adequate, but profitability was deeply negative.</p></div>
+  <div class="bottom"><strong>Key fact</strong><p>Emirates carried 51.9 million passengers in FY2016 and earned a record AED 8,330M operating profit, yet revenue fell 3.7% as premium and transfer demand weakened.</p></div>
 
-  <h3>Financial performance</h3>
+  <h3>Company background</h3>
   <ul>
-    <li>BlackBerry's revenue declined from approximately $19.9 billion in FY2011 to $1.3 billion in FY2017; the company reported a net loss of approximately $1.2 billion in FY2017. Its stock price also declined substantially from its 2008 peak.</li>
-    <li>Software &amp; Services revenue grew by 161.8% between FY2015 and FY2017, but Mobility Solutions and System Access Fees declined by 72.4% and 80.5%. Total segment revenue declined by 58.8%.</li>
-    <li>While BlackBerry was developing new revenue sources, their growth had not yet offset the decline of its traditional businesses.</li>
+    <li>Founded in 1985 by Sheikh Mohammed bin Rashid Al Maktoum after Gulf Air cut flights into Dubai; funded with US$10 million in royal money.</li>
+    <li>Sir Maurice Flanagan (ex-British Airways) laid the groundwork; Sheikh Ahmed bin Saeed Al Maktoum took the top post at 26.</li>
+    <li>Purpose: build Dubai into a centre of business and tourism given its limited oil resources.</li>
+    <li>Profitable for 27 consecutive years; finances disclosed with international auditors.</li>
   </ul>
 
-  <h3>Segment revenue (USD millions)</h3>
-  <div class="scroll"><table>
-    <tr><th>Segment</th><th class="n">FY2015</th><th class="n">FY2016</th><th class="n">FY2017</th></tr>
-    <tr><td>Software &amp; Services</td><td class="n">$249</td><td class="n">$530</td><td class="n">$652</td></tr>
-    <tr><td>Mobility Solutions (hardware)</td><td class="n">$1,480</td><td class="n">$884</td><td class="n">$409</td></tr>
-    <tr><td>System Access Fees (SAF)</td><td class="n">$1,606</td><td class="n">$779</td><td class="n">$313</td></tr>
-    <tr><td><b>Total</b></td><td class="n"><b>$3,335</b></td><td class="n"><b>$2,193</b></td><td class="n"><b>$1,374</b></td></tr>
-  </table></div>
-  <div class="chart" role="img" aria-label="Grouped bar chart of segment revenue. Software and Services rises from 249 to 652 million dollars; Mobility Solutions falls from 1,480 to 409; System Access Fees fall from 1,606 to 313.">
-    <svg viewBox="0 0 600 260"><line x1="48" x2="590" y1="226.0" y2="226.0" stroke="var(--line)"/><text x="42" y="230.0" text-anchor="end">0</text><line x1="48" x2="590" y1="156.7" y2="156.7" stroke="var(--line)"/><text x="42" y="160.7" text-anchor="end">600</text><line x1="48" x2="590" y1="87.3" y2="87.3" stroke="var(--line)"/><text x="42" y="91.3" text-anchor="end">1,200</text><line x1="48" x2="590" y1="18.0" y2="18.0" stroke="var(--line)"/><text x="42" y="22.0" text-anchor="end">1,800</text><rect x="73.3" y="197.2" width="40" height="28.8" rx="2" fill="var(--jade)"/><text x="93.3" y="192.2" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">249</text><rect x="118.3" y="55.0" width="40" height="171.0" rx="2" fill="var(--gold)"/><text x="138.3" y="50.0" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">1,480</text><rect x="163.3" y="40.4" width="40" height="185.6" rx="2" fill="var(--red)"/><text x="183.3" y="35.4" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">1,606</text><text x="138.3" y="250" text-anchor="middle" style="fill:var(--text);font-weight:600">FY2015</text><rect x="254.0" y="164.8" width="40" height="61.2" rx="2" fill="var(--jade)"/><text x="274.0" y="159.8" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">530</text><rect x="299.0" y="123.8" width="40" height="102.2" rx="2" fill="var(--gold)"/><text x="319.0" y="118.8" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">884</text><rect x="344.0" y="136.0" width="40" height="90.0" rx="2" fill="var(--red)"/><text x="364.0" y="131.0" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">779</text><text x="319.0" y="250" text-anchor="middle" style="fill:var(--text);font-weight:600">FY2016</text><rect x="434.7" y="150.7" width="40" height="75.3" rx="2" fill="var(--jade)"/><text x="454.7" y="145.7" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">652</text><rect x="479.7" y="178.7" width="40" height="47.3" rx="2" fill="var(--gold)"/><text x="499.7" y="173.7" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">409</text><rect x="524.7" y="189.8" width="40" height="36.2" rx="2" fill="var(--red)"/><text x="544.7" y="184.8" text-anchor="middle" style="fill:var(--text);font-weight:600;font-size:11px">313</text><text x="499.7" y="250" text-anchor="middle" style="fill:var(--text);font-weight:600">FY2017</text></svg>
-    <div class="legend"><span><i class="sq" style="background:var(--jade)"></i>Software &amp; Services</span><span><i class="sq" style="background:var(--gold)"></i>Mobility Solutions</span><span><i class="sq" style="background:var(--red)"></i>System Access Fees</span></div>
+  <h3>Key milestones</h3>
+  <ul class="tl">
+    <li><b>1985</b>Airline launched.</li>
+    <li><b>1988</b>Serving 12 destinations.</li>
+    <li><b>1996</b>Boeing 777 introduced; long range opens new city pairs.</li>
+    <li><b>2003</b>Pioneers first-class suites on the A340.</li>
+    <li><b>2008</b>Airbus A380 introduced; growth continues through the recession.</li>
+    <li><b>2012</b>"Hello Tomorrow" brand launched in 150 countries.</li>
+    <li><b>2016–2017</b>Almost 240 aircraft, 145 destinations; demand softens; A380 orders cut back; some routes switched to the 777.</li>
+  </ul>
+
+  <h3>Strategy and network</h3>
+  <ul>
+    <li>Dubai hub connects the U.S., Europe, Africa and Asia with one stop, linking "strange city pairs" such as New York–Shanghai and London–Nairobi.</li>
+    <li>About two-thirds of the world's population lives within eight hours of Dubai.</li>
+    <li>Dubai: over 80 million passengers a year; world's busiest international airport; new US$4.5 billion terminal.</li>
+  </ul>
+
+  <h3>Product and service</h3>
+  <ul>
+    <li>First seat-back in-flight entertainment in all classes; 115,000 meal trays a day.</li>
+    <li>Business class: chauffeur, check-in assistance, 30 lounges; 600-member Marhaba team.</li>
+    <li>A380 premium features (Exhibit 6): 1,600 entertainment channels, Dom Pérignon, Iranian caviar, Royal Doulton china, Robert Welch cutlery, Bulgari kits, stand-up bar, two first-class shower spas.</li>
+    <li>50 A380s with 14 first-class suites each.</li>
+  </ul>
+
+  <h3>People and marketing</h3>
+  <ul>
+    <li>18,000 flight attendants, 140 nationalities, 50+ languages; Open Days in 140+ cities in 70 countries; about 5% accepted; seven-week training; pay about US$30,000 plus room and board.</li>
+    <li>Crew 75% women, average age 26 (versus over 40 at U.S. airlines).</li>
+    <li>StrawberryFrog's "Hello Tomorrow" movement, 18 months of internal work before the 2012 launch.</li>
+  </ul>
+
+  <h3>Current challenges</h3>
+  <ul>
+    <li>Oil price drop and terrorism reduce demand; Middle East companies cut travel; premium revenue falls.</li>
+    <li>Passengers avoid connecting through the Middle East.</li>
+    <li>U.S. airlines allege government subsidies; Clark denies them.</li>
+    <li>Etihad's The Residence (US$21,000) and First Apartments (US$16,000); Singapore Airlines' new premium economy.</li>
+  </ul>
+
+  <h3>Performance highlights (Exhibit 2)</h3>
+  <div class="chart" role="img" aria-label="Passengers flown rose from 12.5 million in FY2005 to 51.9 million in FY2016; operating profit swung from 1.8 billion dirhams in FY2012 to 8.3 billion in FY2016.">
+<svg viewBox="0 0 640 290">
+<g stroke="var(--line)" stroke-width="1">
+<line x1="50" y1="250" x2="600" y2="250"/><line x1="50" y1="176.7" x2="600" y2="176.7"/><line x1="50" y1="103.3" x2="600" y2="103.3"/><line x1="50" y1="30" x2="600" y2="30"/>
+</g>
+<text x="44" y="254" text-anchor="end">0</text><text x="44" y="180" text-anchor="end">20</text><text x="44" y="107" text-anchor="end">40</text><text x="44" y="34" text-anchor="end">60</text>
+<text x="606" y="254">0</text><text x="606" y="180">4</text><text x="606" y="107">8</text><text x="606" y="34">12</text>
+<g fill="var(--jade)" opacity="0.55">
+<rect x="58.9" y="204.06" width="28" height="45.94"/><rect x="104.75" y="196.84" width="28" height="53.16"/><rect x="150.6" y="185.67" width="28" height="64.33"/><rect x="196.4" y="172.16" width="28" height="77.84"/><rect x="242.25" y="166.65" width="28" height="83.35"/><rect x="288.1" y="149.34" width="28" height="100.66"/><rect x="333.9" y="134.79" width="28" height="115.21"/><rect x="379.75" y="125.4" width="28" height="124.6"/><rect x="425.6" y="105.57" width="28" height="144.43"/><rect x="471.4" y="86.7" width="28" height="163.3"/><rect x="517.25" y="69.26" width="28" height="180.74"/><rect x="563.1" y="59.87" width="28" height="190.13"/>
+</g>
+<polyline fill="none" stroke="var(--red)" stroke-width="2.5" points="72.9,201.98 118.75,201.38 164.6,188.78 210.4,168.4 256.25,208.24 302.1,184.64 347.9,150.21 393.75,216.76 439.6,197.95 485.4,190.34 531.25,141.96 577.1,97.28"/>
+<g fill="var(--red)"><circle cx="72.9" cy="201.98" r="3"/><circle cx="118.75" cy="201.38" r="3"/><circle cx="164.6" cy="188.78" r="3"/><circle cx="210.4" cy="168.4" r="3"/><circle cx="256.25" cy="208.24" r="3"/><circle cx="302.1" cy="184.64" r="3"/><circle cx="347.9" cy="150.21" r="3"/><circle cx="393.75" cy="216.76" r="3"/><circle cx="439.6" cy="197.95" r="3"/><circle cx="485.4" cy="190.34" r="3"/><circle cx="531.25" cy="141.96" r="3"/><circle cx="577.1" cy="97.28" r="3"/></g>
+<g text-anchor="middle"><text x="72.9" y="268">05</text><text x="118.75" y="268">06</text><text x="164.6" y="268">07</text><text x="210.4" y="268">08</text><text x="256.25" y="268">09</text><text x="302.1" y="268">10</text><text x="347.9" y="268">11</text><text x="393.75" y="268">12</text><text x="439.6" y="268">13</text><text x="485.4" y="268">14</text><text x="531.25" y="268">15</text><text x="577.1" y="268">16</text></g>
+<text x="50" y="18">Passengers (millions)</text><text x="600" y="18" text-anchor="end">Operating profit (AED bn)</text>
+<text x="325" y="286" text-anchor="middle">Fiscal year ended 31 March</text>
+</svg>
+    <div class="legend"><span><i class="sq" style="background:var(--jade);opacity:.55"></i>Passengers flown</span><span><i style="background:var(--red)"></i>Operating profit</span></div>
   </div>
-  <p class="src">Source: case Exhibit 3, from BlackBerry annual reports [1]. The case's FY2017 highlights state total revenue of $935 million (down from $1,276 million in FY2016) with a net loss of $1,206 million, which does not reconcile exactly with the segment total of $1,374 million; the difference is likely definitional (for example, revenue recognition or intersegment eliminations). Both sets of figures are reported as given [1][2].</p>
-
-  <h3>Financial ratio analysis</h3>
-  <div class="scroll"><table>
-    <tr><th>Financial ratio</th><th class="n">FY2016</th><th class="n">FY2017</th><th>Assessment</th></tr>
-    <tr class="grp"><td colspan="4">Profitability</td></tr>
-    <tr><td>Gross profit margin</td><td class="n">43.6%</td><td class="n">47.1%</td><td><span class="badge good">Improving</span></td></tr>
-    <tr><td>Operating profit margin</td><td class="n neg">-10.3%</td><td class="n neg">-90.2%</td><td><span class="badge poor">Poor</span></td></tr>
-    <tr><td>Net profit margin</td><td class="n neg">-9.6%</td><td class="n neg">-92.1%</td><td><span class="badge poor">Poor</span></td></tr>
-    <tr class="grp"><td colspan="4">Liquidity &amp; solvency</td></tr>
-    <tr><td>Current ratio</td><td class="n">2.90×</td><td class="n">2.79×</td><td><span class="badge good">Adequate</span></td></tr>
-    <tr><td>Quick ratio</td><td class="n">2.76×</td><td class="n">2.75×</td><td><span class="badge good">Adequate</span></td></tr>
-    <tr><td>Liabilities-to-equity</td><td class="n">0.73×</td><td class="n">0.59×</td><td><span class="badge good">Improving</span></td></tr>
-    <tr class="grp"><td colspan="4">Asset efficiency</td></tr>
-    <tr><td>Asset turnover</td><td class="n">—</td><td class="n">0.30×</td><td><span class="badge watch">Needs improvement</span></td></tr>
-    <tr><td>Return on assets</td><td class="n">—</td><td class="n neg">-27.4%</td><td><span class="badge poor">Poor</span></td></tr>
-  </table></div>
-  <p class="src">Computed from case Exhibits 8 and 9. Assessments based on financial trends and ratio interpretation principles from CFA Institute and Corporate Finance Institute.</p>
   <ul>
-    <li><b>Profitability:</b> Gross margin improved from 43.6% to 47.1%, but operating and net margins remained negative and deteriorated significantly in FY2017, partly due to substantial impairment charges. Software and services had not yet generated enough revenue to offset the decline of traditional businesses and support the cost structure.</li>
-    <li><b>Liquidity and solvency:</b> Current and quick ratios of 2.79 and 2.75 show short-term assets substantially exceeded current liabilities; liabilities-to-equity improved from 0.73 to 0.59. However, cash and short-term investments declined from $2.38 billion to $1.38 billion, so financial flexibility was narrowing.</li>
-    <li><b>Asset efficiency:</b> Asset turnover of 0.30 times indicates limited revenue generation relative to the asset base, though no directly comparable industry benchmark is available. Negative ROA reflects weak reported profitability, affected by substantial noncash charges.</li>
-    <li><b>Overall:</b> Liquidity and leverage remained relatively favorable, but profitability and revenue generation were weak. Management needed to prioritize opportunities capable of improving earnings and asset productivity while preserving financial flexibility.</li>
+    <li>Passengers grew from 12.5M (FY2005) to 51.9M (FY2016), about 13.8% a year.</li>
+    <li>Profit is fuel-sensitive: it fell to AED 1,813M in FY2012 despite traffic growth, then reached AED 8,330M in FY2016.</li>
   </ul>
 
-  <h3>Competitive landscape</h3>
+  <h3>Competitive set (Exhibit 1, Skytrax top-rated airlines)</h3>
   <div class="scroll"><table>
-    <tr><th>Competitor</th><th>Arena</th><th>Key facts from the case</th></tr>
-    <tr><td>Apple</td><td>Smartphones</td><td>$699 to $999+ pricing; ~36% of global smartphone spending on ~11% of volume; integrated ecosystem</td></tr>
-    <tr><td>Samsung</td><td>Smartphones</td><td>Vertical integration; entry-level to flagship ($570 to $840+)</td></tr>
-    <tr><td>Xiaomi, Huawei, Vivo</td><td>Smartphones</td><td>Open-source Android, Qualcomm/MediaTek reference chipsets; squeeze the mid-tier</td></tr>
-    <tr><td>Symantec</td><td>Enterprise security</td><td>$3.77 billion information security revenue (2017)</td></tr>
-    <tr><td>Verizon Enterprise Solutions</td><td>Enterprise security</td><td>Telecom-infrastructure reach into corporate data security</td></tr>
-    <tr><td>Imperva</td><td>Enterprise data security</td><td>$264 million revenue (FY2017)</td></tr>
+    <tr><th>Airline</th><th class="n">Started</th><th>Main hub</th><th class="n">Fleet</th><th class="n">Destinations</th></tr>
+    <tr><td><b>Emirates</b></td><td class="n">1985</td><td>Dubai</td><td class="n">221</td><td class="n">142</td></tr>
+    <tr><td>Qatar Airways</td><td class="n">1994</td><td>Doha</td><td class="n">146</td><td class="n">146</td></tr>
+    <tr><td>Etihad</td><td class="n">2003</td><td>Abu Dhabi</td><td class="n">102</td><td class="n">109</td></tr>
+    <tr><td>Singapore Airlines</td><td class="n">1972</td><td>Singapore</td><td class="n">108</td><td class="n">63</td></tr>
+    <tr><td>Cathay Pacific</td><td class="n">1946</td><td>Hong Kong</td><td class="n">161</td><td class="n">102</td></tr>
+    <tr><td>ANA</td><td class="n">1952</td><td>Tokyo</td><td class="n">211</td><td class="n">73</td></tr>
+    <tr><td>Lufthansa</td><td class="n">1953</td><td>Frankfurt</td><td class="n">273</td><td class="n">190</td></tr>
+    <tr><td>Other listed carriers (Thai, Asiana, EVA, Air New Zealand, Garuda, South African, Virgin Atlantic, Qantas)</td><td class="n">—</td><td>Various</td><td class="n">40–119</td><td class="n">30–108</td></tr>
   </table></div>
+  <p class="src">Exhibit 1 differs slightly from the narrative (almost 240 aircraft, 145 destinations) because of timing.</p>
 </section>
 
-<!-- PROBLEM ANALYSIS -->
+<!-- EXTERNAL -->
+<section role="tabpanel" id="p-ext" aria-labelledby="t-ext">
+  <h2 class="title">External environment</h2>
+  <div class="bottom"><strong>In brief</strong><p>The environment has turned from tailwind to headwind. Cheap fuel is the only major external factor still in Emirates' favour, and it is temporary; the hub-and-transfer model faces security, political and technological threats at once.</p></div>
+
+  <h3>PESTEL</h3>
+  <div class="scroll"><table>
+    <tr><th>Factor</th><th>Key developments</th><th>Impact</th></tr>
+    <tr><td>Political</td><td>Middle East wars; U.S. carriers' subsidy allegations; state ownership by the Government of Dubai</td><td><span class="badge poor">Threat</span> Traffic-rights risk; reputational pressure; deterred transfers</td></tr>
+    <tr><td>Economic</td><td>Oil price collapse lowers fuel cost but weakens Gulf economies; corporate travel cuts</td><td><span class="badge watch">Mixed</span> Costs down 7.5%, but premium revenue and yields fall</td></tr>
+    <tr><td>Social</td><td>Fear of terrorism; rising global middle class; demand for upscale yet affordable cabins</td><td><span class="badge watch">Mixed</span> Fewer Middle East connections; leisure and premium economy opportunity</td></tr>
+    <tr><td>Technological</td><td>Long-range aircraft enabled the hub model; newer long-range twins make point-to-point flights viable</td><td><span class="badge watch">Mixed</span> The technology that built the hub now lets rivals bypass it</td></tr>
+    <tr><td>Environmental</td><td>Fuel-efficiency and emissions scrutiny on four-engine aircraft</td><td><span class="badge poor">Threat</span> A380 economics depend on high load factors</td></tr>
+    <tr><td>Legal</td><td>Bilateral aviation rights; employment practices (appearance, weight, pregnancy rules)</td><td><span class="badge poor">Threat</span> Regulatory and reputational exposure</td></tr>
+  </table></div>
+
+  <h3>Porter's Five Forces</h3>
+  <div class="scroll"><table>
+    <tr><th>Force</th><th>Intensity</th><th>Rationale</th></tr>
+    <tr><td>Rivalry among competitors</td><td><span class="badge poor">High</span></td><td>Qatar (146 destinations) and Etihad chase the same transfer flows; Etihad and Singapore out-innovate in premium cabins</td></tr>
+    <tr><td>Threat of new entrants</td><td><span class="badge good">Low–moderate</span></td><td>High capital and brand barriers, but state-backed entrants are possible (Etihad began in 2003)</td></tr>
+    <tr><td>Buyer power</td><td><span class="badge watch">Moderate–high</span></td><td>Low switching costs, price transparency, corporate buyers cutting travel</td></tr>
+    <tr><td>Supplier power</td><td><span class="badge poor">High</span></td><td>Airbus–Boeing duopoly; volatile fuel; partly offset by government-backed airport infrastructure</td></tr>
+    <tr><td>Threat of substitutes</td><td><span class="badge watch">Moderate</span></td><td>Non-stop flights bypassing Dubai; video conferencing; avoidance of the region</td></tr>
+  </table></div>
+  <p>Industry attractiveness is moderate: profit depends on scale, unit cost and differentiation, not structural protection.</p>
+
+  <h3>External Factor Evaluation (EFE) Matrix</h3>
+  <div class="scroll"><table>
+    <tr><th>Key external factor</th><th class="n">Weight</th><th class="n">Rating</th><th class="n">Weighted</th></tr>
+    <tr class="grp"><td colspan="4">Opportunities</td></tr>
+    <tr><td>O1 Dubai location: two-thirds of world within 8 hours; busiest international airport</td><td class="n">0.10</td><td class="n">4</td><td class="n">0.40</td></tr>
+    <tr><td>O2 Low oil prices reduce fuel cost</td><td class="n">0.10</td><td class="n">4</td><td class="n">0.40</td></tr>
+    <tr><td>O3 Demand for upscale, mid-priced cabins</td><td class="n">0.08</td><td class="n">2</td><td class="n">0.16</td></tr>
+    <tr><td>O4 Dubai tourism and stopover demand</td><td class="n">0.08</td><td class="n">3</td><td class="n">0.24</td></tr>
+    <tr><td>O5 Underserved emerging-market city pairs</td><td class="n">0.08</td><td class="n">3</td><td class="n">0.24</td></tr>
+    <tr><td>O6 Efficient long-range twin-engine aircraft</td><td class="n">0.06</td><td class="n">2</td><td class="n">0.12</td></tr>
+    <tr class="grp"><td colspan="4">Threats</td></tr>
+    <tr><td>T1 Terrorism and regional conflict deterring transfers</td><td class="n">0.12</td><td class="n">2</td><td class="n">0.24</td></tr>
+    <tr><td>T2 Corporate travel cuts hitting premium cabins</td><td class="n">0.10</td><td class="n">2</td><td class="n">0.20</td></tr>
+    <tr><td>T3 U.S. subsidy allegations and traffic-rights risk</td><td class="n">0.08</td><td class="n">2</td><td class="n">0.16</td></tr>
+    <tr><td>T4 Premium competition (Etihad, Qatar, Singapore)</td><td class="n">0.12</td><td class="n">3</td><td class="n">0.36</td></tr>
+    <tr><td>T5 Yield pressure: revenue falling while passengers grow</td><td class="n">0.08</td><td class="n">2</td><td class="n">0.16</td></tr>
+    <tr class="total"><td>Total</td><td class="n">1.00</td><td class="n"></td><td class="n">2.68</td></tr>
+  </table></div>
+  <p>2.68 is only slightly above the 2.50 average: Emirates responds well to opportunities but weakly to its heaviest threats (T1, T2).</p>
+
+  <h3>Competitive Profile Matrix (CPM)</h3>
+  <div class="scroll"><table>
+    <tr><th>Critical success factor</th><th class="n">Weight</th><th class="n">Emirates</th><th class="n">Qatar</th><th class="n">Etihad</th><th class="n">Singapore</th></tr>
+    <tr><td>Hub location and network reach</td><td class="n">0.20</td><td class="n">4 (0.80)</td><td class="n">4 (0.80)</td><td class="n">2 (0.40)</td><td class="n">2 (0.40)</td></tr>
+    <tr><td>Service quality and premium experience</td><td class="n">0.20</td><td class="n">4 (0.80)</td><td class="n">4 (0.80)</td><td class="n">4 (0.80)</td><td class="n">4 (0.80)</td></tr>
+    <tr><td>Fleet size and modernity</td><td class="n">0.15</td><td class="n">4 (0.60)</td><td class="n">3 (0.45)</td><td class="n">2 (0.30)</td><td class="n">2 (0.30)</td></tr>
+    <tr><td>Brand recognition</td><td class="n">0.15</td><td class="n">4 (0.60)</td><td class="n">3 (0.45)</td><td class="n">2 (0.30)</td><td class="n">3 (0.45)</td></tr>
+    <tr><td>Financial strength</td><td class="n">0.15</td><td class="n">4 (0.60)</td><td class="n">2 (0.30)</td><td class="n">1 (0.15)</td><td class="n">3 (0.45)</td></tr>
+    <tr><td>Product innovation (new cabins)</td><td class="n">0.15</td><td class="n">2 (0.30)</td><td class="n">3 (0.45)</td><td class="n">4 (0.60)</td><td class="n">4 (0.60)</td></tr>
+    <tr class="total"><td>Total</td><td class="n">1.00</td><td class="n">3.70</td><td class="n">3.25</td><td class="n">2.55</td><td class="n">3.00</td></tr>
+  </table></div>
+  <p>Emirates leads overall but trails on product innovation, the factor rivals are attacking.</p>
+</section>
+
+<!-- INTERNAL -->
+<section role="tabpanel" id="p-int" aria-labelledby="t-int">
+  <h2 class="title">Internal environment</h2>
+  <div class="bottom"><strong>In brief</strong><p>The hub, service culture and brand are sustained advantages, and the balance sheet can fund a response. The weak points are revenue quality and an asset base built for a growth environment that has stalled.</p></div>
+
+  <h3>Financial ratio analysis (AED millions)</h3>
+  <div class="scroll"><table>
+    <tr><th>Metric</th><th class="n">FY2016</th><th class="n">FY2015</th><th>Reading</th></tr>
+    <tr class="grp"><td colspan="4">Growth and profitability</td></tr>
+    <tr><td>Revenue</td><td class="n">83,500</td><td class="n">86,728</td><td><span class="badge poor">−3.7%</span></td></tr>
+    <tr><td>Passengers (thousands)</td><td class="n">51,853</td><td class="n">49,292</td><td><span class="badge good">+5.2%</span></td></tr>
+    <tr><td>Revenue per passenger (AED)</td><td class="n">1,610</td><td class="n">1,760</td><td><span class="badge poor">−8.5%</span> Yield erosion</td></tr>
+    <tr><td>Operating costs</td><td class="n">76,714</td><td class="n">82,926</td><td><span class="badge good">−7.5%</span> Mainly fuel</td></tr>
+    <tr><td>Operating margin</td><td class="n">10.0%</td><td class="n">6.8%</td><td>Improved, cost-led</td></tr>
+    <tr><td>Net profit margin</td><td class="n">8.8%</td><td class="n">5.5%</td><td>Improved</td></tr>
+    <tr><td>Return on assets</td><td class="n">6.1%</td><td class="n">4.2%</td><td>Improved</td></tr>
+    <tr><td>Return on equity</td><td class="n">22.6%</td><td class="n">16.7%</td><td>Strong</td></tr>
+    <tr><td>Asset turnover</td><td class="n">0.70×</td><td class="n">0.78×</td><td><span class="badge watch">Weaker</span></td></tr>
+    <tr class="grp"><td colspan="4">Liquidity and leverage</td></tr>
+    <tr><td>Current ratio</td><td class="n">0.82</td><td class="n">0.80</td><td><span class="badge watch">Below 1.0</span></td></tr>
+    <tr><td>Cash and short-term deposits</td><td class="n">19,988</td><td class="n">16,885</td><td>Healthy buffer</td></tr>
+    <tr><td>Borrowings and lease liabilities</td><td class="n">50,105</td><td class="n">47,808</td><td>Up 4.8%</td></tr>
+    <tr><td>Debt to equity</td><td class="n">1.55×</td><td class="n">1.69×</td><td>Improving</td></tr>
+    <tr><td>Liabilities to assets</td><td class="n">72.8%</td><td class="n">74.6%</td><td>Highly leveraged, improving</td></tr>
+    <tr><td>Interest coverage</td><td class="n">6.3×</td><td class="n">4.1×</td><td>Comfortable</td></tr>
+    <tr class="grp"><td colspan="4">Cash flow</td></tr>
+    <tr><td>Operating cash flow</td><td class="n">14,105</td><td class="n">13,265</td><td>Strong</td></tr>
+    <tr><td>Capex (PPE and intangibles)</td><td class="n">9,878</td><td class="n">10,426</td><td>Heavy fleet investment</td></tr>
+    <tr><td>Free cash flow</td><td class="n">4,227</td><td class="n">2,839</td><td><span class="badge good">Positive</span></td></tr>
+    <tr><td>Dividend paid to owner</td><td class="n">2,100</td><td class="n">869</td><td>Rising payout</td></tr>
+  </table></div>
+  <p class="src">Computed from Exhibits 2 to 5 using year-end balances. Exhibit 5 prints FY2016 net change in cash as "3,7696"; the correct figure is 3,769.</p>
+
+  <h3>Value chain</h3>
+  <div class="scroll"><table>
+    <tr><th>Activity</th><th>How Emirates creates value</th><th>Assessment</th></tr>
+    <tr><td>Inbound logistics</td><td>Large-volume 777 and A380 purchases; fuel procurement</td><td>Scale strength; A380 rigidity</td></tr>
+    <tr><td>Operations</td><td>DXB hub with US$4.5bn terminal; 115,000 meals a day</td><td>Core strength</td></tr>
+    <tr><td>Outbound logistics</td><td>One-stop network to 145 destinations</td><td>Strength, concentrated in one hub</td></tr>
+    <tr><td>Marketing and sales</td><td>"Hello Tomorrow" in 150 countries</td><td>Strength; premium message challenged</td></tr>
+    <tr><td>Service</td><td>Marhaba team, chauffeur, 30 lounges, bar and showers</td><td>Distinctive strength</td></tr>
+    <tr><td>Human resources</td><td>Open Days in 140 cities; 5% acceptance; seven-week training</td><td>Distinctive; reputational risk in rules</td></tr>
+    <tr><td>Technology</td><td>First seat-back IFE; first-class suites</td><td>Strong historically; rivals now lead</td></tr>
+    <tr><td>Firm infrastructure</td><td>Government of Dubai ownership; Clark, Daly, Mattar</td><td>Strength; fuels subsidy allegations</td></tr>
+  </table></div>
+
+  <h3>VRIO analysis</h3>
+  <div class="scroll"><table>
+    <tr><th>Resource or capability</th><th>V</th><th>R</th><th>I</th><th>O</th><th>Implication</th></tr>
+    <tr><td>Dubai hub and "strange city pairs" network</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="badge good">Sustained advantage</span></td></tr>
+    <tr><td>Multinational, rigorously selected service culture</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="badge good">Sustained advantage</span></td></tr>
+    <tr><td>Global brand ("Hello Tomorrow")</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="badge good">Sustained advantage</span></td></tr>
+    <tr><td>Financial strength and cash generation</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td><td><span class="badge watch">Temporary advantage</span></td></tr>
+    <tr><td>Largest A380 fleet</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td><td><span class="badge watch">Temporary; also a rigidity</span></td></tr>
+    <tr><td>Onboard amenities (bar, showers, suites)</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td><span class="badge poor">Competitive parity</span></td></tr>
+  </table></div>
+
+  <h3>Internal Factor Evaluation (IFE) Matrix</h3>
+  <div class="scroll"><table>
+    <tr><th>Key internal factor</th><th class="n">Weight</th><th class="n">Rating</th><th class="n">Weighted</th></tr>
+    <tr class="grp"><td colspan="4">Strengths</td></tr>
+    <tr><td>S1 Dubai hub and one-stop global network</td><td class="n">0.12</td><td class="n">4</td><td class="n">0.48</td></tr>
+    <tr><td>S2 Service excellence and premium reputation</td><td class="n">0.12</td><td class="n">4</td><td class="n">0.48</td></tr>
+    <tr><td>S3 Large, modern widebody fleet</td><td class="n">0.08</td><td class="n">4</td><td class="n">0.32</td></tr>
+    <tr><td>S4 Multinational crew (18,000; 140 nationalities)</td><td class="n">0.08</td><td class="n">4</td><td class="n">0.32</td></tr>
+    <tr><td>S5 27 years of profit; operating cash flow AED 14.1bn; ROE 22.6%</td><td class="n">0.10</td><td class="n">4</td><td class="n">0.40</td></tr>
+    <tr><td>S6 Global brand</td><td class="n">0.05</td><td class="n">3</td><td class="n">0.15</td></tr>
+    <tr class="grp"><td colspan="4">Weaknesses</td></tr>
+    <tr><td>W1 Transfer dependence on a single hub in a volatile region</td><td class="n">0.12</td><td class="n">1</td><td class="n">0.12</td></tr>
+    <tr><td>W2 A380-heavy fleet hard to right-size</td><td class="n">0.10</td><td class="n">2</td><td class="n">0.20</td></tr>
+    <tr><td>W3 Yield erosion (revenue per passenger −8.5%)</td><td class="n">0.10</td><td class="n">1</td><td class="n">0.10</td></tr>
+    <tr><td>W4 Current ratio 0.82; borrowings AED 50.1bn</td><td class="n">0.07</td><td class="n">2</td><td class="n">0.14</td></tr>
+    <tr><td>W5 No premium economy; flagship product being matched</td><td class="n">0.06</td><td class="n">2</td><td class="n">0.12</td></tr>
+    <tr class="total"><td>Total</td><td class="n">1.00</td><td class="n"></td><td class="n">2.83</td></tr>
+  </table></div>
+  <p>2.83 is an above-average internal position, held back by heavily weighted structural weaknesses (W1, W3).</p>
+</section>
+
+<!-- PROBLEM -->
 <section role="tabpanel" id="p-prob" aria-labelledby="t-prob">
   <h2 class="title">Problem analysis &amp; statement</h2>
-  <div class="bottom warn"><strong>Problem statement</strong><p>How should BlackBerry leverage its existing capabilities and resources to achieve sustainable growth and profitability amid increasing competition and changing industry dynamics?</p></div>
+  <div class="bottom warn"><strong>Problem statement</strong><p>How can Emirates restore revenue quality and sustain profitable growth of its Dubai-hub network over FY2017 to FY2020, given declining transfer and premium demand, intensifying premium competition from Etihad, Qatar and Singapore Airlines, political pressure on its traffic rights, and a fleet sized for continuous high-density growth?</p></div>
 
   <h3>Root cause analysis</h3>
-  <p>BlackBerry's decline was not caused by a single unsuccessful product but by its failure to adapt its business model and competitive capabilities to fundamental changes in the smartphone industry.</p>
   <div class="scroll"><table>
     <tr><th>Root cause</th><th>Case evidence</th><th>Business impact</th></tr>
-    <tr><td>1. Failure to anticipate market shifts</td><td>Management underestimated the shift toward touchscreen smartphones, mobile applications, and consumer-driven purchasing preferences.</td><td>BlackBerry's traditional product advantages became less relevant, resulting in declining market share.</td></tr>
-    <tr><td>2. Weak innovation and product execution</td><td>The BlackBerry Storm, Torch, and BB10 failed to establish a competitive position against iOS and Android. Product delays and software limitations weakened execution.</td><td>BlackBerry struggled to retain customers and recover lost hardware sales.</td></tr>
-    <tr><td>3. Dependence on a proprietary ecosystem</td><td>BlackBerry relied heavily on its devices, operating system, and network infrastructure. The rise of BYOD reduced enterprise dependence on this closed ecosystem.</td><td>Declining device sales and system access fees eroded traditional revenue sources.</td></tr>
-    <tr><td>4. Leadership and strategic misalignment</td><td>Disagreements between senior leaders contributed to delayed decisions and inconsistent responses to industry changes.</td><td>BlackBerry lost valuable time while competitors strengthened their market positions.</td></tr>
-    <tr><td>5. Slow replacement of declining revenues</td><td>Despite Software &amp; Services revenue growing by 161.8% from FY2015 to FY2017, total segment revenue declined by 58.8%.</td><td>Emerging businesses had not achieved sufficient scale to replace traditional revenues and restore profitability.</td></tr>
+    <tr><td>1. Transfer-dependent, single-hub model</td><td>Fear of terrorism leads passengers to avoid connecting through the Middle East</td><td>Lost connecting traffic on key flows</td></tr>
+    <tr><td>2. Weakening premium demand</td><td>Middle East companies cut employee travel after the oil price drop</td><td>Premium revenue falls; revenue per passenger −8.5%</td></tr>
+    <tr><td>3. Slowing product innovation</td><td>Etihad's Residence and Singapore's premium economy surpass or match Emirates' offer</td><td>Loss of differentiation; trendy-airline image fades</td></tr>
+    <tr><td>4. Fleet built for continuous growth</td><td>A380 orders cut; 777s swapped onto some A380 routes</td><td>Capacity hard to match to demand; load-factor risk</td></tr>
+    <tr><td>5. Political exposure of state ownership</td><td>U.S. airlines' subsidy allegations</td><td>Risk to traffic rights in a key long-haul market</td></tr>
   </table></div>
 
   <h3>Root cause and effect</h3>
-  <div class="flow" role="img" aria-label="Four root causes (market misjudgment, execution weaknesses, business model dependence, leadership misalignment) lead to loss of competitive position, then financial deterioration, then the unresolved strategic challenge in 2017.">
-    <div class="causes">
-      <div class="node"><b>Market misjudgment</b><span>Underestimated changing customer needs</span></div>
-      <div class="node"><b>Execution weaknesses</b><span>Delayed and unsuccessful product responses</span></div>
-      <div class="node"><b>Business model dependence</b><span>Reliance on proprietary devices and networks</span></div>
-      <div class="node"><b>Leadership misalignment</b><span>Slow and inconsistent strategic decisions</span></div>
+  <div class="flow" role="img" aria-label="Five root causes lead to falling yields and transfer traffic, then earnings that depend on cheap fuel, then the strategic challenge in 2017.">
+    <div class="causes five">
+      <div class="node"><b>Hub dependence</b><span>Transfers avoid the region</span></div>
+      <div class="node"><b>Premium demand</b><span>Corporate travel cuts</span></div>
+      <div class="node"><b>Innovation slowing</b><span>Rivals out-design suites</span></div>
+      <div class="node"><b>Fleet rigidity</b><span>A380s hard to fill</span></div>
+      <div class="node"><b>Political exposure</b><span>Subsidy allegations</span></div>
     </div>
-    <div class="join"></div>
-    <div class="effect"><b>Loss of competitive position</b><span>Declining market share, hardware sales, and system access fees</span></div>
+    <div class="join five"></div>
+    <div class="effect"><b>Falling revenue quality</b><span>Revenue −3.7% while passengers +5.2%; revenue per passenger −8.5%</span></div>
     <div class="arrow"></div>
-    <div class="effect"><b>Financial deterioration</b><span>Revenue contraction, operating losses, and declining financial resources</span></div>
+    <div class="effect"><b>Fuel-dependent earnings</b><span>Record profit driven by AED 6.2bn lower operating costs</span></div>
     <div class="arrow"></div>
-    <div class="effect final"><b>Unresolved strategic challenge in 2017</b><span>How to convert remaining capabilities and resources into sustainable growth and profitability</span></div>
+    <div class="effect final"><b>Strategic challenge in 2017</b><span>How to sustain profitable hub growth when cheap fuel no longer masks weak demand</span></div>
   </div>
 
-  <h3>Synthesis</h3>
+  <h3>Objectives</h3>
   <ul>
-    <li>BlackBerry's decline was primarily driven by its inability to respond effectively to changing customer preferences and technological developments, compounded by weak product execution, dependence on its proprietary ecosystem, and leadership disagreements that delayed strategic decisions.</li>
-    <li>By 2017, management had begun addressing these weaknesses through restructuring and diversification, but software and services growth remained insufficient to replace declining traditional revenues.</li>
-    <li>The strategic challenge had shifted from defending the smartphone business to determining how remaining technological capabilities, intellectual property, customer relationships, and financial resources could generate sustainable growth and profitability.</li>
+    <li>Arrest the decline in revenue per passenger and return it to growth by FY2019.</li>
+    <li>Grow connecting traffic from new source markets to offset Middle East-sensitive flows.</li>
+    <li>Keep an operating margin of at least 8% at normalised fuel prices.</li>
+    <li>Keep cash and deposits above AED 15bn; move the current ratio toward 0.9.</li>
+    <li>Preserve the brand and service culture behind the sustained advantages.</li>
   </ul>
 </section>
 
-<!-- SWOT -->
-<section role="tabpanel" id="p-swot" aria-labelledby="t-swot">
-  <h2 class="title">SWOT analysis</h2>
-  <div class="bottom"><strong>In brief</strong><p>BlackBerry's strengths lie in trust, security, patents and a growing software line. Its weaknesses are uncompetitive hardware, collapsing system access fees, heavy losses and small scale against security incumbents.</p></div>
+<!-- TOOLS -->
+<section role="tabpanel" id="p-tools" aria-labelledby="t-tools">
+  <h2 class="title">SWOT, TOWS &amp; IE Matrix</h2>
+  <div class="bottom"><strong>In brief</strong><p>The tools point to a "hold and maintain" posture: deepen market penetration of the existing network and develop products, rather than retrench or pursue risky consolidation.</p></div>
+
+  <h3>SWOT analysis</h3>
   <div class="grid2">
-    <div class="quad s"><h4>Strengths</h4><ul>
-      <li>Trusted security brand with governments and enterprises</li>
-      <li>Growing software/services line ($249M to $652M, FY2015 to FY2017, +161.8%)</li>
-      <li>Patent portfolio with proven licensing value</li>
-      <li>$815 million Qualcomm award; cost base cut under Chen</li>
-    </ul></div>
-    <div class="quad w"><h4>Weaknesses</h4><ul>
-      <li>Non-competitive hardware and no consumer ecosystem</li>
-      <li>Collapsing System Access Fees ($1,606M to $313M, −80.5%) and heavy losses ($1,206M net loss, FY2017)</li>
-      <li>Small scale versus Symantec, Microsoft, and Verizon</li>
-      <li>History of slow decisions and internal leadership conflict</li>
-    </ul></div>
-    <div class="quad o"><h4>Opportunities</h4><ul>
-      <li>Growth in enterprise mobility management and cybersecurity spending</li>
-      <li>Licensing the BlackBerry brand and name to OEMs (asset-light hardware), IoT</li>
-      <li>Embedded/automotive software (QNX heritage)</li>
-      <li>Secure communications niches; regulatory and privacy tailwinds favoring certified secure vendors</li>
-    </ul></div>
-    <div class="quad t"><h4>Threats</h4><ul>
-      <li>Entrenched enterprise-security incumbents (Symantec, Verizon, Imperva)</li>
-      <li>Continued erosion of SAF as carriers decommission BlackBerry services</li>
-      <li>Platform owners (Apple, Google) absorbing security features natively</li>
-      <li>Any re-entry into consumer hardware invites commoditization by Chinese vendors</li>
-    </ul></div>
+    <div class="quad s"><h4>Strengths</h4><ul><li>Dubai hub within eight hours of two-thirds of the world</li><li>Top-rated service and premium brand</li><li>Large modern fleet; largest A380 operator</li><li>Elite multinational crew</li><li>27 years of profit; strong cash flow</li></ul></div>
+    <div class="quad w"><h4>Weaknesses</h4><ul><li>Single-hub, transfer-dependent model</li><li>A380 fleet inflexibility</li><li>Falling revenue per passenger</li><li>High leverage; current ratio below 1</li><li>No premium economy cabin</li></ul></div>
+    <div class="quad o"><h4>Opportunities</h4><ul><li>Low fuel prices</li><li>Dubai tourism and stopovers</li><li>Underserved emerging-market city pairs</li><li>Demand for upscale mid-priced cabins</li><li>Efficient long-range twins</li></ul></div>
+    <div class="quad t"><h4>Threats</h4><ul><li>Terrorism and regional conflict</li><li>Corporate travel cuts</li><li>U.S. subsidy allegations</li><li>Etihad, Qatar, Singapore premium push</li><li>Non-stop flights bypassing hubs</li></ul></div>
   </div>
-</section>
 
-<!-- TOWS -->
-<section role="tabpanel" id="p-tows" aria-labelledby="t-tows">
-  <h2 class="title">TOWS matrix</h2>
-  <div class="bottom"><strong>In brief</strong><p>The matrix points toward software, security and licensing, funded by disciplined cost control and away from capital-intensive hardware.</p></div>
-  <div class="grid2">
-    <div class="quad s"><h4>SO strategies (use strengths to seize opportunities)</h4><ul>
-      <li>Leverage security expertise and enterprise relationships to expand software solutions.</li>
-      <li>Commercialize patents through licensing.</li>
-      <li>Explore growth opportunities in QNX and connected technologies.</li>
-    </ul></div>
-    <div class="quad o"><h4>WO strategies (overcome weaknesses using opportunities)</h4><ul>
-      <li>Accelerate replacement of declining traditional revenues through software expansion, partnerships, and selective acquisitions.</li>
-      <li>Redeploy resources toward businesses with stronger growth potential.</li>
-    </ul></div>
-    <div class="quad w"><h4>ST strategies (use strengths to counter threats)</h4><ul>
-      <li>Differentiate through trusted security capabilities.</li>
-      <li>Use strategic partnerships and licensing to compete without significant hardware investment.</li>
-    </ul></div>
-    <div class="quad t"><h4>WT strategies (minimize weaknesses and avoid threats)</h4><ul>
-      <li>Rationalize underperforming operations and control operating costs.</li>
-      <li>Preserve liquidity while reducing exposure to highly competitive, capital-intensive businesses.</li>
-    </ul></div>
-  </div>
-</section>
-
-<!-- ENVIRONMENT -->
-<section role="tabpanel" id="p-env" aria-labelledby="t-env">
-  <h2 class="title">Internal &amp; external environment</h2>
-  <div class="bottom"><strong>In brief</strong><p>Technological and social shifts broke the device business. Enterprise security software is competitive but has entry barriers that favor BlackBerry's certifications, government trust and compliance history.</p></div>
-
-  <h3>External environment: PESTLE</h3>
+  <h3>TOWS matrix</h3>
   <div class="scroll"><table>
-    <tr><th>Factor</th><th>External factors</th><th>Strategic implications</th></tr>
-    <tr><td>Political</td><td>Government agencies and public institutions continued to require secure and reliable communication systems.</td><td>Government security requirements provided opportunities for BlackBerry to leverage its established reputation and relationships.</td></tr>
-    <tr><td>Economic</td><td>The smartphone market had become increasingly competitive, with large technology companies benefiting from scale and extensive product ecosystems.</td><td>BlackBerry faced pressure to generate returns in markets dominated by financially stronger competitors.</td></tr>
-    <tr><td>Social</td><td>Consumers shifted toward touchscreen smartphones, mobile applications, and integrated ecosystems. BYOD practices also became increasingly common among enterprise customers.</td><td>BlackBerry's traditional advantage in corporate devices weakened as purchasing preferences shifted toward consumer-oriented platforms.</td></tr>
-    <tr><td>Technological</td><td>Rapid innovation in mobile operating systems, application ecosystems, cybersecurity, and connected devices changed the basis of competition.</td><td>BlackBerry faced continued technological disruption but could potentially leverage its security expertise and QNX technology in emerging applications.</td></tr>
-    <tr><td>Legal</td><td>Patent protection, intellectual property disputes, and requirements for secure handling of information remained important. BlackBerry received an $815 million arbitration award against Qualcomm in April 2017.</td><td>Intellectual property represented a potential source of economic value, while litigation and compliance created costs and risks.</td></tr>
-    <tr><td>Environmental</td><td>Electronic waste, device lifecycles, and environmental concerns associated with electronics manufacturing affected the broader technology industry.</td><td>Relevant to hardware operations but not identified as a major driver of BlackBerry's strategic difficulties in the case.</td></tr>
+    <tr><th></th><th>Opportunities</th><th>Threats</th></tr>
+    <tr><td><b>Strengths</b></td><td><b>SO:</b> Use the DXB hub and flydubai's narrow-body network to capture underserved markets and feed long-haul flights (S1, S3, O1, O5). <i>Alternative 1</i></td><td><b>ST:</b> Use financial strength and political backing to consolidate UAE aviation with Etihad (S5, T4). <i>Alternative 3</i></td></tr>
+    <tr><td><b>Weaknesses</b></td><td><b>WO:</b> Launch premium economy and next-generation suites to recapture yield (W3, W5, O3). <i>Alternative 2</i></td><td><b>WT:</b> Cut capacity, park A380s, exit weak routes to protect margin and liquidity (W2, W4, T1, T2). <i>Alternative 4</i></td></tr>
   </table></div>
+
+  <h3>Internal–External (IE) Matrix</h3>
+  <div class="ie" role="img" aria-label="IE Matrix: Emirates in cell five, hold and maintain">
+    <div class="h"></div><div class="h">IFE strong<br>3.0–4.0</div><div class="h">IFE average<br>2.0–2.99</div><div class="h">IFE weak<br>1.0–1.99</div>
+    <div class="h">EFE high</div><div class="c1">I</div><div class="c1">II</div><div class="c2">III</div>
+    <div class="h">EFE medium</div><div class="c1">IV</div><div class="c2 here">V · Emirates<br>(2.83, 2.68)</div><div class="c3">VI</div>
+    <div class="h">EFE low</div><div class="c2">VII</div><div class="c3">VIII</div><div class="c3">IX</div>
+  </div>
   <ul>
-    <li><b>Key finding:</b> Technological and Social factors were the most significant external pressures. The shift toward touchscreen devices, application ecosystems, and BYOD fundamentally weakened BlackBerry's traditional competitive advantages.</li>
-    <li>Developments in cybersecurity, connected devices, and embedded systems created opportunities beyond smartphones; BlackBerry's 2017 annual filing confirms its participation through enterprise security solutions, QNX, and technology licensing.</li>
-    <li>Political and Legal factors mattered because of security requirements and IP protection; Economic pressures reinforced the need for sustainable returns; Environmental factors had limited direct relevance.</li>
+    <li>Cell V: "hold and maintain"; prescribed strategies are market penetration and product development.</li>
+    <li>This favours Alternative 1 (penetration) and Alternative 2 (product development) over Alternative 3 (consolidation) and Alternative 4 (retrenchment).</li>
   </ul>
-
-  <h3>External environment: Porter's Five Forces (devices vs. enterprise software)</h3>
-  <div class="scroll"><table>
-    <tr><th>Force</th><th>Smartphone devices</th><th>Enterprise security software</th></tr>
-    <tr><td>Rivalry</td><td>Extreme: Apple, Samsung, and Chinese vendors on open Android</td><td>High: Symantec ($3.77B security revenue), Verizon, Imperva, but fragmented by vertical</td></tr>
-    <tr><td>Buyer power</td><td>Extreme: carriers and consumers; zero switching loyalty shown post-2010</td><td>Moderate: enterprises face switching costs in the security stack</td></tr>
-    <tr><td>Supplier power</td><td>High: Qualcomm/MediaTek reference designs available to all, so no differentiation</td><td>Moderate: talent and certifications</td></tr>
-    <tr><td>Threat of substitutes</td><td>Absolute: any touchscreen Android/iOS device substitutes</td><td>Moderate: native platform security (Apple/Google) is the main substitute</td></tr>
-    <tr><td>Barriers to entry</td><td>Low for hardware assembly (exactly how Chinese vendors entered)</td><td>Moderate to high: certifications, compliance track records, federal approvals</td></tr>
-  </table></div>
-  <p>The devices industry scores badly on every force, which explains why revenue there fell regardless of product quality. The enterprise software industry is competitive but has entry barriers that play to BlackBerry's existing strengths. The five forces independently confirm the direction the segment data already suggested.</p>
-
-  <h3>Internal environment: VRIO</h3>
-  <div class="scroll"><table class="wide">
-    <tr><th>Resource</th><th>V</th><th>R</th><th>I</th><th>O</th><th>Implication</th></tr>
-    <tr><td>Security/encryption technology and certifications</td><td>Yes</td><td>Yes</td><td>Costly to imitate</td><td>No (organized around devices)</td><td>Temporary advantage only; organization must be re-oriented</td></tr>
-    <tr><td>Global secure network infrastructure (SAF base)</td><td>Yes (historic)</td><td>Yes</td><td>Hard to imitate</td><td>No (structured decline)</td><td>Non-durable: BYOD is dismantling exclusivity; milk, do not invest</td></tr>
-    <tr><td>Patent portfolio</td><td>Yes</td><td>Yes</td><td>Legally protected</td><td>Partial (licensing underdeveloped)</td><td>Durable cash source if a licensing organization is built</td></tr>
-    <tr><td>QNX embedded automotive software</td><td>Yes</td><td>Yes</td><td>Very hard to imitate</td><td>Under-leveraged</td><td>The most under-exploited durable advantage in the company</td></tr>
-    <tr><td>Brand (“secure”)</td><td>Yes</td><td>Yes</td><td>Hard to imitate</td><td>No (tied to failing hardware)</td><td>Transferable to software and licensing once repositioned</td></tr>
-    <tr><td>Handset design/manufacturing</td><td>No</td><td>No</td><td>Easily imitated</td><td>Yes</td><td>Competitive parity at best; a liability to keep</td></tr>
-  </table></div>
-  <p>The company kept organizing durable resources around a device business whose resource base was worth nothing. This reframes the problem from “build better phones” to “re-organize existing durable resources toward businesses where they are actually competitive.”</p>
-
-  <h3>Internal environment: assessment</h3>
-  <div class="scroll"><table>
-    <tr><th>Dimension</th><th>Assessment</th></tr>
-    <tr><td>Strategy</td><td>Shifting from device-led to software/services/licensing-led under Chen; cost discipline restored</td></tr>
-    <tr><td>Structure and leadership</td><td>Two-CEO structure removed; single CEO with clearer accountability, but a history of strategic paralysis to overcome</td></tr>
-    <tr><td>Finances</td><td>Revenue collapsed to $935 million (FY2017 case highlights) with a $1,206 million net loss; segment table shows total revenue of $1,374 million for FY2017 (see Annex note); $815 million Qualcomm award provides a one-time cash buffer</td></tr>
-    <tr><td>Products and technology</td><td>World-class security and encryption pedigree; secure messaging (BBM); QNX embedded software heritage; hardware now uncompetitive</td></tr>
-    <tr><td>Brand</td><td>Strong residual trust with governments, regulated industries, and enterprises (“secure” positioning)</td></tr>
-    <tr><td>Weaknesses</td><td>Shrinking developer base, no consumer ecosystem, loss of carrier leverage, revenue concentration in declining segments</td></tr>
-  </table></div>
 </section>
 
 <!-- ALTERNATIVES -->
 <section role="tabpanel" id="p-alt" aria-labelledby="t-alt">
   <h2 class="title">Alternative courses of action</h2>
-  <div class="bottom"><strong>In brief</strong><p>Four alternatives were considered, differing in where BlackBerry's revenue would come from: enterprise customers, embedded technology and IP, a sale or merger, or device manufacturers.</p></div>
+  <div class="bottom"><strong>Mutual exclusivity</strong><p>Each alternative is a single primary thrust for FY2017 to FY2020 and commits the same constrained resources (about AED 10bn a year of capex, management bandwidth and the fleet plan) in a different direction. Choosing one rules out the others.</p></div>
 
   <div class="quad pick" style="margin-bottom:12px">
-    <h4>Alternative 1: Expand as an enterprise software and security company <span class="tag">Recommended</span></h4>
-    <p>Concentrate resources on becoming a major provider of enterprise software, cybersecurity, and secure communications solutions, accelerating organic development and pursuing selective acquisitions to expand the portfolio, customer base, and recurring software revenues.</p>
+    <h4>Alternative 1: Dubai hub network integration with flydubai <span class="tag">Recommended</span></h4>
+    <p>Sign a comprehensive partnership with <b>flydubai</b>, the Dubai low-cost carrier owned by the same shareholder (Investment Corporation of Dubai): full codeshare, coordinated DXB schedules, through-checked baggage and joint Emirates Skywards. flydubai's Boeing 737 network feeds secondary cities in the Gulf, Africa, Central Asia, the Indian subcontinent and Eastern Europe into Emirates long-haul flights. Thin routes move to flydubai; Emirates widebodies redeploy to dense trunks; further A380 commitments are deferred in favour of the Boeing 777X.</p>
     <p class="pc pro">Pros</p>
     <ul>
-      <li><b>Leverages existing strengths:</b> builds on security expertise, enterprise customer relationships, and the established software portfolio.</li>
-      <li><b>Recurring revenue potential:</b> subscriptions and enterprise contracts could provide more predictable revenues and higher margins than hardware.</li>
-      <li><b>Established growth momentum:</b> Software &amp; Services revenue increased by 161.8% between FY2015 and FY2017.</li>
+      <li><b>New feed without new aircraft:</b> adds source markets and lifts load factors on A380s and 777s.</li>
+      <li><b>No ownership barrier:</b> same owner, so no antitrust or foreign-approval hurdle.</li>
+      <li><b>Speed:</b> codeshare achievable in 6–12 months.</li>
+      <li><b>Diversification:</b> broadens transfer sources beyond Middle East-sensitive flows.</li>
     </ul>
     <p class="pc con">Cons</p>
     <ul>
-      <li><b>Intense competition:</b> established enterprise software and cybersecurity providers have greater scale and resources.</li>
-      <li><b>High investment requirements:</b> product development, acquisitions, and customer acquisition would require substantial financial commitments.</li>
-      <li><b>Concentration risk:</b> heavy dependence on enterprise software increases exposure if the business fails to achieve sufficient market penetration.</li>
+      <li><b>Product gap remains:</b> does not directly answer Etihad and Singapore cabins.</li>
+      <li><b>Brand dilution risk:</b> low-cost legs may feel inconsistent with Emirates service.</li>
+      <li><b>Still single-hub:</b> concentration at DXB persists.</li>
     </ul>
+    <p class="src">Exclusive because it commits to a single-hub DXB model and a fleet deferral, incompatible with a dual-hub merger or deep retrenchment, and it diverts capital from a fleet-wide retrofit.</p>
   </div>
 
   <div class="quad" style="margin-bottom:12px">
-    <h4>Alternative 2: Focus on embedded technology and IP licensing</h4>
-    <p>Reposition primarily as a technology and IP provider concentrating on QNX, automotive applications, connected devices, and patent licensing, commercializing proprietary technologies through OEM agreements, licensing arrangements, and strategic partnerships.</p>
+    <h4>Alternative 2: Premium product reboot</h4>
+    <p>Introduce a premium economy cabin across the A380 and 777 fleet to compete with Singapore Airlines; launch fully enclosed next-generation first-class suites on new Boeing 777-300ERs, co-designed with <b>Mercedes-Benz</b>, to answer Etihad's The Residence; upgrade the 30 lounges and expand Marhaba.</p>
     <p class="pc pro">Pros</p>
     <ul>
-      <li><b>Leverages proprietary technology:</b> QNX and the patent portfolio provide opportunities beyond the smartphone market.</li>
-      <li><b>Lower capital intensity:</b> licensing and embedded software could generate revenues without large-scale hardware manufacturing.</li>
-      <li><b>Growth opportunities:</b> adoption of connected vehicles and IoT could expand demand for embedded software.</li>
+      <li><b>Targets yield directly:</b> captures upscale mid-priced demand.</li>
+      <li><b>Leverages service culture:</b> a sustained advantage.</li>
+      <li><b>Restores innovation leadership.</b></li>
     </ul>
     <p class="pc con">Cons</p>
     <ul>
-      <li><b>Dependence on OEM adoption:</b> growth depends on manufacturers selecting and integrating BlackBerry technologies.</li>
-      <li><b>Long commercialization cycles:</b> automotive and embedded systems require extensive development, testing, and qualification.</li>
-      <li><b>Uncertain revenue scale:</b> licensing income and royalties may not grow sufficiently or quickly enough to replace declining revenues.</li>
+      <li><b>Heavy capex and retrofit downtime.</b></li>
+      <li><b>Mistimed:</b> bets on premium demand as corporate travel is cut.</li>
+      <li><b>Imitable:</b> amenities are competitive parity under VRIO; does not fix transfer losses.</li>
     </ul>
+    <p class="src">Exclusive because the fleet-wide retrofit absorbs the capital and aircraft time the other options need.</p>
   </div>
 
   <div class="quad" style="margin-bottom:12px">
-    <h4>Alternative 3: Pursue a strategic sale or merger</h4>
-    <p>Pursue a sale or merger with a larger technology, enterprise software, or cybersecurity company able to integrate BlackBerry's security technologies, IP, and customer relationships, maximizing shareholder value through a negotiated transaction rather than an independent turnaround.</p>
+    <h4>Alternative 3: UAE consolidation through a merger with Etihad Airways</h4>
+    <p>Propose to the UAE federal government a merger with <b>Etihad Airways</b> (Abu Dhabi), combining fleets (221 + 102 aircraft) and networks and running DXB and Abu Dhabi as a coordinated dual hub.</p>
     <p class="pc pro">Pros</p>
     <ul>
-      <li><b>Potential shareholder value realization:</b> immediate value and reduced exposure to future turnaround risks.</li>
-      <li><b>Access to greater resources:</b> a larger company could provide capital, distribution, and organizational capabilities.</li>
-      <li><b>Operational synergies:</b> combining technologies and eliminating duplicated functions could improve cost efficiency.</li>
+      <li><b>Removes the closest premium rival.</b></li>
+      <li><b>Scale:</b> stronger bargaining with Airbus and Boeing; rationalised overlapping routes.</li>
     </ul>
     <p class="pc con">Cons</p>
     <ul>
-      <li><b>Loss of independence:</b> surrenders control over future strategic direction and long-term upside.</li>
-      <li><b>Valuation risk:</b> declining performance could weaken the negotiating position and result in an unattractive price.</li>
-      <li><b>Execution and regulatory risks:</b> regulatory scrutiny, integration challenges, and uncertain buyer interest.</li>
+      <li><b>Political complexity</b> between Dubai and Abu Dhabi ownership.</li>
+      <li><b>Absorbs Etihad's weaker finances</b> and its loss-making stakes in other airlines.</li>
+      <li><b>Intensifies</b> U.S. and EU subsidy and competition scrutiny; long timeline.</li>
     </ul>
+    <p class="src">Exclusive because a merger consumes years of management attention and replaces the single-hub model.</p>
   </div>
 
   <div class="quad" style="margin-bottom:12px">
-    <h4>Alternative 4: Become a security technology supplier to global device manufacturers</h4>
-    <p>License and integrate security technologies, encrypted communications, and enterprise device management into third-party platforms such as Samsung and potentially Apple, expanding the existing Samsung collaboration while pursuing additional OEM customers.</p>
+    <h4>Alternative 4: Strategic retrenchment and capacity discipline</h4>
+    <p>Cancel or defer remaining A380 deliveries with <b>Airbus</b>, retire older aircraft early, park surplus A380s, cut frequencies on weak U.S. and Middle East-sensitive routes, freeze crew hiring, and use savings to reduce borrowings.</p>
     <p class="pc pro">Pros</p>
     <ul>
-      <li><b>Leverages security expertise:</b> capitalizes on reputation and proprietary security technologies without returning to smartphone manufacturing.</li>
-      <li><b>Access to established device ecosystems:</b> larger installed bases and global distribution channels.</li>
-      <li><b>Recurring licensing opportunities:</b> licensing, integration services, and enterprise security agreements across multiple platforms.</li>
+      <li><b>Fast cost relief;</b> protects liquidity.</li>
+      <li><b>Lower U.S. political exposure;</b> low execution risk.</li>
     </ul>
     <p class="pc con">Cons</p>
     <ul>
-      <li><b>Strong OEM bargaining power:</b> Apple and Samsung may demand unfavorable commercial terms.</li>
-      <li><b>Limited differentiation:</b> major manufacturers already invest heavily in proprietary security.</li>
-      <li><b>Partner dependence:</b> growth depends on OEM adoption and partnership continuity.</li>
+      <li><b>Surrenders scale</b> to Qatar and Etihad.</li>
+      <li><b>Confirms</b> the "moment has passed" narrative; weakens Dubai's hub economy.</li>
+      <li><b>Damages</b> the Airbus relationship and A380 residual values.</li>
     </ul>
+    <p class="src">Exclusive because shrinking capacity contradicts the growth logic of the other three.</p>
   </div>
-
-  <h3>Strategic distinction among alternatives</h3>
-  <div class="scroll"><table>
-    <tr><th>Alternative</th><th>Primary business focus</th><th>Main revenue driver</th></tr>
-    <tr><td><b>1. Enterprise software &amp; security</b></td><td>Enterprise customers</td><td>Software subscriptions and service contracts</td></tr>
-    <tr><td>2. Embedded technology &amp; IP</td><td>Automotive and connected-device manufacturers</td><td>QNX royalties and technology licensing</td></tr>
-    <tr><td>3. Sale or merger</td><td>Corporate acquisition</td><td>Shareholder proceeds from the transaction</td></tr>
-    <tr><td>4. Device security technology supplier</td><td>Smartphone and device manufacturers</td><td>Security licensing and integration agreements</td></tr>
-  </table></div>
 </section>
 
-<!-- ANALYSIS -->
-<section role="tabpanel" id="p-ana" aria-labelledby="t-ana">
-  <h2 class="title">Analysis of alternatives</h2>
-  <div class="bottom"><strong>Recommendation</strong><p>Alternative 1, Enterprise Software &amp; Security Expansion, scores highest at 4.60 out of 5.00. A sale shows the highest estimated value ($3.22B), but it depends on finding a buyer at that price and gives up future growth.</p></div>
+<!-- EVALUATION -->
+<section role="tabpanel" id="p-eval" aria-labelledby="t-eval">
+  <h2 class="title">Evaluation &amp; decision</h2>
+  <div class="bottom"><strong>Decision</strong><p>Alternative 1 ranks first on both the weighted criteria matrix and the QSPM.</p></div>
 
-  <h3>Comparative projected financial statement, FY2018 (USD millions)</h3>
-  <div class="scroll"><table>
-    <tr><th>Financial item</th><th class="n">Alt 1<br>Software &amp; Security</th><th class="n">Alt 2<br>Embedded Tech &amp; IP</th><th class="n">Alt 3<br>Sale / Merger</th><th class="n">Alt 4<br>Device Security</th></tr>
-    <tr><td>Revenue</td><td class="n">1,505</td><td class="n">1,440</td><td class="n">1,309</td><td class="n">1,466</td></tr>
-    <tr><td>Revenue growth</td><td class="n">15%</td><td class="n">10%</td><td class="n">0%</td><td class="n">12%</td></tr>
-    <tr><td>Cost of revenue</td><td class="n neg">(602)</td><td class="n neg">(576)</td><td class="n neg">(524)</td><td class="n neg">(616)</td></tr>
-    <tr><td><b>Gross profit</b></td><td class="n"><b>903</b></td><td class="n"><b>864</b></td><td class="n"><b>785</b></td><td class="n"><b>850</b></td></tr>
-    <tr><td>Gross margin</td><td class="n">60.0%</td><td class="n">60.0%</td><td class="n">60.0%</td><td class="n">58.0%</td></tr>
-    <tr><td>Operating expenses</td><td class="n neg">(950)</td><td class="n neg">(800)</td><td class="n neg">(700)</td><td class="n neg">(820)</td></tr>
-    <tr><td><b>Operating profit (loss)</b></td><td class="n neg"><b>(47)</b></td><td class="n"><b>64</b></td><td class="n"><b>85</b></td><td class="n"><b>30</b></td></tr>
-    <tr><td>Operating margin</td><td class="n neg">-3.1%</td><td class="n">4.4%</td><td class="n">6.5%</td><td class="n">2.0%</td></tr>
-    <tr><td>Strategic investment</td><td class="n neg">(250)</td><td class="n neg">(150)</td><td class="n">—</td><td class="n neg">(120)</td></tr>
-    <tr><td>Acquisition enterprise value</td><td class="n">—</td><td class="n">—</td><td class="n">2,500</td><td class="n">—</td></tr>
-    <tr><td>Cash &amp; short-term investments</td><td class="n">—</td><td class="n">—</td><td class="n">1,378</td><td class="n">—</td></tr>
-    <tr><td>Less: debt</td><td class="n">—</td><td class="n">—</td><td class="n neg">(591)</td><td class="n">—</td></tr>
-    <tr><td>Estimated equity value</td><td class="n">—</td><td class="n">—</td><td class="n">3,287</td><td class="n">—</td></tr>
-    <tr><td>Transaction costs</td><td class="n">—</td><td class="n">—</td><td class="n neg">(66)</td><td class="n">—</td></tr>
-    <tr><td><b>Net shareholder proceeds</b></td><td class="n">—</td><td class="n">—</td><td class="n"><b>3,221</b></td><td class="n">—</td></tr>
-  </table></div>
-  <p class="src">All FY2018 operating projections, the acquisition enterprise value, strategic investments, and transaction costs are hypothetical. Alt 3 operating figures represent an illustrative post-merger scenario. The $1,378M liquid holdings and $591M debt are drawn from the case's FY2017 balance sheet.</p>
-  <ul>
-    <li>Alternative 1 delivers the highest revenue growth but requires the largest investment and remains operating-loss-making.</li>
-    <li>Alternative 2 generates the strongest operating profit among the independent growth strategies; Alternative 4 produces a smaller operating profit with lower assumed investment.</li>
-    <li>Alternative 3 provides an estimated $3.22 billion in net shareholder proceeds, but this is a one-time equity realization, whereas the other alternatives' operating profits are annual results. They cannot be compared directly.</li>
-  </ul>
-
-  <h3>Comparative financial valuation, FY2018–FY2020 (USD millions)</h3>
-  <div class="scroll"><table>
-    <tr><th>Financial measure</th><th class="n">Alt 1</th><th class="n">Alt 2</th><th class="n">Alt 3</th><th class="n">Alt 4</th></tr>
-    <tr><td>Initial investment</td><td class="n neg">(250)</td><td class="n neg">(150)</td><td class="n">—</td><td class="n neg">(120)</td></tr>
-    <tr><td>FY2018 cash flow</td><td class="n">50</td><td class="n">80</td><td class="n">—</td><td class="n">60</td></tr>
-    <tr><td>FY2019 cash flow</td><td class="n">120</td><td class="n">130</td><td class="n">—</td><td class="n">110</td></tr>
-    <tr><td>FY2020 cash flow</td><td class="n">200</td><td class="n">190</td><td class="n">—</td><td class="n">170</td></tr>
-    <tr><td>Terminal value</td><td class="n">2,800</td><td class="n">2,500</td><td class="n">—</td><td class="n">2,400</td></tr>
-    <tr><td>PV of future cash flows &amp; terminal value</td><td class="n">2,416</td><td class="n">2,273</td><td class="n">—</td><td class="n">2,165</td></tr>
-    <tr><td>Less: initial investment</td><td class="n neg">(250)</td><td class="n neg">(150)</td><td class="n">—</td><td class="n neg">(120)</td></tr>
-    <tr><td><b>Estimated shareholder value</b></td><td class="n"><b>2,166</b></td><td class="n"><b>2,123</b></td><td class="n"><b>3,221</b></td><td class="n"><b>2,045</b></td></tr>
-  </table></div>
-  <p class="src">Assumptions: 10% discount rate; three-year projection period; hypothetical terminal values and acquisition price. Alternative 3 represents immediate estimated net proceeds from a sale.</p>
-  <ul>
-    <li><b>Alt 1, Enterprise Software &amp; Security:</b> highest initial investment ($250M) but rising cash flows as software expands; estimated value $2.17B.</li>
-    <li><b>Alt 2, Embedded Technology &amp; IP:</b> $150M investment; estimated value $2.12B, commercializing existing technologies without substantial hardware investment.</li>
-    <li><b>Alt 3, Sale or Merger:</b> highest estimated value at $3.22B, assuming a willing buyer at the proposed price; shareholders surrender future ownership and returns.</li>
-    <li><b>Alt 4, Security Technology Supplier:</b> lowest investment ($120M); estimated value $2.05B, exposed to OEM bargaining power and partner dependence.</li>
-    <li>These valuations are sensitive to assumed terminal values, cash flows, and acquisition price, and the terminal values have not yet been derived from a consistent valuation formula. Treat them as a preliminary comparison.</li>
-  </ul>
-
-  <h3>Weighted scoring model</h3>
-  <div class="scroll"><table>
-    <tr><th>Criterion</th><th class="n">Weight</th><th>Basis for evaluation</th></tr>
-    <tr><td>Financial viability</td><td class="n">40%</td><td>Potential shareholder value, profitability, and investment requirements</td></tr>
-    <tr><td>Strategic fit</td><td class="n">35%</td><td>Ability to leverage BlackBerry's existing capabilities, technologies, and resources</td></tr>
-    <tr><td>Growth &amp; sustainability</td><td class="n">25%</td><td>Potential to generate long-term growth and maintain a competitive position</td></tr>
-  </table></div>
-  <p>Financial viability carries the highest weight given declining revenues and continuing losses; strategic fit emphasizes maximizing existing capabilities; growth and sustainability assesses long-term potential. Ratings use a 1 (very poor) to 5 (excellent) scale.</p>
-
+  <h3>Weighted criteria matrix (1–5)</h3>
   <div class="scores" aria-label="Weighted scores">
-    <div class="sc pick"><b>4.60</b><span>Alt 1: Software &amp; Security</span><i>Rank 1</i></div>
-    <div class="sc"><b>4.00</b><span>Alt 2: QNX &amp; IP</span><i>Rank 2</i></div>
-    <div class="sc"><b>3.95</b><span>Alt 4: OEM Security</span><i>Rank 3</i></div>
-    <div class="sc"><b>3.80</b><span>Alt 3: Sale / Merger</span><i>Rank 4</i></div>
+    <div class="sc pick"><b>4.60</b><span>Alt 1: flydubai integration</span><i>Rank 1</i></div>
+    <div class="sc"><b>3.40</b><span>Alt 2: Premium reboot</span><i>Rank 2</i></div>
+    <div class="sc"><b>2.85</b><span>Alt 4: Retrenchment</span><i>Rank 3</i></div>
+    <div class="sc"><b>2.10</b><span>Alt 3: Etihad merger</span><i>Rank 4</i></div>
   </div>
   <div class="scroll"><table>
     <tr><th>Criterion</th><th class="n">Weight</th><th class="n">Alt 1</th><th class="n">Alt 2</th><th class="n">Alt 3</th><th class="n">Alt 4</th></tr>
-    <tr><td>Financial viability</td><td class="n">40%</td><td class="n">4</td><td class="n">4</td><td class="n">5</td><td class="n">3</td></tr>
-    <tr><td>Strategic fit</td><td class="n">35%</td><td class="n">5</td><td class="n">4</td><td class="n">3</td><td class="n">5</td></tr>
-    <tr><td>Growth &amp; sustainability</td><td class="n">25%</td><td class="n">5</td><td class="n">4</td><td class="n">3</td><td class="n">4</td></tr>
-    <tr><td><b>Weighted score</b></td><td class="n"><b>100%</b></td><td class="n"><b>4.60</b></td><td class="n"><b>4.00</b></td><td class="n"><b>3.80</b></td><td class="n"><b>3.95</b></td></tr>
-    <tr><td><b>Rank</b></td><td class="n"></td><td class="n"><b>1</b></td><td class="n"><b>2</b></td><td class="n"><b>4</b></td><td class="n"><b>3</b></td></tr>
+    <tr><td>Addresses root cause (yield, transfer demand)</td><td class="n">25%</td><td class="n">4</td><td class="n">4</td><td class="n">3</td><td class="n">2</td></tr>
+    <tr><td>Financial feasibility (capex, liquidity)</td><td class="n">20%</td><td class="n">5</td><td class="n">2</td><td class="n">2</td><td class="n">4</td></tr>
+    <tr><td>Speed of implementation</td><td class="n">15%</td><td class="n">5</td><td class="n">2</td><td class="n">1</td><td class="n">4</td></tr>
+    <tr><td>Risk (political, regulatory, execution)</td><td class="n">15%</td><td class="n">4</td><td class="n">3</td><td class="n">1</td><td class="n">3</td></tr>
+    <tr><td>Leverages core competencies (VRIO)</td><td class="n">15%</td><td class="n">5</td><td class="n">5</td><td class="n">3</td><td class="n">2</td></tr>
+    <tr><td>Fit with IE Matrix prescription</td><td class="n">10%</td><td class="n">5</td><td class="n">5</td><td class="n">2</td><td class="n">2</td></tr>
+    <tr class="total"><td>Weighted score</td><td class="n">100%</td><td class="n">4.60</td><td class="n">3.40</td><td class="n">2.10</td><td class="n">2.85</td></tr>
   </table></div>
-  <p class="src">Weighted score = sum of (criterion weight × alternative rating).</p>
+
+  <h3>Quantitative Strategic Planning Matrix (QSPM)</h3>
+  <div class="scores" aria-label="QSPM totals">
+    <div class="sc pick"><b>6.45</b><span>Alt 1: flydubai integration</span><i>Rank 1</i></div>
+    <div class="sc"><b>5.57</b><span>Alt 2: Premium reboot</span><i>Rank 2</i></div>
+    <div class="sc"><b>4.29</b><span>Alt 3: Etihad merger</span><i>Rank 3</i></div>
+    <div class="sc"><b>3.81</b><span>Alt 4: Retrenchment</span><i>Rank 4</i></div>
+  </div>
+  <div class="scroll"><table>
+    <tr><th>Key factor</th><th class="n">Weight</th><th class="n">Alt 1 AS/TAS</th><th class="n">Alt 2 AS/TAS</th><th class="n">Alt 3 AS/TAS</th><th class="n">Alt 4 AS/TAS</th></tr>
+    <tr class="grp"><td colspan="6">External factors</td></tr>
+    <tr><td>O1 Dubai location</td><td class="n">0.10</td><td class="n">4 / 0.40</td><td class="n">3 / 0.30</td><td class="n">3 / 0.30</td><td class="n">1 / 0.10</td></tr>
+    <tr><td>O2 Low fuel prices</td><td class="n">0.10</td><td class="n">3 / 0.30</td><td class="n">3 / 0.30</td><td class="n">2 / 0.20</td><td class="n">2 / 0.20</td></tr>
+    <tr><td>O3 Upscale mid-priced demand</td><td class="n">0.08</td><td class="n">2 / 0.16</td><td class="n">4 / 0.32</td><td class="n">2 / 0.16</td><td class="n">1 / 0.08</td></tr>
+    <tr><td>O4 Dubai tourism</td><td class="n">0.08</td><td class="n">4 / 0.32</td><td class="n">3 / 0.24</td><td class="n">2 / 0.16</td><td class="n">1 / 0.08</td></tr>
+    <tr><td>O5 Emerging-market city pairs</td><td class="n">0.08</td><td class="n">4 / 0.32</td><td class="n">2 / 0.16</td><td class="n">3 / 0.24</td><td class="n">1 / 0.08</td></tr>
+    <tr><td>O6 Long-range twins</td><td class="n">0.06</td><td class="n">3 / 0.18</td><td class="n">2 / 0.12</td><td class="n">2 / 0.12</td><td class="n">3 / 0.18</td></tr>
+    <tr><td>T1 Terrorism, regional conflict</td><td class="n">0.12</td><td class="n">3 / 0.36</td><td class="n">2 / 0.24</td><td class="n">2 / 0.24</td><td class="n">3 / 0.36</td></tr>
+    <tr><td>T2 Corporate travel cuts</td><td class="n">0.10</td><td class="n">3 / 0.30</td><td class="n">1 / 0.10</td><td class="n">2 / 0.20</td><td class="n">3 / 0.30</td></tr>
+    <tr><td>T3 Subsidy allegations</td><td class="n">0.08</td><td class="n">3 / 0.24</td><td class="n">3 / 0.24</td><td class="n">1 / 0.08</td><td class="n">3 / 0.24</td></tr>
+    <tr><td>T4 Premium competition</td><td class="n">0.12</td><td class="n">3 / 0.36</td><td class="n">4 / 0.48</td><td class="n">3 / 0.36</td><td class="n">1 / 0.12</td></tr>
+    <tr><td>T5 Yield pressure</td><td class="n">0.08</td><td class="n">3 / 0.24</td><td class="n">3 / 0.24</td><td class="n">2 / 0.16</td><td class="n">3 / 0.24</td></tr>
+    <tr class="grp"><td colspan="6">Internal factors</td></tr>
+    <tr><td>S1 Hub and network</td><td class="n">0.12</td><td class="n">4 / 0.48</td><td class="n">3 / 0.36</td><td class="n">3 / 0.36</td><td class="n">1 / 0.12</td></tr>
+    <tr><td>S2 Service excellence</td><td class="n">0.12</td><td class="n">3 / 0.36</td><td class="n">4 / 0.48</td><td class="n">2 / 0.24</td><td class="n">1 / 0.12</td></tr>
+    <tr><td>S3 Modern widebody fleet</td><td class="n">0.08</td><td class="n">3 / 0.24</td><td class="n">3 / 0.24</td><td class="n">2 / 0.16</td><td class="n">1 / 0.08</td></tr>
+    <tr><td>S4 Multinational crew</td><td class="n">0.08</td><td class="n">3 / 0.24</td><td class="n">4 / 0.32</td><td class="n">2 / 0.16</td><td class="n">1 / 0.08</td></tr>
+    <tr><td>S5 Profitability, cash flow</td><td class="n">0.10</td><td class="n">4 / 0.40</td><td class="n">2 / 0.20</td><td class="n">1 / 0.10</td><td class="n">3 / 0.30</td></tr>
+    <tr><td>S6 Global brand</td><td class="n">0.05</td><td class="n">3 / 0.15</td><td class="n">4 / 0.20</td><td class="n">2 / 0.10</td><td class="n">1 / 0.05</td></tr>
+    <tr><td>W1 Single-hub transfer dependence</td><td class="n">0.12</td><td class="n">3 / 0.36</td><td class="n">1 / 0.12</td><td class="n">3 / 0.36</td><td class="n">2 / 0.24</td></tr>
+    <tr><td>W2 A380 inflexibility</td><td class="n">0.10</td><td class="n">4 / 0.40</td><td class="n">2 / 0.20</td><td class="n">2 / 0.20</td><td class="n">3 / 0.30</td></tr>
+    <tr><td>W3 Yield erosion</td><td class="n">0.10</td><td class="n">3 / 0.30</td><td class="n">4 / 0.40</td><td class="n">2 / 0.20</td><td class="n">2 / 0.20</td></tr>
+    <tr><td>W4 Liquidity, leverage</td><td class="n">0.07</td><td class="n">4 / 0.28</td><td class="n">1 / 0.07</td><td class="n">1 / 0.07</td><td class="n">4 / 0.28</td></tr>
+    <tr><td>W5 No premium economy</td><td class="n">0.06</td><td class="n">1 / 0.06</td><td class="n">4 / 0.24</td><td class="n">2 / 0.12</td><td class="n">1 / 0.06</td></tr>
+    <tr class="total"><td>Sum of TAS</td><td class="n">2.00</td><td class="n">6.45</td><td class="n">5.57</td><td class="n">4.29</td><td class="n">3.81</td></tr>
+  </table></div>
+  <p class="src">AS = attractiveness score (1 not attractive to 4 highly attractive); TAS = weight × AS. Weights from the EFE and IFE matrices.</p>
 
   <h3>Evaluation results</h3>
   <ul>
-    <li><b>Alt 1 (4.60):</b> strong strategic fit built on enterprise security capabilities, customer relationships, and a growing software business; substantial investment, but an opportunity for recurring revenues and sustainable profitability.</li>
-    <li><b>Alt 2 (4.00):</b> leverages QNX and IP with lower investment; growth depends on licensing agreements and the pace of adoption in automotive and embedded markets.</li>
-    <li><b>Alt 4 (3.95):</b> builds on security expertise and access to device makers; depends heavily on partnerships with manufacturers that may develop competing solutions internally.</li>
-    <li><b>Alt 3 (3.80):</b> highest estimated immediate value, but execution depends on securing a buyer at an acceptable valuation; its growth score reflects uncertainty over future value to shareholders after a transaction.</li>
+    <li><b>Alt 1 (selected):</b> best balance of root-cause fit, low capital and speed; builds on sustained advantages.</li>
+    <li><b>Alt 2 (runner-up):</b> strong on yield and competition but too capital-heavy while premium demand falls; retained as a contingency.</li>
+    <li><b>Alt 3 (rejected):</b> political and integration risk; worsens the subsidy dispute.</li>
+    <li><b>Alt 4 (rejected):</b> surrenders the network advantage; contradicts the IE Matrix prescription.</li>
+  </ul>
+</section>
+
+<!-- RECOMMENDATION -->
+<section role="tabpanel" id="p-rec" aria-labelledby="t-rec">
+  <h2 class="title">Recommendation</h2>
+  <div class="bottom"><strong>Recommendation</strong><p>Integrate the Emirates network with flydubai at DXB under a single commercial partnership, and rebalance the fleet plan from further A380 commitments toward the Boeing 777X, so Emirates fills existing widebodies from new source markets and grows capacity in step with demand.</p></div>
+  <ul>
+    <li><b>Addresses the problem:</b> new secondary-market feed offsets transfer traffic lost on Middle East-sensitive flows and lifts load factors, supporting revenue per flight while premium demand is soft.</li>
+    <li><b>Builds on sustained advantages:</b> the DXB hub, Clark's network design capability and the brand.</li>
+    <li><b>Protects the balance sheet:</b> mainly commercial and IT investment, preserving free cash flow (AED 4.2bn in FY2016).</li>
+    <li><b>Reduces political exposure:</b> growth comes from Africa, Asia and Eastern Europe rather than more U.S. capacity.</li>
+    <li><b>Supporting moves within the same thrust:</b> reinforce financial transparency (audited results, no fuel subsidies) and package Dubai stopovers with Dubai Tourism and Emirates Holidays.</li>
   </ul>
 </section>
 
 <!-- IMPLEMENTATION -->
 <section role="tabpanel" id="p-imp" aria-labelledby="t-imp">
-  <h2 class="title">Decision &amp; implementation plan</h2>
-  <div class="bottom"><strong>Decision</strong><p>Reposition BlackBerry as an enterprise software and security company, with profitability and cash generation taking priority over market share expansion. Implement over FY2018 to FY2020 with phased, milestone-based funding.</p></div>
-
-  <h3>Recommendation</h3>
-  <ul>
-    <li>Alternative 1 gives BlackBerry the strongest opportunity to return to sustainable growth and profitability by building on its strengths in enterprise security, software, and customer relationships, rather than attempting to regain its position in smartphones.</li>
-    <li>Although Alternative 3 offers the highest estimated value under the financial assumptions, Alternative 1 lets BlackBerry retain ownership of its technologies and participate in future growth, with greater alignment to its capabilities and long-term direction.</li>
-    <li>Prioritize enterprise software subscriptions, stronger security solutions, and existing corporate customers to generate recurring revenues. Phase investments and tie them to measurable improvements in revenue growth, operating profitability, and cash flow.</li>
-  </ul>
+  <h2 class="title">Implementation plan</h2>
+  <div class="bottom"><strong>Timeline</strong><p>Four phases from April 2017 to 2020, governed by a joint Emirates–flydubai steering committee.</p></div>
 
   <h3>Implementation roadmap</h3>
   <ul class="tl">
-    <li><b>FY2018 Q1–Q2 · CEO, CFO, Product Management</b><strong class="tl-h">Evaluate and prioritize the software portfolio.</strong> Assess products on revenue, margins, demand, and competitive strength; prioritize enterprise mobility management, endpoint security, and secure communications; identify products for investment, consolidation, or discontinuation. <em>Outcome: resources concentrated on software businesses with the strongest commercial potential.</em></li>
-    <li><b>FY2018 Q3–Q4 · CTO, Product Management</b><strong class="tl-h">Strengthen product competitiveness.</strong> Improve integration across enterprise solutions; ensure compatibility with Android, iOS, and other environments; develop subscription packages by customer size, security requirements, and service level; test with existing customers before broader rollout. <em>Outcome: more competitive solutions that address enterprise security needs beyond BlackBerry devices.</em></li>
-    <li><b>FY2019 Q1–Q2 · Enterprise Sales</b><strong class="tl-h">Expand within the existing customer base.</strong> Identify enterprise and government accounts for additional subscriptions; prioritize renewals, cross-selling, and migration of legacy customers; assign account-level revenue and retention targets. <em>Outcome: higher recurring revenues from established relationships.</em></li>
-    <li><b>FY2019 Q3–Q4 · Sales, Business Development</b><strong class="tl-h">Acquire new enterprise customers.</strong> Target financial services, healthcare, and government; strengthen partnerships with resellers, systems integrators, and managed-service providers; focus on customers securing multiple devices and operating systems. <em>Outcome: broader customer base and reduced dependence on legacy customers.</em></li>
-    <li><b>FY2020 · CEO, CFO, Product Management</b><strong class="tl-h">Scale profitable operations.</strong> Increase investment in products with strong growth, retention, and margins; reduce spending on underperformers; improve onboarding, support, and renewals to control cost-to-serve. <em>Outcome: improved operating profitability and sustainable cash generation.</em></li>
+    <li><b>Apr–Jun 2017 · Sir Tim Clark; Ghaith Al Ghaith (flydubai CEO)</b><strong class="tl-h">Mobilise.</strong> Obtain owner (Investment Corporation of Dubai) approval; form the steering committee and integration office; map network overlaps and feeder opportunities. <em>Outcome: partnership signed; integration charter approved.</em></li>
+    <li><b>Jul–Dec 2017 · Commercial Operations; Mohammed H. Mattar (Airport Services); Terry Daly (Service)</b><strong class="tl-h">Commercial integration.</strong> Launch codeshare on initial routes, then the full network; joint Skywards earn-and-burn; through-checking and coordinated DXB connections; train flydubai staff on Emirates transfer standards. <em>Outcome: codeshare live; connection and satisfaction metrics tracked.</em></li>
+    <li><b>Jan–Dec 2018 · Network Planning; Fleet Planning; Finance</b><strong class="tl-h">Network optimisation.</strong> Transfer thin and seasonal routes to flydubai; redeploy widebodies to dense trunks; defer incremental A380 commitments and prioritise 777X deliveries; joint corporate sales contracts. <em>Outcome: higher load factors; revenue per passenger stabilised.</em></li>
+    <li><b>2019–2020 · Marketing; Revenue Management</b><strong class="tl-h">Demand creation and scale.</strong> Dubai stopover packages with Dubai Tourism and Emirates Holidays timed for Expo 2020; joint revenue management; annual benefit review. <em>Outcome: more stopover passengers; combined network revenue growth.</em></li>
   </ul>
-
-  <h3>Key implementation considerations</h3>
-  <ul>
-    <li><b>Prioritize enterprise security rather than compete across the entire cybersecurity market.</b> Build on enterprise mobility management, secure communications, and device security; expanding into unrelated segments would require new capabilities against more established competitors.</li>
-    <li><b>Make BlackBerry software independent of BlackBerry hardware.</b> Customers must be able to use BlackBerry security across different devices and operating systems, given widespread Android and iOS adoption in corporate environments.</li>
-    <li><b>Use existing customers as the initial source of growth.</b> Identify customers already using BlackBerry software, assess their additional security needs, and offer relevant solutions through cross-selling and subscription upgrades.</li>
-    <li><b>Manage the decline of legacy businesses without weakening the software business.</b> Keep cutting hardware and legacy service costs, but protect software engineering, security expertise, and customer support; report software performance separately from legacy operations.</li>
-  </ul>
-
-  <h3>Financial implementation and controls</h3>
-  <p>The financial evaluation assumed an illustrative strategic investment of US$250 million (not an amount established by the case). Release funding by milestone and adjust to available liquidity and operating performance.</p>
-  <div class="scroll"><table>
-    <tr><th>Stage</th><th>Funding priority</th><th>Condition for further investment</th></tr>
-    <tr><td>FY2018</td><td>Product integration, software development, and customer retention</td><td>Completion of portfolio review, validated customer demand, and acceptable development costs</td></tr>
-    <tr><td>FY2019</td><td>Enterprise sales expansion, customer acquisition, and channel partnerships</td><td>Demonstrated subscription growth, customer retention, and improving sales productivity</td></tr>
-    <tr><td>FY2020</td><td>Scaling successful products and improving operating efficiency</td><td>Evidence of improving margins and a credible path to positive operating cash flow</td></tr>
-  </table></div>
 
   <h3>Performance monitoring (quarterly review)</h3>
   <div class="scroll"><table>
-    <tr><th>KPI</th><th>What management should monitor</th><th>Action if performance falls short</th></tr>
-    <tr><td>Software revenue growth</td><td>Growth in software revenues relative to the decline in legacy businesses</td><td>Reassess product priorities and sales execution</td></tr>
-    <tr><td>Customer retention and recurring revenue</td><td>Subscription renewals, customer losses, and expansion of existing contracts</td><td>Address product gaps and strengthen key-account retention</td></tr>
-    <tr><td>Operating profitability</td><td>Software margins, operating expenses, and contribution to company profitability</td><td>Reduce spending on low-return products and activities</td></tr>
-    <tr><td>Operating cash flow</td><td>Cash generated by operations relative to ongoing investment requirements</td><td>Defer discretionary expansion and preserve liquidity</td></tr>
+    <tr><th>KPI</th><th>Proposed target</th><th>Action if performance falls short</th></tr>
+    <tr><td>Revenue per passenger</td><td>Decline stopped by FY2018; growth by FY2019</td><td>Review pricing and mix; consider Alt 2 elements</td></tr>
+    <tr><td>Connecting passengers fed by flydubai</td><td>Rising share of total transfers</td><td>Re-prioritise feeder markets and schedules</td></tr>
+    <tr><td>Combined network reach</td><td>200+ destinations on one ticket via DXB</td><td>Accelerate codeshare rollout</td></tr>
+    <tr><td>Operating margin</td><td>At least 8% at normalised fuel prices</td><td>Cost review; capacity trims</td></tr>
+    <tr><td>Liquidity</td><td>Cash and deposits above AED 15bn; current ratio toward 0.9</td><td>Defer discretionary capex</td></tr>
+    <tr><td>Brand and service</td><td>Skytrax top tier; connecting satisfaction at Emirates benchmark</td><td>Tighten service standards on codeshare legs</td></tr>
   </table></div>
 
-  <h3>Contingency plan</h3>
-  <div class="bottom warn"><strong>If Alternative 1 underperforms</strong><p>Shift to Alternative 2: Embedded Technology &amp; IP Licensing, ranked second in the weighted scoring model.</p></div>
+  <h3>Resource requirements</h3>
   <ul>
-    <li>Conduct a formal strategic review at the end of FY2019 to assess whether enterprise software expansion is generating sufficient returns.</li>
-    <li>If performance remains below expectations, gradually redirect investment toward commercializing QNX, expanding licensing with automotive and embedded-device manufacturers, and monetizing the IP portfolio.</li>
-    <li>Make the transition selective: retain profitable enterprise software operations while reducing investment in underperforming products.</li>
+    <li>Integration office staffed from both carriers; IT investment in codeshare inventory, loyalty and baggage systems.</li>
+    <li>Training budget for flydubai front-line staff on transfer standards.</li>
+    <li>No incremental aircraft purchases; fleet capex re-phased under the deferral.</li>
   </ul>
+</section>
+
+<!-- CONTINGENCY -->
+<section role="tabpanel" id="p-cont" aria-labelledby="t-cont">
+  <h2 class="title">Contingency plan</h2>
+  <div class="bottom warn"><strong>If Alternative 1 underperforms</strong><p>Pre-agreed triggers, reviewed quarterly, activate elements of Alternative 4 (capacity cuts) or Alternative 2 (premium economy), the runner-up in both evaluations.</p></div>
+  <div class="scroll"><table>
+    <tr><th>Risk scenario</th><th>Trigger</th><th>Response</th><th>Owner</th></tr>
+    <tr><td>Transfer traffic keeps falling</td><td>Connecting passengers down more than 5% year on year for two consecutive quarters</td><td>Park surplus A380s, cut weakest frequencies, freeze hiring (Alt 4 elements)</td><td>Network Planning; Finance</td></tr>
+    <tr><td>Yields do not stabilise</td><td>Revenue per passenger still declining at end of FY2018</td><td>Introduce premium economy on selected A380 routes (Alt 2 elements)</td><td>Commercial; Product</td></tr>
+    <tr><td>Integration delays</td><td>Phase 1 milestones more than three months late; approval withheld in a market</td><td>Start with interline agreements; phase codeshare by approved markets</td><td>Integration office</td></tr>
+    <tr><td>U.S. action against Gulf carriers</td><td>Formal Open Skies action or new restrictions</td><td>Redeploy U.S. capacity to Asia and Africa fed by flydubai; publish audited financials and fuel-cost evidence</td><td>Government Affairs; Network Planning</td></tr>
+    <tr><td>Oil price spike</td><td>Fuel cost per seat-km up more than 20%</td><td>Increase hedging; retire least efficient aircraft; review surcharges</td><td>Finance; Fleet Planning</td></tr>
+    <tr><td>Brand dilution on low-cost legs</td><td>Connecting satisfaction below Emirates benchmark</td><td>Emirates standards on codeshare legs; protected connections; Marhaba transfer assistance</td><td>Service (Terry Daly)</td></tr>
+    <tr><td>Security incident at or near DXB</td><td>Major event affecting the hub</td><td>Crisis communications, flexible rebooking, temporary capacity reallocation</td><td>Operations; Corporate Communications</td></tr>
+  </table></div>
 </section>
 
 <!-- ANNEX -->
 <section role="tabpanel" id="p-annex" aria-labelledby="t-annex">
   <h2 class="title">Annex</h2>
-  <div class="bottom"><strong>In brief</strong><p>External evidence of acquisitions and partnerships that support the recommended strategy, followed by references.</p></div>
-
-  <h3>Acquisitions and partnerships supporting the recommended strategy</h3>
-  <div class="scroll"><table>
-    <tr><th>Move</th><th>Year</th><th>Purpose in the strategy</th></tr>
-    <tr><td>Secusmart (voice/data encryption)</td><td>2014</td><td>Deepen secure-communications strength [9]</td></tr>
-    <tr><td>WatchDox (secure file sync and share)</td><td>2015</td><td>Product development in content security; FIPS 140-2 certified [7]</td></tr>
-    <tr><td>AtHoc (crisis communications)</td><td>2015</td><td>Government and defense vertical product [10]</td></tr>
-    <tr><td>Good Technology (EMM)</td><td>2015</td><td>$425 million; multi-OS EMM, majority of activations on iOS [5][6]</td></tr>
-    <tr><td>Encryption (cybersecurity services)</td><td>2016</td><td>Services capability [9]</td></tr>
-    <tr><td>TCL global brand and software license</td><td>2016</td><td>Convert hardware to a royalty model; exit manufacturing economics [3][4]</td></tr>
-    <tr><td>Cisco long-term patent cross-license</td><td>2015</td><td>Monetize the patent portfolio [10]</td></tr>
-    <tr><td>QNX automotive expansion</td><td>ongoing</td><td>Second growth engine; 50M+ vehicles by 2015, 120M by 2018, 275M+ later [11][12][13]</td></tr>
-  </table></div>
-
-  <h3>References</h3>
+  <div class="bottom"><strong>In brief</strong><p>Sources and notes on data outside the case.</p></div>
+  <h3>Sources</h3>
   <ul class="refs">
-    <li>The Verge, “Chinese company TCL buys global rights to BlackBerry phone brand,” December 16, 2016. <a href="https://www.theverge.com/2016/12/16/13979914/blackberry-global-branding-phone-rights-tcl">theverge.com</a></li>
-    <li>SecurityWeek, “BlackBerry Completes Acquisition of Good Technology.” <a href="https://www.securityweek.com/blackberry-completes-acquisition-good-technology">securityweek.com</a></li>
+    <li>Jamal Shamsie and Alan B. Eisner, "Emirates Airline in 2017", Case 12, pp. C75–C81 (Exhibits 1–6).</li>
+    <li>Case endnotes: Mark Seal, <i>Departures.com</i>, Summer 2014; Susan Carey, <i>The Wall Street Journal</i>, March 6, 2015.</li>
+  </ul>
+  <h3>Notes</h3>
+  <ul>
+    <li>Matrix weights and ratings are analyst judgments based on the case.</li>
+    <li>Details drawn from general knowledge rather than the case, to verify before submission: flydubai's ownership and network, flydubai CEO Ghaith Al Ghaith, the Boeing 777X order, Expo 2020 Dubai, the Mercedes-Benz design partnership, and Etihad's financial position.</li>
   </ul>
 </section>
 
@@ -736,7 +887,7 @@ td:first-child{min-width:150px}
     t.scrollIntoView({block:'nearest',inline:'nearest'});
     var nav=document.querySelector('nav');
     if(window.scrollY>nav.offsetTop) window.scrollTo({top:nav.offsetTop,behavior:'auto'});
-    try{localStorage.setItem('bb-tab',t.id)}catch(e){}
+    try{localStorage.setItem('ek-tab',t.id)}catch(e){}
   }
   tabs.forEach(function(t,i){
     t.addEventListener('click',function(){select(t)});
@@ -745,7 +896,7 @@ td:first-child{min-width:150px}
       if(e.key==='ArrowLeft'){e.preventDefault();select(tabs[(i-1+tabs.length)%tabs.length],true)}
     });
   });
-  try{var s=localStorage.getItem('bb-tab'); if(s&&document.getElementById(s)) select(document.getElementById(s));}catch(e){}
+  try{var s=localStorage.getItem('ek-tab'); if(s&&document.getElementById(s)) select(document.getElementById(s));}catch(e){}
 })();
 </script>
 </body>
